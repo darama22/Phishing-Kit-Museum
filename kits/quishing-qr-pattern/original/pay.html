@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8"><title>DEMO — Web de pago falsa</title><link rel="stylesheet" href="style.css"></head>
+<body>
+  <!--
+    DEMO EDUCATIVA. Web GENÉRICA de "pago de aparcamiento", tal y como
+    aparecería tras escanear el QR falso. Ver annotations.md.
+  -->
+  <div class="login-box">
+    <div class="logo">🅿️ CityPark Pay <span>(demo genérico)</span></div>
+    <p class="subtitle">⚠️ Pago pendiente — evita una multa de $65</p>
+    <form action="capture.php" method="POST">
+      <input type="text" name="card_number" placeholder="Número de tarjeta (demo)" autocomplete="off">
+      <input type="text" name="expiry" placeholder="MM/AA (demo)" autocomplete="off">
+      <input type="text" name="cvv" placeholder="CVV (demo)" autocomplete="off">
+      <button type="submit">Pagar $3.50 ahora</button>
+    </form>
+    <p class="fine-print">DEMO — no es ningún ayuntamiento ni servicio real. NUNCA introduzcas datos de tarjeta reales aquí.</p>
+  </div>
+</body>
+</html>

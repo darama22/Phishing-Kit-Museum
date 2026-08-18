@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>DEMO — El email que inició la brecha de Target</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!--
+    DEMO EDUCATIVA. Reconstrucción GENÉRICA e ilustrativa del tipo de
+    email de spear-phishing documentado por Brian Krebs. No reproduce el
+    email real, ni contiene ningún adjunto ejecutable ni código de
+    malware — el "adjunto" es un archivo de texto inerte. Ver
+    annotations.md.
+  -->
+  <div class="email-mock">
+    <div class="email-header">
+      <span class="from">Remitente falsificado &lt;facturacion@proveedor-demo.invalid&gt;</span>
+      <span class="subject">Factura pendiente — revisión requerida</span>
+    </div>
+    <div class="email-body">
+      <p>Buenas,</p>
+      <p>Adjunto encontrarás la factura pendiente de revisión de este mes.
+      Por favor confirma los detalles antes del viernes.</p>
+      <div class="attachment">
+        <span class="att-icon">📎</span>
+        <div>
+          <div class="att-name">factura_pendiente.txt</div>
+          <div class="att-note">DEMO — archivo de texto inerte, NO es malware. En el ataque real, el adjunto instalaba el troyano Citadel.</div>
+        </div>
+      </div>
+      <p class="fine-print">— Departamento de Facturación (demo)</p>
+    </div>
+  </div>
+  <p class="caption">↑ Reconstrucción genérica del tipo de cebo documentado — no el email original. Ver <code>attachment_demo.txt</code>.</p>
+</body>
+</html>

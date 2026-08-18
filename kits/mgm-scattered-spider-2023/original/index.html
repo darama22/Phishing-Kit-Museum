@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8"><title>DEMO — Panel del Helpdesk (genérico)</title><link rel="stylesheet" href="style.css"></head>
+<body>
+  <!--
+    DEMO EDUCATIVA. Simulación GENÉRICA del formulario que un agente de
+    helpdesk podría rellenar tras una llamada de "restablecimiento
+    urgente", según el patrón documentado (no reproduce ninguna
+    herramienta real de MGM ni de Okta). Ver annotations.md.
+  -->
+  <div class="panel">
+    <h1>🎧 Simulador: formulario de restablecimiento del Helpdesk (demo)</h1>
+    <p class="intro">Ponte en el lugar del agente de soporte que acaba de recibir la llamada (ver <code>linkedin_recon_notes.txt</code>). Rellena el formulario como si le creyeras y pulsa "Procesar restablecimiento".</p>
+    <form action="reset.php" method="POST">
+      <label>Nombre del empleado (según quien llama)</label>
+      <input type="text" name="employee_name" placeholder="Ej. Nombre Ficticio" autocomplete="off">
+      <label>Nuevo número de teléfono para el MFA</label>
+      <input type="text" name="new_phone" placeholder="Ej. +1 555 0100 (demo)" autocomplete="off">
+      <label>Motivo indicado por quien llama</label>
+      <input type="text" name="reason" placeholder="Ej. Teléfono estropeado, evento fuera de oficina" autocomplete="off">
+      <button type="submit">Procesar restablecimiento (demo)</button>
+    </form>
+    <p class="fine-print">DEMO — ningún dato sale de tu disco ni se conecta a ninguna herramienta real.</p>
+  </div>
+</body>
+</html>

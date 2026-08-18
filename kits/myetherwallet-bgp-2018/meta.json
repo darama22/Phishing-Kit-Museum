@@ -1,0 +1,29 @@
+{
+  "id": "myetherwallet-bgp-2018",
+  "display_name": "El phishing donde escribir la URL correcta no te salvaba",
+  "display_name_en": "The phishing where typing the right URL didn't save you",
+  "target_brand": "Usuarios de MyEtherWallet (MEW), una wallet de Ethereum muy popular",
+  "target_brand_en": "MyEtherWallet (MEW) users, a very popular Ethereum wallet",
+  "year": 2018,
+  "kit_type": "secuestro de BGP + DNS — phishing a nivel de infraestructura de internet, no de la aplicación",
+  "kit_type_en": "BGP + DNS hijacking — infrastructure-level phishing, not application-level",
+  "delivery_vector": "ningún email ni enlace — la propia navegación normal de la víctima al dominio real fue redirigida",
+  "delivery_vector_en": "no email or link at all — the victim's own normal navigation to the real domain was redirected",
+  "evasion_techniques": [
+    "No hacía falta engañar a nadie para que hiciera clic en nada — la víctima escribía la URL real, correcta, de siempre, y aun así llegaba al sitio falso",
+    "El ataque manipuló las rutas centrales de internet (BGP) para que el tráfico hacia los servidores DNS de Amazon (usados por MEW) se desviara a un servidor bajo control del atacante",
+    "La única señal visible para la víctima era una advertencia de certificado TLS — fácil de ignorar sin entender su importancia"
+  ],
+  "evasion_techniques_en": [
+    "No one needed to be tricked into clicking anything — the victim typed the real, correct URL as always, and still landed on the fake site",
+    "The attack manipulated the internet's core routing (BGP) so traffic to Amazon's DNS servers (used by MEW) was redirected to a server under the attacker's control",
+    "The only visible sign to the victim was a TLS certificate warning — easy to dismiss without understanding its significance"
+  ],
+  "exfiltration_method_original": "Clave privada de la wallet introducida directamente en el formulario de la web falsa, capturada de inmediato por los atacantes",
+  "source": "Cobertura técnica de BleepingComputer, Virus Bulletin y la propia comunicación oficial de MyEtherWallet — https://www.bleepingcomputer.com/news/security/hacker-hijacks-dns-server-of-myetherwallet-to-steal-160-000/",
+  "status": "defanged",
+  "notes": "Entre las 11:00 y las 13:00 UTC del 24 de abril de 2018, alguien envió mensajes BGP falsos a routers centrales de internet, engañándolos para enviar el tráfico de Amazon Route 53 (el servicio DNS que usaba MEW) hacia un servidor en Rusia. Se robaron unos 160.000 dólares en Ethereum. Investigadores bautizaron esta categoría de ataque como 'MEWKit'. Reconstrucción educativa del formulario de wallet — sin ninguna manipulación de red real.",
+  "notes_en": "Between 11:00 and 13:00 UTC on April 24, 2018, someone sent fake BGP messages to core internet routers, tricking them into sending traffic for Amazon Route 53 (the DNS service MEW used) to a server in Russia. About $160,000 in Ethereum was stolen. Researchers dubbed this category of attack 'MEWKit.' Educational reconstruction of the wallet form — no real network manipulation involved.",
+  "local_port": 8033,
+  "entry_path": "index.html"
+}

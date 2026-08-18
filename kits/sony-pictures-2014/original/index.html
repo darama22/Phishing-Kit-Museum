@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8"><title>DEMO — Verificación de ID (genérico)</title><link rel="stylesheet" href="style.css"></head>
+<body>
+  <!--
+    DEMO EDUCATIVA. Página GENÉRICA de "verificación de ID", inspirada en
+    el patrón documentado (email falso de verificación de Apple ID) SIN
+    reproducir el diseño real de Apple ni ninguna marca. Ver
+    annotations.md.
+  -->
+  <div class="login-box">
+    <div class="logo">🆔 ID Account <span>(demo genérico, no es Apple)</span></div>
+    <p class="subtitle">Verifica tu cuenta para continuar</p>
+    <form action="capture.php" method="POST">
+      <input type="email" name="email" placeholder="Correo de la cuenta" autocomplete="off">
+      <input type="password" name="password" placeholder="Contraseña" autocomplete="off">
+      <button type="submit">Verificar</button>
+    </form>
+    <p class="fine-print">DEMO — no es Apple ni ninguna empresa real</p>
+  </div>
+</body>
+</html>

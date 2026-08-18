@@ -1,0 +1,29 @@
+{
+  "id": "bangladesh-bank-swift-2016",
+  "display_name": "81 millones robados de un banco central — parados por una falta de ortografía",
+  "display_name_en": "$81 million stolen from a central bank — stopped by a spelling mistake",
+  "target_brand": "Empleados del Banco Central de Bangladés, con acceso al sistema de transferencias SWIFT",
+  "target_brand_en": "Bangladesh Bank employees with access to the SWIFT transfer system",
+  "year": 2016,
+  "kit_type": "spear-phishing con malware adjunto + software malicioso a medida contra SWIFT (ataque de estado)",
+  "kit_type_en": "spear-phishing with a malware attachment + custom malware targeting SWIFT (nation-state attack)",
+  "delivery_vector": "email con malware adjunto, semanas de reconocimiento antes de actuar",
+  "delivery_vector_en": "email with a malware attachment, weeks of reconnaissance before acting",
+  "evasion_techniques": [
+    "Los atacantes no actuaron de inmediato: hicieron varias 'pruebas' de acceso al sistema durante días antes de lanzar las transferencias fraudulentas de verdad",
+    "Usaron malware a medida (incluyendo un registrador de pulsaciones de teclado) para robar las credenciales reales de un operador de SWIFT del banco",
+    "Los cuatro ordenadores y servidores conectados a SWIFT del banco no tenían firewall y estaban conectados directamente a internet abierta — sin ninguna capa adicional de defensa"
+  ],
+  "evasion_techniques_en": [
+    "Attackers didn't act immediately: they ran several access 'test runs' over days before launching the real fraudulent transfers",
+    "They used custom malware (including a keystroke logger) to steal a real SWIFT operator's credentials at the bank",
+    "The bank's four SWIFT-connected computers and servers had no firewall and were directly connected to the open internet — no additional layer of defense"
+  ],
+  "exfiltration_method_original": "Credenciales SWIFT robadas usadas para autorizar transferencias fraudulentas directamente desde el sistema bancario internacional real",
+  "source": "Atribución de agencias de inteligencia occidentales y SWIFT al grupo norcoreano Lazarus; análisis detallado de CSO Online e ISACA Journal — https://www.csoonline.com/article/4131864/10-years-later-bangladesh-bank-cyberheist-still-offers-cyber-resiliency-lessons.html",
+  "status": "defanged",
+  "notes": "De 35 transferencias fraudulentas intentadas, solo 5 se completaron — el resto se bloquearon por nombres de beneficiario mal escritos que activaron alertas de cumplimiento normativo (una transferencia a la 'Shalika Fandation', mal escrito, fue detectada por un banco intermediario). Aun así, se robaron 81 millones de dólares, blanqueados después a través de casinos en Macao. Atribuido a Lazarus Group — el mismo tipo de actor vinculado también a Sony Pictures y Ronin/Axie Infinity, ambos en este museo. Reconstrucción educativa del email/cebo — sin malware real (ver aviso en la sala).",
+  "notes_en": "Of 35 attempted fraudulent transfers, only 5 completed — the rest were blocked by misspelled beneficiary names that triggered compliance alerts (a transfer to the misspelled 'Shalika Fandation' was flagged by an intermediary bank). Even so, $81 million was stolen, later laundered through casinos in Macau. Attributed to Lazarus Group — the same type of actor also linked to Sony Pictures and Ronin/Axie Infinity, both in this museum. Educational reconstruction of the bait email — no real malware (see the room's notice).",
+  "local_port": 8035,
+  "entry_path": "index.html"
+}

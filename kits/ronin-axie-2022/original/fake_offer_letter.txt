@@ -1,0 +1,23 @@
+DEMO — este archivo es texto inerte, no es malware ni ejecuta nada.
+Ver annotations.md, secciones 2-3 y el aviso final.
+
+En el ataque real documentado por Chainalysis/Halborn, el documento final
+enviado a los ingenieros de Sky Mavis, tras varias rondas de entrevistas
+falsas, contenía malware embebido. Al abrirlo:
+
+  1. Se instalaba una puerta trasera en el equipo de la víctima.
+  2. Los atacantes usaban ese punto de apoyo para moverse por la red
+     interna de Sky Mavis.
+  3. Comprometieron 4 de los 9 nodos validadores de la red Ronin
+     directamente desde equipos infectados.
+  4. Obtuvieron una quinta firma explotando un nodo RPC mal configurado.
+  5. Con 5 de 9 firmas, autorizaron dos retiradas fraudulentas por un
+     total de ~625 millones de dólares.
+
+Este museo trata sobre kits de PHISHING WEB, no sobre malware ejecutable.
+Por eso este archivo no reproduce ningún comportamiento real — solo
+documenta, en texto, qué habría hecho.
+
+Si quieres estudiar malware real (siempre cifrado y con fines de
+investigación), ese es el ámbito del proyecto hermano
+"Malware Research Hub".

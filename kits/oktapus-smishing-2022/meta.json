@@ -1,0 +1,29 @@
+{
+  "id": "oktapus-smishing-2022",
+  "display_name": "0ktapus — el smishing que comprometió 136 empresas en meses",
+  "display_name_en": "0ktapus — the smishing campaign that hit 136 companies in months",
+  "target_brand": "Empleados de empresas clientes de Okta (Twilio, Cloudflare, MailChimp, Klaviyo, y ~130 más)",
+  "target_brand_en": "Employees at Okta customer companies (Twilio, Cloudflare, MailChimp, Klaviyo, and ~130 more)",
+  "year": 2022,
+  "kit_type": "smishing (phishing por SMS) + relevo de código de verificación en tiempo real",
+  "kit_type_en": "smishing (SMS phishing) + real-time verification-code relay",
+  "delivery_vector": "SMS con enlace a una página de login de Okta clonada, personalizada por empresa",
+  "delivery_vector_en": "SMS with a link to a cloned Okta login page, personalized per company",
+  "evasion_techniques": [
+    "Cada web falsa se generaba con el logo y nombre exactos de la empresa objetivo, apuntando a un dominio parecido al portal real de Okta de esa empresa",
+    "El SMS (en vez de email) esquivaba los filtros anti-phishing corporativos, centrados casi siempre en el correo",
+    "Tras robar la contraseña, el kit pedía también el código de un solo uso enviado por SMS (MFA) y lo reenviaba en tiempo real a los atacantes antes de que caducara"
+  ],
+  "evasion_techniques_en": [
+    "Each fake site was generated with the target company's exact logo and name, pointing to a domain resembling that company's real Okta portal",
+    "SMS (instead of email) dodged corporate anti-phishing filters, almost always focused on email",
+    "After stealing the password, the kit also asked for the SMS one-time code (MFA) and relayed it to the attackers in real time before it expired"
+  ],
+  "exfiltration_method_original": "Credenciales y código MFA capturados y usados en tiempo real para iniciar sesión en el sistema real de Okta de la víctima",
+  "source": "Group-IB, 'Roasting 0ktapus' (2022) — https://www.group-ib.com/blog/0ktapus/ · confirmación oficial de Okta ('Scatter Swine') — https://sec.okta.com/articles/scatterswine/",
+  "status": "defanged",
+  "notes": "Casi 10.000 credenciales de empleados robadas en 136 organizaciones, la mayoría empresas de tecnología/software/nube, entre ellas Twilio, Cloudflare, MailChimp y Klaviyo. El acceso a Twilio permitió a los atacantes interceptar códigos SMS de otras víctimas en campañas posteriores. Reconstrucción educativa — el relevo de MFA se queda siempre en un log local, nunca se envía a ningún sitio real.",
+  "notes_en": "Nearly 10,000 employee credentials stolen across 136 organizations, mostly tech/software/cloud companies, including Twilio, Cloudflare, MailChimp, and Klaviyo. Access to Twilio let attackers intercept SMS codes for other victims in later campaigns. Educational reconstruction — the MFA relay always stays in a local log, never sent anywhere real.",
+  "local_port": 8026,
+  "entry_path": "index.html"
+}

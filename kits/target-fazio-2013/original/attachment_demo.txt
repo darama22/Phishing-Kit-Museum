@@ -1,0 +1,20 @@
+DEMO — este archivo es texto inerte, no es malware ni ejecuta nada.
+Ver annotations.md, secciones 2-3 y el aviso final.
+
+En el ataque real documentado por Brian Krebs, el archivo adjunto al email
+de phishing instalaba el troyano bancario "Citadel" (derivado del código
+filtrado de Zeus). Una vez ejecutado en el sistema de la víctima, ese
+malware:
+
+  1. Capturaba las credenciales YA GUARDADAS en el navegador/sistema.
+  2. Grababa vídeo de la sesión y registraba pulsaciones de teclado.
+  3. Exfiltraba todo eso a un panel de mando y control del atacante.
+
+Este museo trata sobre kits de PHISHING WEB (páginas que capturan lo que
+tú escribes), no sobre malware ejecutable. Por eso este archivo no
+reproduce ningún comportamiento de Citadel ni de ningún troyano real —
+solo documenta, en texto, qué habría hecho.
+
+Si quieres estudiar malware real como Citadel o la familia Zeus (siempre
+cifrado y con fines de investigación), ese es el ámbito del proyecto
+hermano "Malware Research Hub".

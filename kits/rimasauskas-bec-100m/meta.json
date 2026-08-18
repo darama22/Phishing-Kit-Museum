@@ -1,0 +1,31 @@
+{
+  "id": "rimasauskas-bec-100m",
+  "display_name": "El hombre que estafó $100 millones a Google y Facebook",
+  "display_name_en": "The man who scammed Google and Facebook out of $100 million",
+  "target_brand": "Empleados del departamento de pagos de Google y Facebook (2013-2015)",
+  "target_brand_en": "Payments-department employees at Google and Facebook (2013-2015)",
+  "year": 2013,
+  "kit_type": "estafa BEC (Business Email Compromise) — sin kit técnico, ingeniería social + documentos falsificados",
+  "kit_type_en": "BEC scam (Business Email Compromise) — no technical kit, social engineering + forged documents",
+  "delivery_vector": "email corporativo suplantando a un proveedor real, con facturas y contratos falsificados adjuntos",
+  "delivery_vector_en": "corporate email impersonating a real vendor, with forged invoices and contracts attached",
+  "evasion_techniques": [
+    "Registró una empresa REAL con el mismo nombre que un proveedor de hardware auténtico de ambas compañías — no un dominio parecido, una empresa legalmente constituida",
+    "Falsificó facturas, contratos y cartas con firmas de directivos reales de las empresas suplantadas",
+    "Fabricó sellos corporativos falsos grabados con los nombres de las compañías, para que la documentación superara controles bancarios",
+    "Repartió el dinero en cuentas bancarias de varios países para dificultar el rastreo (blanqueo de capitales)"
+  ],
+  "evasion_techniques_en": [
+    "Registered a REAL company with the same name as a genuine hardware vendor of both companies — not a similar-looking domain, a legally incorporated business",
+    "Forged invoices, contracts and letters bearing the signatures of real executives from the impersonated companies",
+    "Fabricated fake corporate seals engraved with the companies' names, so the paperwork would pass bank checks",
+    "Spread the money across bank accounts in several countries to make tracing harder (money laundering)"
+  ],
+  "exfiltration_method_original": "No aplica — el 'robo' aquí es la propia transferencia bancaria que las víctimas autorizan creyendo que pagan a un proveedor real",
+  "source": "Departamento de Justicia de EE.UU. (cargos y sentencia); cobertura de BleepingComputer, CNBC, NPR y CyberScoop — https://www.bleepingcomputer.com/news/security/lithuanian-pleads-guilty-to-stealing-100-million-from-google-facebook/ · https://www.npr.org/2019/03/25/706715377/",
+  "local_port": 8017,
+  "entry_path": "index.html",
+  "status": "defanged",
+  "notes": "Evaldas Rimasauskas (Lituania) defraudó a Google (~23M$) y Facebook (~99M$) entre 2013 y 2015. Se declaró culpable de fraude electrónico, robo de identidad agravado y blanqueo de capitales; sentenciado a 5 años de prisión, con orden de decomiso de ~50M$ y restitución de más de 26M$. Google recuperó todo su dinero; Facebook, la mayor parte. Reconstrucción educativa con empresas y documentos ficticios — no se reproduce ningún documento real.",
+  "notes_en": "Evaldas Rimasauskas (Lithuania) defrauded Google (~$23M) and Facebook (~$99M) between 2013 and 2015. He pleaded guilty to wire fraud, aggravated identity theft and money laundering; sentenced to 5 years in prison, with an order to forfeit ~$50M and pay over $26M in restitution. Google recovered all its money; Facebook recovered most of it. Educational reconstruction with fictional companies and documents — no real document is reproduced."
+}

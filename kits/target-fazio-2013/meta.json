@@ -1,0 +1,29 @@
+{
+  "id": "target-fazio-2013",
+  "display_name": "Cómo un email a un proveedor de aire acondicionado tumbó a Target",
+  "display_name_en": "How one email to an air-conditioning vendor took down Target",
+  "target_brand": "Fazio Mechanical (proveedor de HVAC de Target) → red interna de Target Corp.",
+  "target_brand_en": "Fazio Mechanical (Target's HVAC vendor) → Target Corp.'s internal network",
+  "year": 2013,
+  "kit_type": "spear-phishing con troyano adjunto (ataque a la cadena de suministro)",
+  "kit_type_en": "spear-phishing with a trojan attachment (supply-chain attack)",
+  "delivery_vector": "email con malware adjunto (troyano Citadel, basado en Zeus)",
+  "delivery_vector_en": "email with malware attached (Citadel trojan, based on Zeus)",
+  "evasion_techniques": [
+    "No atacó a Target directamente — atacó a un proveedor externo con acceso legítimo a la red de Target, un eslabón mucho más débil",
+    "El troyano Citadel no robó contraseñas de una web falsa: capturó las credenciales guardadas en el propio ordenador infectado de Fazio",
+    "Con esas credenciales legítimas y robadas, los atacantes se movieron dentro de la red de Target durante semanas sin levantar sospechas, hasta llegar a los terminales de punto de venta"
+  ],
+  "evasion_techniques_en": [
+    "Didn't attack Target directly — attacked an external vendor with legitimate access to Target's network, a much weaker link",
+    "The Citadel trojan didn't steal passwords from a fake website: it captured credentials already saved on Fazio's infected computer",
+    "With those legitimate, stolen credentials, the attackers moved inside Target's network for weeks without raising suspicion, until reaching the point-of-sale terminals"
+  ],
+  "exfiltration_method_original": "El troyano Citadel exfiltra credenciales guardadas, capturas de pantalla y pulsaciones de teclado a un panel de mando y control (C&C) del atacante",
+  "source": "Investigación de Brian Krebs (KrebsOnSecurity), primera fuente en documentar el origen del ataque — https://krebsonsecurity.com/2014/02/target-hackers-broke-in-via-hvac-company/ · https://krebsonsecurity.com/2014/02/email-attack-on-vendor-set-up-breach-at-target/",
+  "local_port": 8018,
+  "entry_path": "index.html",
+  "status": "defanged",
+  "notes": "Una de las mayores brechas de datos de la historia del retail: ~40 millones de tarjetas de pago y datos personales de ~70 millones de clientes comprometidos. No incluimos ningún ejecutable ni código del troyano Citadel en esta sala — para investigación de malware real (troyanos bancarios, familia Zeus) usa el proyecto hermano 'Malware Research Hub', con muestras cifradas y catalogadas para ese fin. Aquí solo reconstruimos el email/cebo que inició la cadena.",
+  "notes_en": "One of the largest data breaches in retail history: ~40 million payment cards and personal data from ~70 million customers compromised. We do not include any executable or Citadel trojan code in this room — for real malware research (banking trojans, the Zeus family) use the sibling project 'Malware Research Hub', with encrypted, cataloged samples for that purpose. Here we only reconstruct the email/bait that started the chain."
+}

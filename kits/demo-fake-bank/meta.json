@@ -1,0 +1,29 @@
+{
+  "id": "demo-fake-bank",
+  "display_name": "SecureBank Demo (kit de ejemplo, ficticio)",
+  "display_name_en": "SecureBank Demo (fictional example kit)",
+  "target_brand": "Ninguna — marca inventada para fines didácticos",
+  "target_brand_en": "None — brand invented purely for teaching purposes",
+  "year": 2026,
+  "kit_type": "credential-harvester",
+  "kit_type_en": "credential-harvester",
+  "delivery_vector": "email + enlace",
+  "delivery_vector_en": "email + link",
+  "evasion_techniques": [
+    "Detección de bots por User-Agent (bloquea crawlers de seguridad)",
+    "Ofuscación de nombres de campos del formulario",
+    "Redirección a la web real tras 'capturar' para no levantar sospechas"
+  ],
+  "evasion_techniques_en": [
+    "Bot detection via User-Agent (blocks security crawlers)",
+    "Obfuscated form field names",
+    "Redirects to the real site after 'capturing', to avoid raising suspicion"
+  ],
+  "exfiltration_method_original": "POST a un endpoint PHP del atacante (DESACTIVADO en este kit)",
+  "source": "Escrito por el proyecto como ejemplo pedagógico — no proviene de un kit capturado en el mundo real",
+  "local_port": 8010,
+  "entry_path": "index.html",
+  "status": "defanged",
+  "notes": "Este es el kit plantilla del museo: muestra el formato de sala (meta.json + annotations.md + original/) que deben seguir los kits reales que se añadan después, todos limpios de datos de víctimas y desactivados según RULES.md.",
+  "notes_en": "This is the museum's template kit: it shows the room format (meta.json + annotations.md + original/) that real kits added later should follow, always scrubbed of victim data and defanged per RULES.md."
+}

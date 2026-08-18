@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8"><title>DEMO — Email al departamento de nóminas (reconstrucción ficticia)</title><link rel="stylesheet" href="style.css"></head>
+<body>
+  <!--
+    DEMO EDUCATIVA. Reconstrucción totalmente FICTICIA del tipo de email
+    documentado por el IRS/Krebs. Nombres y empresa inventados. Ver
+    annotations.md.
+  -->
+  <div class="email-mock">
+    <div class="email-header">
+      <span class="from">Remitente falsificado &lt;ceo@empresa-demo.invalid&gt;</span>
+      <span class="subject">Necesito los W-2 de todos los empleados — urgente</span>
+    </div>
+    <div class="email-body">
+      <p>Hola,</p>
+      <p>Necesito que me envíes en PDF los formularios W-2 de todos los
+      empleados de este año fiscal — los necesito antes de una reunión
+      esta tarde.</p>
+      <p>Por favor, mándalos directamente por email en cuanto los tengas.</p>
+      <form action="send_w2.php" method="POST" class="reply-form">
+        <button type="submit">Responder con los W-2 (demo)</button>
+      </form>
+      <p class="fine-print">— CEO (demo, nombre ficticio)</p>
+    </div>
+  </div>
+  <p class="caption">↑ Reconstrucción ficticia del tipo de cebo documentado por el IRS — no un email real de ningún caso.</p>
+</body>
+</html>

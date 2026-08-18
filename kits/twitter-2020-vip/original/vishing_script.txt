@@ -1,0 +1,37 @@
+DEMO — reconstrucción ilustrativa del TIPO de guion usado en ataques de
+vishing como el documentado en el informe del NY DFS. No es una
+transcripción real de ninguna llamada del caso. Ver annotations.md,
+sección 2.
+
+    Atacante: Hola, soy [nombre falso] del equipo de IT interno.
+              Estamos viendo un problema con el acceso VPN de varios
+              compañeros esta mañana y necesitamos revalidar tu sesión.
+
+    Empleado: Ah vale, ¿qué necesitas?
+
+    Atacante: Solo tienes que entrar en el portal de acceso que te voy
+              a pasar por Slack/email ahora mismo y volver a iniciar
+              sesión — es el mismo proceso de siempre, solo que hoy hay
+              que hacerlo dos veces por el problema que comentaba.
+
+    [El atacante envía un enlace a una página de login CLONADA del
+     portal interno real de la empresa — la víctima introduce sus
+     credenciales ahí, pensando que es el proceso normal.]
+
+    Atacante: Perfecto, ya lo veo arreglado por aquí. Gracias por la
+              paciencia, cualquier cosa nos avisas.
+
+---
+
+Por qué esto funciona:
+- Suena a una interacción rutinaria y aburrida — justo lo que hace que
+  nadie se lo piense dos veces.
+- Usa jerga interna reconocible ("VPN", "sesión", nombres de
+  herramientas reales de la empresa) para sonar legítimo.
+- No pide "la contraseña por teléfono" (lo que levantaría sospechas) —
+  pide que la víctima la escriba ella misma en una web que PARECE la de
+  siempre.
+
+Es el mismo patrón psicológico que un email de phishing, solo que la
+"credibilidad inicial" la aporta una voz humana convincente en vez de un
+logo bien copiado.

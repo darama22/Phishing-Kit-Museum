@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8"><title>DEMO — Simulador de SIM swap (genérico)</title><link rel="stylesheet" href="style.css"></head>
+<body>
+  <!--
+    DEMO EDUCATIVA. Simulación GENÉRICA del tipo de llamada de ingeniería
+    social a un operador telefónico para un SIM swap — técnica probable
+    (no confirmada oficialmente) en el caso Reddit 2018. No reproduce
+    ninguna herramienta real de ningún operador. Ver annotations.md.
+  -->
+  <div class="panel">
+    <h1>📞 Simulador: petición de SIM swap al operador (demo)</h1>
+    <p class="intro">Ponte en el lugar del agente del operador telefónico que recibe la llamada, alegando pérdida del teléfono. Rellena el formulario como si le creyeras.</p>
+    <form action="swap.php" method="POST">
+      <label>Número de teléfono a transferir</label>
+      <input type="text" name="phone" placeholder="Ej. +1 555 0100 (demo)" autocomplete="off">
+      <label>Motivo indicado</label>
+      <input type="text" name="reason" placeholder="Ej. Teléfono perdido/robado" autocomplete="off">
+      <button type="submit">Procesar SIM swap (demo)</button>
+    </form>
+    <p class="fine-print">DEMO — ningún operador real, ninguna SIM real</p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+body { margin: 0; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; background: #0f172a; font-family: -apple-system, "Segoe UI", sans-serif; padding: 20px; box-sizing: border-box; }
+.cert-warning { background: #fef3c7; border: 1px solid #f59e0b; color: #92400e; font-size: 11.5px; padding: 10px 14px; border-radius: 6px; max-width: 320px; margin-bottom: 16px; line-height: 1.5; }
+.login-box { background: #fff; border-radius: 10px; padding: 34px; width: 320px; box-shadow: 0 20px 50px rgba(0,0,0,0.35); text-align: center; }
+.logo { font-size: 17px; font-weight: 700; color: #0f172a; margin-bottom: 4px; }
+.logo span { display: block; font-weight: 400; color: #999; font-size: 10.5px; margin-top: 3px; }
+.subtitle { color: #667; font-size: 13px; margin: 14px 0 18px; }
+form { display: flex; flex-direction: column; gap: 12px; }
+textarea { padding: 10px 12px; border: 1px solid #d5dae2; border-radius: 6px; font-size: 12px; font-family: monospace; resize: none; }
+button { padding: 11px; border: none; border-radius: 6px; background: #6366f1; color: #fff; font-weight: 600; cursor: pointer; }
+.fine-print { margin-top: 16px; font-size: 10px; color: #99a; }
+.result-box { font-size: 11.5px; color: #444; background: #f8f9fa; padding: 12px; border-radius: 6px; margin-top: 14px; text-align: left; }

@@ -1,0 +1,18 @@
+body { margin: 0; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; background: #ece5dd; font-family: -apple-system, "Segoe UI", sans-serif; padding: 20px; box-sizing: border-box; }
+.chat-window { background: #fff; border-radius: 10px; max-width: 360px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); padding: 16px; }
+.chat-title { font-size: 12px; font-weight: 700; color: #555; margin-bottom: 12px; }
+.bubble { max-width: 80%; padding: 8px 12px; border-radius: 12px; font-size: 13px; margin-bottom: 8px; line-height: 1.4; }
+.bubble.them { background: #fff; border: 1px solid #eee; align-self: flex-start; }
+.bubble.me { background: #dcf8c6; margin-left: auto; }
+.bubble.faded { color: #999; font-style: italic; font-size: 11.5px; background: none; border: none; text-align: center; }
+.chat-cta { display: block; text-align: center; margin-top: 14px; padding: 10px; background: #25d366; color: #fff; text-decoration: none; border-radius: 8px; font-weight: 700; font-size: 13px; }
+.caption { max-width: 360px; margin: 14px auto 0; font-size: 11px; color: #78716c; text-align: center; }
+
+.dash { background: #0f172a; border-radius: 12px; padding: 24px; width: 360px; max-width: 100%; box-shadow: 0 20px 50px rgba(0,0,0,0.4); color: #e2e8f0; }
+.dash-title { font-size: 13px; font-weight: 700; margin-bottom: 4px; }
+.dash-sub { font-size: 10.5px; color: #64748b; margin-bottom: 18px; }
+.balance { font-size: 30px; font-weight: 800; color: #4ade80; font-family: monospace; }
+.balance-label { font-size: 10.5px; color: #94a3b8; margin-bottom: 18px; }
+.chart-fake { height: 60px; background: linear-gradient(180deg, transparent, rgba(74,222,128,0.15)); border-bottom: 2px solid #4ade80; margin-bottom: 18px; position: relative; overflow: hidden; }
+.chart-fake::after { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(100deg, transparent 0 20px, rgba(74,222,128,0.3) 20px 22px); }
+.withdraw-btn { width: 100%; padding: 12px; border: none; border-radius: 8px; background: #4ade80; color: #052e16; font-weight: 800; cursor: pointer; font-size: 13px; }

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>16Shop — panel (explicación, no un clon)</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!--
+    DEMO EDUCATIVA. 16Shop no era una única página falsa, sino un PANEL
+    que generaba el paquete de phishing según la marca elegida (ver
+    panel_config.php y verify.ini). Por eso aquí mostramos el concepto del
+    panel en vez de clonar una marca concreta. Ver annotations.md.
+  -->
+  <div class="panel">
+    <div class="badge">🛒 Phishing-as-a-Service</div>
+    <h1>El comprador no programaba nada — elegía de un catálogo</h1>
+    <div class="catalog">
+      <div class="item"><span>🍎 Apple ID</span><span class="price">$50</span></div>
+      <div class="item"><span>📦 Amazon</span><span class="price">$40</span></div>
+      <div class="item"><span>💳 PayPal</span><span class="price">$60</span></div>
+      <div class="item"><span>🚚 DHL</span><span class="price">$35</span></div>
+      <div class="item highlight"><span>💎 American Express</span><span class="price">$90</span></div>
+    </div>
+    <p class="fine-print">Precios ilustrativos — American Express era la opción más cara según la investigación de Trend Micro. Ver <code>panel_config.php</code> y <code>verify.ini</code>.</p>
+  </div>
+</body>
+</html>

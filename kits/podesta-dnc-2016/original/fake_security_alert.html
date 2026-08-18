@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>DEMO — Cómo se veía el email (reconstrucción genérica)</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!--
+    DEMO EDUCATIVA. Reconstrucción GENÉRICA e ilustrativa del tipo de
+    email documentado en la investigación (una falsa alerta de seguridad
+    de un proveedor de webmail). No reproduce el email real, ni ningún
+    logo/identidad visual real de ningún proveedor concreto. Ver
+    annotations.md.
+  -->
+  <div class="email-mock">
+    <div class="email-header">
+      <span class="from">Equipo de Seguridad &lt;alertas@mail-security-demo.invalid&gt;</span>
+      <span class="subject">Alguien tiene tu contraseña</span>
+    </div>
+    <div class="email-body">
+      <p>Hola,</p>
+      <p>Alguien acaba de usar tu contraseña para intentar acceder a tu
+      cuenta desde <strong>Ucrania</strong>. Hemos bloqueado este intento
+      por tu seguridad.</p>
+      <p>Deberías cambiar tu contraseña inmediatamente.</p>
+      <a class="cta" href="#" onclick="alert('DEMO: en un ataque real esto llevaría a una página de login falsa. Ningún enlace real en esta demo.'); return false;">CAMBIAR CONTRASEÑA</a>
+      <p class="fine-print">El equipo de Seguridad</p>
+    </div>
+  </div>
+  <p class="caption">↑ Reconstrucción genérica del tipo de cebo documentado — no el email original. En el caso real, el enlace de "cambiar contraseña" era un enlace acortado (Bitly) personalizado por víctima.</p>
+</body>
+</html>

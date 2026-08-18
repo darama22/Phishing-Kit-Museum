@@ -1,0 +1,29 @@
+{
+  "id": "phish-phry-2009",
+  "display_name": "Operation Phish Phry — la mayor causa de cibercrimen de la historia (100 acusados)",
+  "display_name_en": "Operation Phish Phry — the largest cybercrime case in history (100 defendants)",
+  "target_brand": "Clientes de bancos estadounidenses (páginas de banca online falsificadas)",
+  "target_brand_en": "US bank customers (fake online-banking pages)",
+  "year": 2009,
+  "kit_type": "credential-harvester + red de blanqueo de capitales (mulas de dinero)",
+  "kit_type_en": "credential-harvester + money-laundering network (money mules)",
+  "delivery_vector": "email masivo (spam) con enlaces a páginas bancarias falsas",
+  "delivery_vector_en": "mass email (spam) with links to fake banking pages",
+  "evasion_techniques": [
+    "Operación transnacional dividida en dos roles: hackers en Egipto capturaban las credenciales, cómplices en EE.UU. gestionaban el dinero — así ninguno de los dos grupos veía la operación completa",
+    "Reclutamiento de 'runners' (mulas de dinero) que abrían cuentas bancarias reales a su nombre para recibir las transferencias, dificultando el rastreo directo hasta los hackers",
+    "El dinero robado se fragmentaba y se enviaba de vuelta a Egipto por servicios de transferencia internacional, en tramos que evitaban activar alertas de grandes movimientos"
+  ],
+  "evasion_techniques_en": [
+    "Transnational operation split into two roles: hackers in Egypt captured credentials, accomplices in the US handled the money — so neither group saw the whole operation",
+    "Recruitment of 'runners' (money mules) who opened real bank accounts in their own name to receive transfers, making it harder to trace money directly back to the hackers",
+    "Stolen money was split up and sent back to Egypt via international transfer services, in amounts designed to avoid triggering large-transaction alerts"
+  ],
+  "exfiltration_method_original": "Credenciales bancarias introducidas en la web falsa, usadas directamente para iniciar transferencias fraudulentas",
+  "source": "FBI, comunicado oficial de la Operation 'Phish Phry' (2009) — https://www.fbi.gov/news/stories/2009/october/phishphry_100709 · Departamento de Justicia de EE.UU.",
+  "local_port": 8019,
+  "entry_path": "index.html",
+  "status": "defanged",
+  "notes": "En su momento, la mayor causa de cibercrimen jamás presentada: 53 acusados en EE.UU. y 47 en Egipto, en una investigación conjunta del FBI y las autoridades egipcias. Pérdidas estimadas superiores a 1,5 millones de dólares; decenas de condenas, con penas de hasta 13 años de prisión para los cabecillas. Reconstrucción educativa del mecanismo, sin datos de víctimas ni cuentas reales.",
+  "notes_en": "At the time, the largest cybercrime case ever brought: 53 defendants in the US and 47 in Egypt, in a joint FBI and Egyptian-authorities investigation. Estimated losses over $1.5 million; dozens of convictions, with sentences up to 13 years in prison for ringleaders. Educational reconstruction of the mechanism, with no victim data or real accounts."
+}

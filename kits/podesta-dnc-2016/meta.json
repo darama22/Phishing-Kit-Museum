@@ -1,0 +1,31 @@
+{
+  "id": "podesta-dnc-2016",
+  "display_name": "El email que llegó a influir en una elección presidencial",
+  "display_name_en": "The email that ended up shaping a presidential election",
+  "target_brand": "Cuenta de Gmail de John Podesta, presidente de campaña de Hillary Clinton (2016)",
+  "target_brand_en": "The Gmail account of John Podesta, Hillary Clinton's 2016 campaign chairman",
+  "year": 2016,
+  "kit_type": "spear-phishing (ataque dirigido a una persona concreta)",
+  "kit_type_en": "spear-phishing (attack targeted at one specific person)",
+  "delivery_vector": "email, con enlaces acortados vía Bitly",
+  "delivery_vector_en": "email, with shortened links via Bitly",
+  "evasion_techniques": [
+    "Falsa alerta de seguridad de Google ('alguien ha usado tu contraseña') — genera pánico y urgencia real, no codicia",
+    "Dominio de remitente parecido pero no idéntico al legítimo",
+    "Miles de enlaces Bitly generados en masa contra ~4.000 objetivos distintos, cada uno personalizado con el nombre/email de la víctima concreta",
+    "El propio equipo de TI de la campaña, al reenviar la alerta, escribió 'this is a legitimate email' por error (querían decir 'illegitimate') — el típico fallo humano que decide todo"
+  ],
+  "evasion_techniques_en": [
+    "Fake Google security alert ('someone has your password') — triggers real panic and urgency, not greed",
+    "Sender domain that looks similar but isn't identical to the legitimate one",
+    "Thousands of Bitly links generated in bulk against ~4,000 different targets, each personalized with that specific victim's name/email",
+    "The campaign's own IT staff, forwarding the alert, typed 'this is a legitimate email' by mistake (they meant 'illegitimate') — the classic human slip that decided everything"
+  ],
+  "exfiltration_method_original": "Página de login de Google clonada tras el enlace acortado; contraseña capturada al escribirla ahí (DESACTIVADO en este kit)",
+  "source": "Atribución técnica de SecureWorks a 'Fancy Bear' (GRU, inteligencia militar rusa); cobertura de CNN, Sophos y Motherboard sobre el caso Podesta — https://www.cnn.com/2016/10/28/politics/phishing-email-hack-john-podesta-hillary-clinton-wikileaks · https://news.sophos.com/en-us/2016/12/16/dnc-chief-podesta-led-to-phishing-link-thanks-to-a-typo/",
+  "local_port": 8016,
+  "entry_path": "index.html",
+  "status": "defanged",
+  "notes": "Entre marzo de 2015 y mayo de 2016, el mismo grupo generó cerca de 9.000 enlaces Bitly dirigidos a unos 4.000 objetivos. El correo de Podesta fue uno de ellos: los emails robados acabaron publicados por WikiLeaks semanas antes de las elecciones de EE.UU. de 2016. Reconstrucción educativa del mecanismo, con dominios y textos ficticios — no se reproduce el email original.",
+  "notes_en": "Between March 2015 and May 2016, the same group generated close to 9,000 Bitly links aimed at roughly 4,000 targets. Podesta's email was one of them: the stolen emails ended up published by WikiLeaks weeks before the 2016 US election. Educational reconstruction of the mechanism, with fictional domains and text — the original email is not reproduced."
+}

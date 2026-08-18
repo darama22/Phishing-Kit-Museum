@@ -1,0 +1,29 @@
+{
+  "id": "ronin-axie-2022",
+  "display_name": "La oferta de trabajo falsa que costó 625 millones de dólares",
+  "display_name_en": "The fake job offer that cost $625 million",
+  "target_brand": "Ingenieros senior de Sky Mavis (empresa creadora de Axie Infinity / red Ronin)",
+  "target_brand_en": "Senior engineers at Sky Mavis (the company behind Axie Infinity / the Ronin network)",
+  "year": 2022,
+  "kit_type": "spear-phishing de reclutamiento con documento malicioso adjunto (ataque a infraestructura cripto)",
+  "kit_type_en": "recruitment spear-phishing with a malicious document attachment (attack on crypto infrastructure)",
+  "delivery_vector": "contacto vía LinkedIn con una oferta de empleo, seguido de varias rondas de entrevista falsas y un PDF malicioso",
+  "delivery_vector_en": "LinkedIn outreach with a job offer, followed by several fake interview rounds and a malicious PDF",
+  "evasion_techniques": [
+    "El proceso de reclutamiento falso incluía VARIAS rondas de entrevistas realistas antes de enviar el archivo malicioso — generando confianza acumulada, no un solo mensaje sospechoso",
+    "El documento final se presentaba como una 'oferta de contrato' extremadamente creíble tras semanas de proceso — el momento de menos alerta de la víctima",
+    "El objetivo no era una wallet cualquiera, sino ingenieros con acceso a los nodos validadores de la red — un objetivo elegido con precisión quirúrgica"
+  ],
+  "evasion_techniques_en": [
+    "The fake recruitment process included SEVERAL realistic interview rounds before sending the malicious file — building accumulated trust, not a single suspicious message",
+    "The final document was presented as an extremely credible 'contract offer' after weeks of process — the victim's lowest point of alertness",
+    "The target wasn't just any wallet, but engineers with access to the network's validator nodes — a surgically precise target choice"
+  ],
+  "exfiltration_method_original": "Malware instalado desde el PDF malicioso, usado como punto de entrada para moverse por la red interna y comprometer nodos validadores",
+  "source": "Atribución oficial del FBI y el Departamento del Tesoro de EE.UU. a Lazarus Group; cobertura técnica de Chainalysis, Halborn y The Block — https://www.chainalysis.com/blog/axie-infinity-ronin-bridge-dprk-hack-seizure/ · https://www.halborn.com/blog/post/explained-the-ronin-hack-march-2022",
+  "status": "defanged",
+  "notes": "El mayor robo de criptomonedas de la historia hasta la fecha: 173.600 ETH + 25,5 millones de USDC, valorados en unos 625 millones de dólares en el momento del ataque. La red Ronin requería 5 de 9 firmas de validadores para autorizar una retirada; los atacantes comprometieron 4 nodos directamente y un quinto a través de un nodo RPC mal configurado que Sky Mavis usaba para reducir comisiones a sus usuarios. Atribuido por EE.UU. al grupo norcoreano Lazarus. Reconstrucción educativa del mensaje de LinkedIn y el PDF — sin ningún malware real (ver aviso en la sala).",
+  "notes_en": "The largest cryptocurrency theft in history to date: 173,600 ETH + 25.5 million USDC, worth about $625 million at the time of the attack. The Ronin network required 5 of 9 validator signatures to authorize a withdrawal; attackers compromised 4 nodes directly and a fifth through a misconfigured RPC node Sky Mavis used to reduce fees for its users. Attributed by the US to the North Korean Lazarus group. Educational reconstruction of the LinkedIn message and PDF — no real malware (see the room's notice).",
+  "local_port": 8028,
+  "entry_path": "index.html"
+}

@@ -1,0 +1,10 @@
+body { margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center; background: #1c1c1e; font-family: -apple-system, "Segoe UI", sans-serif; }
+.login-box { background: #fff; border-radius: 12px; padding: 40px 36px; width: 320px; box-shadow: 0 20px 50px rgba(0,0,0,0.35); text-align: center; }
+.logo { font-size: 18px; font-weight: 700; color: #1c1c1e; margin-bottom: 4px; }
+.logo span { display: block; font-weight: 400; color: #999; font-size: 10.5px; margin-top: 3px; }
+.subtitle { color: #667; font-size: 13px; margin: 14px 0 22px; }
+form { display: flex; flex-direction: column; gap: 12px; }
+input { padding: 12px; border: 1px solid #d5dae2; border-radius: 8px; font-size: 14px; }
+button { margin-top: 6px; padding: 12px; border: none; border-radius: 8px; background: #0071e3; color: #fff; font-weight: 600; cursor: pointer; }
+.fine-print { margin-top: 18px; font-size: 10px; color: #99a; }
+.error-box { background: #fef2f2; border: 1px solid #fecaca; color: #b91c1c; font-size: 12.5px; padding: 10px 12px; border-radius: 8px; margin-bottom: 14px; text-align: left; }

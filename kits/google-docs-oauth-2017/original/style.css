@@ -1,0 +1,13 @@
+body { margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center; background: #f1f3f4; font-family: -apple-system, "Segoe UI", sans-serif; }
+.consent-box { background: #fff; border-radius: 10px; padding: 32px; width: 360px; box-shadow: 0 4px 24px rgba(0,0,0,0.15); }
+.app-row { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+.app-icon { font-size: 30px; }
+.app-name { font-weight: 600; font-size: 15px; color: #222; }
+.fake-tag { display: block; font-size: 10px; font-weight: 400; color: #b45309; background: #fef3c7; padding: 1px 6px; border-radius: 3px; margin-top: 3px; width: fit-content; }
+.app-sub { font-size: 12.5px; color: #667; margin-top: 2px; }
+.perms { background: #f8f9fa; border-radius: 8px; padding: 12px 14px; margin-bottom: 16px; }
+.perm-item { font-size: 12.5px; color: #333; padding: 5px 0; }
+.warn-note { font-size: 11px; color: #b45309; background: #fffbeb; border: 1px solid #fde68a; padding: 8px 10px; border-radius: 6px; margin-bottom: 18px; }
+form { display: flex; align-items: center; justify-content: flex-end; gap: 16px; }
+.allow-btn { padding: 9px 22px; border: none; border-radius: 5px; background: #1a73e8; color: #fff; font-weight: 600; font-size: 13px; cursor: pointer; }
+.deny-link { font-size: 13px; color: #667; text-decoration: none; }

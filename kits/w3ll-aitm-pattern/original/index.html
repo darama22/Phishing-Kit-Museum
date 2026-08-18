@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>W3LL / OV6 — cómo se ve (explicación, no un clon)</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!--
+    DEMO EDUCATIVA. A diferencia de las otras salas, este kit NO clona una
+    web con HTML estático propio: reenvía en vivo la web REAL de Microsoft
+    a través de su proxy, así que la víctima ve la interfaz auténtica de
+    Microsoft. Por eso aquí no reconstruimos un login falso (sería, en la
+    práctica, un clon de Microsoft) — en su lugar, este panel EXPLICA el
+    mecanismo. Ver annotations.md.
+  -->
+  <div class="explainer">
+    <div class="badge">🔀 Adversary-in-the-Middle</div>
+    <h1>Este kit no clona nada — retransmite lo real</h1>
+    <p>La víctima ve la web auténtica de Microsoft en todo momento, porque
+    literalmente es Microsoft respondiendo — solo que de camino pasa por el
+    servidor del atacante, que copia la cookie de sesión al final.</p>
+    <div class="diagram">
+      <div class="node">Víctima</div>
+      <div class="arrow">→</div>
+      <div class="node attacker">Proxy del atacante</div>
+      <div class="arrow">→</div>
+      <div class="node">Microsoft (real)</div>
+    </div>
+    <p class="fine-print">Ver <code>original/proxy_relay.php</code> para el mecanismo, y annotations.md para la explicación completa.</p>
+
+    <form action="proxy_relay.php" method="POST" class="demo-form">
+      <p class="try-it">👇 Pruébalo de verdad (con datos inventados) — verás cómo el proxy reenvía tu petición a nuestro "Microsoft" local de mentira y captura la sesión resultante:</p>
+      <input type="text" name="username" placeholder="Usuario (inventado)" autocomplete="off">
+      <input type="password" name="password" placeholder="Contraseña (inventada)" autocomplete="off">
+      <button type="submit">Simular login a través del proxy</button>
+    </form>
+  </div>
+</body>
+</html>

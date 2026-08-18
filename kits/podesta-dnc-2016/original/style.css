@@ -1,0 +1,17 @@
+body { margin: 0; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; background: #f1f3f5; font-family: -apple-system, "Segoe UI", sans-serif; padding: 20px; box-sizing: border-box; }
+.login-box { background: #fff; border-radius: 8px; padding: 40px 36px; width: 320px; box-shadow: 0 10px 40px rgba(0,0,0,0.12); text-align: center; }
+.logo { font-size: 19px; font-weight: 700; color: #1a3d6d; margin-bottom: 4px; }
+.logo span { display: block; font-weight: 400; color: #999; font-size: 11px; margin-top: 3px; }
+.subtitle { color: #667; font-size: 13px; margin: 14px 0 22px; }
+form { display: flex; flex-direction: column; gap: 12px; }
+input { padding: 11px 12px; border: 1px solid #d5dae2; border-radius: 5px; font-size: 14px; }
+button { margin-top: 6px; padding: 11px; border: none; border-radius: 5px; background: #1a3d6d; color: #fff; font-weight: 600; cursor: pointer; }
+.fine-print { margin-top: 18px; font-size: 10px; color: #99a; }
+
+.email-mock { background: #fff; border: 1px solid #ddd; border-radius: 6px; max-width: 480px; margin: 0 auto; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+.email-header { border-bottom: 1px solid #eee; padding: 14px 20px; display: flex; flex-direction: column; gap: 4px; }
+.from { font-size: 12px; color: #667; }
+.subject { font-size: 15px; font-weight: 700; color: #222; }
+.email-body { padding: 20px; color: #333; font-size: 14px; line-height: 1.6; }
+.cta { display: inline-block; margin: 10px 0; padding: 10px 20px; background: #d93025; color: #fff; text-decoration: none; border-radius: 4px; font-weight: 600; font-size: 13px; }
+.caption { max-width: 480px; margin: 14px auto 0; font-size: 11px; color: #78716c; text-align: center; }

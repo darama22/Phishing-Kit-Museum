@@ -1,0 +1,29 @@
+{
+  "id": "16shop-pattern",
+  "display_name": "16Shop — phishing-as-a-service (caso real, con detenciones)",
+  "display_name_en": "16Shop — phishing-as-a-service (real case, with arrests)",
+  "target_brand": "Multimarca por panel: el comprador elegía entre Apple, Amazon, PayPal, DHL, American Express... cada una con un precio distinto",
+  "target_brand_en": "Multi-brand via panel: the buyer chose between Apple, Amazon, PayPal, DHL, American Express... each at a different price",
+  "year": 2018,
+  "kit_type": "phishing-as-a-service",
+  "kit_type_en": "phishing-as-a-service",
+  "delivery_vector": "email",
+  "delivery_vector_en": "email",
+  "evasion_techniques": [
+    "Multi-idioma: plantillas de mensajes preconfiguradas (verify.ini) según el país objetivo",
+    "Licencia atada a la máquina del comprador — dificulta la piratería del propio kit entre criminales",
+    "Panel de control propio: el comprador elige marca, idioma y recibe el paquete listo para desplegar, sin programar nada"
+  ],
+  "evasion_techniques_en": [
+    "Multi-language: preconfigured message templates (verify.ini) based on the target country",
+    "License tied to the buyer's machine — makes it harder for other criminals to pirate the kit itself",
+    "Its own control panel: the buyer picks brand and language and gets a ready-to-deploy package, no coding required"
+  ],
+  "exfiltration_method_original": "Panel privado del operador (no documentado públicamente en detalle el transporte exacto de credenciales)",
+  "source": "Trend Micro, 'Revisiting 16shop Phishing Kit, Trend-Interpol Partnership' (2023) — https://www.trendmicro.com/en_us/research/23/i/revisiting-16shop-phishing-kit-trend-interpol-partnership.html",
+  "local_port": 8014,
+  "entry_path": "panel.php",
+  "status": "defanged",
+  "notes": "Activo desde 2018 hasta que uno de sus administradores principales fue detenido en 2021 (operación conjunta de policía de Indonesia, Japón e Interpol, con el apoyo de Trend Micro). Reconstrucción educativa del panel documentado en la fuente, no el kit original.",
+  "notes_en": "Active from 2018 until one of its main administrators was arrested in 2021 (a joint operation by Indonesian and Japanese police and Interpol, supported by Trend Micro). Educational reconstruction of the panel documented in the source, not the original kit."
+}

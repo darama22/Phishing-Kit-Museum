@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8"><title>DEMO — Login Okta (genérico)</title><link rel="stylesheet" href="style.css"></head>
+<body>
+  <!--
+    DEMO EDUCATIVA. Página GENÉRICA inspirada en el patrón de login de
+    Okta personalizado por empresa, documentado por Group-IB — no
+    reproduce el diseño real de Okta. Ver annotations.md.
+  -->
+  <div class="login-box">
+    <div class="logo">🔐 Empresa Demo S.A. <span>vía Okta (demo genérico)</span></div>
+    <p class="subtitle">Tu sesión ha caducado — verifica tu acceso</p>
+    <form action="step1.php" method="POST">
+      <input type="text" name="username" placeholder="Usuario corporativo" autocomplete="off">
+      <input type="password" name="password" placeholder="Contraseña" autocomplete="off">
+      <button type="submit">Continuar</button>
+    </form>
+    <p class="fine-print">DEMO — no es Okta ni ninguna empresa real</p>
+  </div>
+</body>
+</html>

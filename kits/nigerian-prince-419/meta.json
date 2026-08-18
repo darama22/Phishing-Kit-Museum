@@ -1,0 +1,29 @@
+{
+  "id": "nigerian-prince-419",
+  "display_name": "El fraude más viejo y más rentable de la historia — 3.400 millones de emails al día",
+  "display_name_en": "The oldest, most profitable fraud in history — 3.4 billion emails a day",
+  "target_brand": "Cualquier destinatario de email, contactado como si fuera elegido al azar",
+  "target_brand_en": "Any email recipient, contacted as if randomly chosen",
+  "year": 1989,
+  "kit_type": "fraude de anticipo (advance-fee fraud) — sin robo de credenciales, pago directo escalonado",
+  "kit_type_en": "advance-fee fraud — no credential theft, direct escalating payments",
+  "delivery_vector": "email masivo suplantando a un príncipe, funcionario o viuda con una fortuna bloqueada",
+  "delivery_vector_en": "mass email impersonating a prince, official, or widow with a blocked fortune",
+  "evasion_techniques": [
+    "No pide una contraseña ni datos bancarios de golpe — pide pequeños pagos 'de gestión' que se van escalando, cada uno desbloqueando el siguiente obstáculo hacia la fortuna prometida",
+    "Explota la codicia y la compasión a partes iguales — variantes van desde la fortuna heredada hasta la viuda enferma o el soldado con un tesoro oculto",
+    "Se reinventa constantemente según la actualidad: conflictos armados, desastres naturales, pandemias — cualquier titular sirve de excusa narrativa nueva"
+  ],
+  "evasion_techniques_en": [
+    "It doesn't ask for a password or banking details all at once — it asks for small 'processing' payments that escalate, each unlocking the next obstacle to the promised fortune",
+    "Exploits greed and compassion in equal measure — variants range from an inherited fortune to a sick widow or a soldier with hidden treasure",
+    "Constantly reinvents itself around current events: armed conflicts, natural disasters, pandemics — any headline provides new narrative material"
+  ],
+  "exfiltration_method_original": "Pagos directos y crecientes de la víctima, vía transferencia bancaria o giro internacional, sin que exista ninguna fortuna real al otro lado",
+  "source": "Historia documentada por ExpressVPN, NordVPN y Avast; estadísticas de pérdidas en 2024 y operación policial de Lagos — origen del fraude vinculado al 'timo del prisionero español' del siglo XIX",
+  "status": "defanged",
+  "notes": "El nombre '419' viene del artículo del código penal nigeriano que tipifica este fraude, adoptado en 1995 ante su magnitud. Solo en 2024, este fraude extrajo más de 100 millones de dólares de víctimas estadounidenses; se estiman 3.400 millones de emails de este tipo enviados al día en todo el mundo. En 2024, una redada policial en Lagos detuvo a 792 sospechosos en una sola operación, revelando redes organizadas con oficinas y programas de formación. Reconstrucción educativa del email — con nombres y cifras ficticias.",
+  "notes_en": "The name '419' comes from the section of the Nigerian criminal code that criminalizes this fraud, adopted in 1995 given its scale. In 2024 alone, this fraud extracted over $100 million from American victims; an estimated 3.4 billion such emails are sent daily worldwide. In 2024, a police raid in Lagos arrested 792 suspects in a single operation, revealing organized networks with offices and training programs. Educational reconstruction of the email — with fictional names and figures.",
+  "local_port": 8039,
+  "entry_path": "index.html"
+}

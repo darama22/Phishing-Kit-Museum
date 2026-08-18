@@ -1,0 +1,31 @@
+{
+  "id": "w3ll-aitm-pattern",
+  "display_name": "W3LL / OV6 — bypass de MFA con proxy (caso real, con desmantelamiento del FBI)",
+  "display_name_en": "W3LL / OV6 — MFA bypass via proxy (real case, FBI takedown)",
+  "target_brand": "Microsoft 365 (cuentas corporativas, ataques BEC)",
+  "target_brand_en": "Microsoft 365 (corporate accounts, BEC attacks)",
+  "year": 2023,
+  "kit_type": "adversary-in-the-middle (AiTM) / bypass de 2FA",
+  "kit_type_en": "adversary-in-the-middle (AiTM) / 2FA bypass",
+  "delivery_vector": "email (Business Email Compromise)",
+  "delivery_vector_en": "email (Business Email Compromise)",
+  "evasion_techniques": [
+    "Actúa como proxy inverso: la víctima interactúa con el Microsoft real de verdad, el atacante solo está 'en medio' escuchando",
+    "No roba la contraseña suelta — roba la COOKIE DE SESIÓN ya autenticada tras pasar el 2FA, así el segundo factor deja de proteger nada",
+    "Ecosistema de 16 herramientas complementarias vendidas junto al panel (envío SMTP, escáner de vulnerabilidades, redirecciones, reconocimiento de objetivos)"
+  ],
+  "evasion_techniques_en": [
+    "Acts as a reverse proxy: the victim interacts with the real Microsoft, the attacker is just 'in the middle' listening",
+    "Doesn't steal the password alone — it steals the SESSION COOKIE already authenticated past 2FA, so the second factor stops protecting anything",
+    "An ecosystem of 16 companion tools sold alongside the panel (SMTP senders, a vulnerability scanner, link redirectors, target reconnaissance)"
+  ],
+  "exfiltration_method_original": "Cookie de sesión capturada en tiempo real por el proxy AiTM (DESACTIVADO en este kit)",
+  "source": "Group-IB, 'W3LL Done: Uncovering Phishing Ecosystem Behind BEC Attacks' (2023) — https://www.group-ib.com/resources/research-hub/w3ll-phishing/ · desmantelamiento posterior por el FBI y policía de Indonesia",
+  "local_port": 8013,
+  "entry_path": "index.html",
+  "upstream_port": 8099,
+  "upstream_entry": "fake_upstream.php",
+  "status": "defanged",
+  "notes": "Caso real de gran escala: ~56.000 cuentas de Microsoft 365 atacadas, ~8.000 comprometidas, fraude estimado en 20 millones de dólares antes del desmantelamiento. Reconstrucción educativa del mecanismo AiTM documentado, no el kit original.",
+  "notes_en": "Large-scale real case: ~56,000 Microsoft 365 accounts targeted, ~8,000 compromised, fraud estimated at $20 million before the takedown. Educational reconstruction of the documented AiTM mechanism, not the original kit."
+}

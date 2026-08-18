@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8"><title>DEMO — Pantalla de consentimiento OAuth (genérica)</title><link rel="stylesheet" href="style.css"></head>
+<body>
+  <!--
+    DEMO EDUCATIVA. Reconstrucción GENÉRICA del tipo de pantalla de
+    consentimiento OAuth documentada (no clona el diseño real de Google).
+    Aquí NO hay ningún campo de contraseña — ese es justo el punto: el
+    ataque real no lo necesitaba. Ver annotations.md.
+  -->
+  <div class="consent-box">
+    <div class="app-row">
+      <span class="app-icon">📄</span>
+      <div>
+        <div class="app-name">"Google Docs" <span class="fake-tag">app de terceros — DEMO</span></div>
+        <div class="app-sub">quiere acceder a tu cuenta</div>
+      </div>
+    </div>
+    <div class="perms">
+      <div class="perm-item">✔️ Leer, enviar, borrar y gestionar tu correo</div>
+      <div class="perm-item">✔️ Ver tu lista de contactos</div>
+      <div class="perm-item">✔️ Gestionar tus documentos</div>
+    </div>
+    <p class="warn-note">DEMO: fíjate en que esta pantalla NO pide ninguna contraseña — solo pide "Permitir". Ese es exactamente el mecanismo real.</p>
+    <form action="grant.php" method="POST">
+      <button type="submit" class="allow-btn">Permitir</button>
+      <a href="#" class="deny-link" onclick="alert('DEMO: en la vida real, denegar aquí detiene el ataque por completo.'); return false;">Cancelar</a>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+body { margin: 0; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; background: #422006; font-family: -apple-system, "Segoe UI", sans-serif; padding: 20px; box-sizing: border-box; }
+.email-mock { background: #fff; border: 1px solid #ddd; border-radius: 6px; max-width: 480px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); }
+.email-header { border-bottom: 1px solid #eee; padding: 14px 20px; display: flex; flex-direction: column; gap: 4px; }
+.from { font-size: 12px; color: #667; }
+.subject { font-size: 14px; font-weight: 700; color: #b91c1c; }
+.email-body { padding: 20px; color: #333; font-size: 14px; line-height: 1.6; }
+.reply-btn { display: inline-block; margin: 10px 0; padding: 10px 20px; background: #ca8a04; color: #fff; text-decoration: none; border-radius: 4px; font-weight: 600; font-size: 13px; }
+.fine-print { font-size: 12px; color: #888; margin-top: 12px; }
+.caption { max-width: 480px; margin: 14px auto 0; font-size: 11px; color: #fbbf24; text-align: center; }
+.step-box { background: #fff; border-radius: 8px; padding: 26px; width: 340px; max-width: 100%; box-shadow: 0 20px 50px rgba(0,0,0,0.3); }
+.step-box h2 { font-size: 14px; margin: 0 0 10px; color: #422006; }
+.step-box p { font-size: 12.5px; color: #444; line-height: 1.6; }
+.fee-tag { background: #fef3c7; border: 1px solid #f59e0b; color: #92400e; font-size: 13px; font-weight: 700; padding: 8px 12px; border-radius: 6px; margin: 12px 0; text-align: center; }
+.step-box button { width: 100%; padding: 11px; border: none; border-radius: 6px; background: #ca8a04; color: #fff; font-weight: 700; cursor: pointer; margin-top: 10px; }

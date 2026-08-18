@@ -1,0 +1,25 @@
+DEMO — este archivo es texto inerte, no es malware ni ejecuta nada.
+Ver annotations.md, secciones 1-3 y el aviso final.
+
+En el ataque real documentado en los cargos del Departamento de Justicia
+de EE.UU., el enlace del email de phishing dirigido instalaba
+silenciosamente una puerta trasera en el equipo de la víctima. A partir
+de ahí, los atacantes:
+
+  1. Pasaron MESES haciendo reconocimiento silencioso de la red interna
+     de Anthem, sin tocar nada sensible todavía.
+  2. Localizaron el "enterprise data warehouse" (almacén de datos
+     corporativo), donde se concentraba la información de decenas de
+     millones de asegurados.
+  3. Recopilaron esos datos con herramientas propias, los comprimieron
+     y CIFRARON ELLOS MISMOS antes de sacarlos de la red.
+  4. Borraron los archivos cifrados del sistema tras la exfiltración,
+     para reducir el rastro de evidencia.
+
+Este museo trata sobre kits de PHISHING WEB, no sobre malware ejecutable.
+Por eso este archivo no reproduce ningún comportamiento real — solo
+documenta, en texto, qué habría hecho.
+
+Si quieres estudiar malware real (siempre cifrado y con fines de
+investigación), ese es el ámbito del proyecto hermano
+"Malware Research Hub".

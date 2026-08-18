@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>LogoKit — plantilla genérica</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!--
+    DEMO EDUCATIVA. Este HTML es intencionadamente GENÉRICO — esa es la
+    idea de LogoKit: la misma plantilla sirve para cualquier marca, porque
+    el logo y el email se rellenan en tiempo real con dynamic.js (ver
+    annotations.md). Aquí se muestra con datos de ejemplo ilustrativos.
+  -->
+  <div class="login-box">
+    <img id="company-logo" class="logo-img" src="" alt="logo" width="48" height="48">
+    <p class="subtitle" id="company-name">Cargando…</p>
+    <form id="login-form">
+      <input type="email" id="email-field" placeholder="Email" autocomplete="off">
+      <input type="password" id="pass-field" placeholder="Contraseña" autocomplete="off">
+      <button type="submit">Iniciar sesión</button>
+    </form>
+    <p class="fine-print">DEMO — plantilla genérica de LogoKit (ver dynamic.js)</p>
+    <div id="result-box" style="display:none; margin-top:14px; font-size:11px; color:#2563eb;"></div>
+  </div>
+  <script src="dynamic.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+{
+  "id": "uber-mfa-fatigue-2022",
+  "display_name": "Uber 2022 — cómo agotar a alguien a notificaciones hasta que pulse \"Sí\"",
+  "display_name_en": "Uber 2022 — exhausting someone with notifications until they hit \"Yes\"",
+  "target_brand": "Un contratista externo de Uber con acceso a la red interna",
+  "target_brand_en": "An external Uber contractor with internal network access",
+  "year": 2022,
+  "kit_type": "fatiga de MFA / \"push bombing\" + ingeniería social multicanal",
+  "kit_type_en": "MFA fatigue / \"push bombing\" + multi-channel social engineering",
+  "delivery_vector": "inicios de sesión repetidos generando una tormenta de notificaciones push, combinados con un mensaje de WhatsApp",
+  "delivery_vector_en": "repeated login attempts generating a storm of push notifications, combined with a WhatsApp message",
+  "evasion_techniques": [
+    "La contraseña no se robó por phishing directo — se compró en un mercado de la dark web, tras haber sido capturada antes por un infostealer en el equipo del contratista",
+    "En vez de un solo intento sospechoso, el atacante inició sesión repetidamente durante aproximadamente una hora, generando una notificación push tras otra hasta agotar la paciencia de la víctima",
+    "Cuando la avalancha de notificaciones no bastó, el atacante contactó directamente por WhatsApp haciéndose pasar por soporte de IT de Uber, pidiendo que aprobara la notificación para 'resolver el problema'"
+  ],
+  "evasion_techniques_en": [
+    "The password wasn't stolen via direct phishing — it was purchased on a dark web marketplace, after being captured earlier by an infostealer on the contractor's machine",
+    "Instead of one suspicious attempt, the attacker logged in repeatedly for about an hour, generating one push notification after another until the victim's patience ran out",
+    "When the notification storm alone wasn't enough, the attacker reached out directly via WhatsApp posing as Uber IT support, asking them to approve the notification to 'fix the issue'"
+  ],
+  "exfiltration_method_original": "Aprobación de MFA concedida por la víctima tras el desgaste psicológico, dando acceso directo a la red interna de Uber",
+  "source": "Cobertura técnica de Dark Reading, Group-IB (patrón multicanal) y análisis de OnlineHashCrack sobre el caso Uber/Lapsus$ — https://www.darkreading.com/cyberattacks-data-breaches/uber-breach-external-contractor-mfa-bombing-attack",
+  "status": "defanged",
+  "notes": "En pocos minutos tras conseguir la aprobación, el atacante accedió a los canales de Slack internos, la VPN y los repositorios de código fuente de Uber. Uber se enteró de la brecha cuando el atacante publicó un mensaje en el canal general de Slack de toda la empresa. Este caso conecta con tu Malware Research Hub: el infostealer que capturó la contraseña original es exactamente el tipo de malware catalogado allí. Reconstrucción educativa — sin ningún bombardeo de notificaciones real.",
+  "notes_en": "Within minutes of getting approval, the attacker accessed Uber's internal Slack channels, VPN, and source-code repositories. Uber found out about the breach when the attacker posted a message on the company-wide Slack channel. This case connects to your Malware Research Hub: the infostealer that captured the original password is exactly the kind of malware cataloged there. Educational reconstruction — no real notification bombing.",
+  "local_port": 8032,
+  "entry_path": "index.html"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "ubiquiti-bec-2015",
+  "display_name": "14 transferencias, 46,7 millones de dólares — sin hackear nada",
+  "display_name_en": "14 wire transfers, $46.7 million — without hacking anything",
+  "target_brand": "Departamento financiero de Ubiquiti Networks (oficina de Hong Kong)",
+  "target_brand_en": "Ubiquiti Networks' finance department (Hong Kong office)",
+  "year": 2015,
+  "kit_type": "estafa BEC (Business Email Compromise) — suplantación directa de directivos y de un bufete de abogados",
+  "kit_type_en": "BEC scam (Business Email Compromise) — direct impersonation of executives and a law firm",
+  "delivery_vector": "emails suplantando al CEO de la empresa y a un socio de un bufete de abogados externo real",
+  "delivery_vector_en": "emails impersonating the company's CEO and a partner at a real external law firm",
+  "evasion_techniques": [
+    "No suplantaron una empresa inventada — usaron el nombre de un bufete de abogados REAL y reconocible (Latham & Watkins) para dar peso legal a la instrucción",
+    "Repartieron el fraude en 14 transferencias distintas a lo largo del tiempo, en vez de una sola operación sospechosamente grande",
+    "Enviaron el dinero a cuentas en múltiples países (Rusia, Hong Kong, China, Hungría, Polonia) para dificultar el rastreo y la recuperación legal"
+  ],
+  "evasion_techniques_en": [
+    "They didn't impersonate a made-up company — they used the name of a REAL, recognizable law firm (Latham & Watkins) to lend legal weight to the instruction",
+    "They spread the fraud across 14 separate transfers over time, instead of one suspiciously large operation",
+    "They sent the money to accounts in multiple countries (Russia, Hong Kong, China, Hungary, Poland) to make tracing and legal recovery harder"
+  ],
+  "exfiltration_method_original": "Transferencias bancarias internacionales autorizadas directamente por el propio responsable financiero de la empresa, creyendo seguir instrucciones legítimas",
+  "source": "Investigación de Brian Krebs (KrebsOnSecurity) y documentación pública en el 8-K presentado ante la SEC — https://krebsonsecurity.com/2015/08/tech-firm-ubiquiti-suffers-46m-cyberheist/",
+  "status": "defanged",
+  "notes": "El entonces director financiero de Ubiquiti autorizó 14 transferencias desde la cuenta de Ubiquiti Hong Kong en HSBC, por un total de 46.703.232 dólares, siguiendo instrucciones de estafadores que se hacían pasar por el CEO real (Robert Pera) y un socio real de Latham & Watkins. Solo se recuperaron unos 8,1 millones de dólares. Reconstrucción educativa de los emails — con nombres y empresas ficticios.",
+  "notes_en": "Ubiquiti's then-CFO authorized 14 transfers from Ubiquiti Hong Kong's account at HSBC, totaling $46,703,232, following instructions from scammers posing as the real CEO (Robert Pera) and a real Latham & Watkins partner. Only about $8.1 million was recovered. Educational reconstruction of the emails — with fictional names and companies.",
+  "local_port": 8029,
+  "entry_path": "index.html"
+}

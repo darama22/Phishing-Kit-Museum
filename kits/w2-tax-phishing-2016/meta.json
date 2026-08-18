@@ -1,0 +1,29 @@
+{
+  "id": "w2-tax-phishing-2016",
+  "display_name": "La epidemia de phishing que atacó a RRHH en vez de a Finanzas",
+  "display_name_en": "The phishing epidemic that targeted HR instead of Finance",
+  "target_brand": "Empleados de nóminas / recursos humanos, suplantando al CEO/CFO real de la empresa",
+  "target_brand_en": "Payroll/HR employees, impersonating the company's real CEO/CFO",
+  "year": 2016,
+  "kit_type": "estafa BEC especializada — no pide dinero, pide datos fiscales masivos de empleados",
+  "kit_type_en": "specialized BEC scam — doesn't ask for money, asks for mass employee tax data",
+  "delivery_vector": "email suplantando al CEO/CFO, dirigido específicamente al departamento de nóminas en plena temporada de impuestos",
+  "delivery_vector_en": "email impersonating the CEO/CFO, specifically targeted at the payroll department during tax season",
+  "evasion_techniques": [
+    "Ataca un departamento distinto al de las estafas BEC clásicas — RRHH/nóminas, no Finanzas — un objetivo menos entrenado contra este tipo de fraude en 2016",
+    "Cronometrado exactamente para la temporada de declaración de impuestos, cuando pedir formularios W-2 no levanta ninguna sospecha por sí solo",
+    "El botín no es dinero directamente, sino datos que permiten cometer fraude fiscal y robo de identidad a gran escala contra CADA empleado de la empresa a la vez"
+  ],
+  "evasion_techniques_en": [
+    "Targets a different department than classic BEC scams — HR/payroll, not Finance — a target less trained against this kind of fraud in 2016",
+    "Timed exactly for tax filing season, when requesting W-2 forms doesn't raise suspicion on its own",
+    "The loot isn't money directly, but data enabling large-scale tax fraud and identity theft against EVERY employee at the company at once"
+  ],
+  "exfiltration_method_original": "Archivos W-2 completos de todos los empleados enviados directamente por email como respuesta a la petición falsa del 'CEO'",
+  "source": "Alerta oficial del IRS (Security Summit) e investigación de Brian Krebs, 'IRS Scam Blends CEO Fraud, W-2 Phishing' — https://krebsonsecurity.com/2017/02/irs-scam-blends-ceo-fraud-w-2-phishing/",
+  "status": "defanged",
+  "notes": "El IRS recibió más de 1.000 reportes de este tipo de phishing solo en enero de 2016, con un aumento del 400% interanual en la primera mitad de esa temporada fiscal. Empresas afectadas conocidas incluyen Seagate Technology, Moneytree y Sprouts Farmers Market. El fraude se extendió después a distritos escolares, casinos tribales y cadenas de restaurantes. Algunos casos incluían una segunda petición de transferencia bancaria tras obtener los W-2. Reconstrucción educativa del email — con nombres y empresa ficticios.",
+  "notes_en": "The IRS received over 1,000 reports of this type of phishing in January 2016 alone, with a 400% year-over-year increase in the first half of that tax season. Known affected companies include Seagate Technology, Moneytree, and Sprouts Farmers Market. The fraud later spread to school districts, tribal casinos, and restaurant chains. Some cases included a follow-up wire-transfer request after obtaining the W-2s. Educational reconstruction of the email — with fictional names and company.",
+  "local_port": 8037,
+  "entry_path": "index.html"
+}

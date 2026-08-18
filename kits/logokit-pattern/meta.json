@@ -1,0 +1,29 @@
+{
+  "id": "logokit-pattern",
+  "display_name": "LogoKit — el kit universal (una plantilla, miles de marcas)",
+  "display_name_en": "LogoKit — the universal kit (one template, thousands of brands)",
+  "target_brand": "Cualquiera — esa es la novedad: SharePoint, Adobe Document Cloud, OneDrive, Office 365 y en teoría cualquier empresa con logo público",
+  "target_brand_en": "Any brand — that's the twist: SharePoint, Adobe Document Cloud, OneDrive, Office 365, and in theory any company with a public logo",
+  "year": 2021,
+  "kit_type": "phishing dinámico (JavaScript en tiempo real)",
+  "kit_type_en": "dynamic phishing (real-time JavaScript)",
+  "delivery_vector": "email, con la dirección de la víctima incluida en la propia URL",
+  "delivery_vector_en": "email, with the victim's address embedded in the URL itself",
+  "evasion_techniques": [
+    "No aloja ningún logo propio: los pide EN VIVO a APIs públicas legítimas (Clearbit, Google Favicon, Microlink) — imposible de detectar por 'imágenes conocidas de phishing'",
+    "Autocompleta el email de la víctima leyendo un parámetro de la URL, reforzando la sensación de 'esta web ya me conoce'",
+    "Variantes posteriores generan capturas de pantalla reales del sitio de fondo vía un servicio externo (Thum.io), para verse aún más auténtico"
+  ],
+  "evasion_techniques_en": [
+    "Hosts no logo of its own: fetches it LIVE from legitimate public APIs (Clearbit, Google Favicon, Microlink) — impossible to flag via 'known phishing images'",
+    "Autofills the victim's email by reading a URL parameter, reinforcing the feeling that 'this page already knows me'",
+    "Later variants generate real screenshots of the background site via an external service (Thum.io), to look even more authentic"
+  ],
+  "exfiltration_method_original": "Petición AJAX en segundo plano al servidor del atacante en cuanto se envía la contraseña, luego redirección a la web corporativa real",
+  "source": "RiskIQ / Microsoft (2021), vía Threatpost y SecurityAffairs; actualización posterior documentada por Resecurity — https://threatpost.com/logokit-simplifies-office-365-sharepoint-login-phishing-pages/163430/",
+  "local_port": 8015,
+  "entry_path": "index.html?e=demo@empresa-ejemplo-demo.com",
+  "status": "defanged",
+  "notes": "Reconstrucción educativa del mecanismo documentado. La clave de este kit no es el HTML (mínimo, genérico) sino el JavaScript que lo personaliza en tiempo real — por eso el 'kit' es prácticamente el mismo para todas las víctimas, sea cual sea la marca que ven.",
+  "notes_en": "Educational reconstruction of the documented mechanism. The key to this kit isn't the HTML (minimal, generic) but the JavaScript that personalizes it in real time — which is why the 'kit' is practically the same for every victim, whatever brand they see."
+}

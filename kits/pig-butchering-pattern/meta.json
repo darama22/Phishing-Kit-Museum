@@ -1,0 +1,29 @@
+{
+  "id": "pig-butchering-pattern",
+  "display_name": "\"Pig Butchering\" — la estafa de miles de millones que dura meses, no minutos",
+  "display_name_en": "\"Pig Butchering\" — the multi-billion-dollar scam that lasts months, not minutes",
+  "target_brand": "Cualquier persona contactada por 'error' vía SMS, redes sociales o apps de citas",
+  "target_brand_en": "Anyone contacted 'by mistake' via SMS, social media, or dating apps",
+  "year": 2023,
+  "kit_type": "estafa de inversión romántica a largo plazo, con panel de trading falso",
+  "kit_type_en": "long-con romance investment scam, with a fake trading dashboard",
+  "delivery_vector": "mensaje de \"número equivocado\" por SMS, redes sociales o apps de citas, seguido de meses de relación cultivada",
+  "delivery_vector_en": "a \"wrong number\" text message via SMS, social media, or dating apps, followed by months of cultivated relationship",
+  "evasion_techniques": [
+    "No hay urgencia en ningún momento — al contrario que casi todas las demás salas, aquí la paciencia de MESES es la propia arma del ataque",
+    "El panel de inversión muestra ganancias falsas reales y permite retirar pequeñas cantidades al principio, generando confianza genuina antes del gran engaño",
+    "Los operadores suelen estar en centros de estafa organizados en el sudeste asiático — a menudo, ellos mismos son víctimas de trata de personas, forzados a operar la estafa"
+  ],
+  "evasion_techniques_en": [
+    "There's no urgency at any point — unlike almost every other room, MONTHS of patience is itself the weapon here",
+    "The investment dashboard shows real-looking fake profits and allows small early withdrawals, building genuine trust before the big con",
+    "Operators are often based in organized scam centers in Southeast Asia — frequently, they are themselves trafficking victims, forced to run the scam"
+  ],
+  "exfiltration_method_original": "Depósitos voluntarios y crecientes de la víctima en una plataforma de trading falsa, hasta que se bloquean todas las retiradas",
+  "source": "Servicio Secreto de EE.UU. (unidad de fraude de inversión) y Departamento de Justicia de EE.UU. (acciones de decomiso de criptomonedas) — https://www.secretservice.gov/investigations/investmentfraud-pigbutchering",
+  "status": "defanged",
+  "notes": "Se estima que este fraude ha costado miles de millones de dólares a nivel mundial, con millones de víctimas. El nombre viene del mandarín 'Shā Zhū Pán' ('engordar al cerdo antes de matarlo') — la víctima se 'engorda' con confianza y atención antes del golpe final. Reconstrucción educativa del panel de trading falso — sin ninguna plataforma ni criptomoneda real.",
+  "notes_en": "This fraud is estimated to have cost billions of dollars worldwide, with millions of victims. The name comes from the Mandarin 'Shā Zhū Pán' ('fatten the pig before slaughter') — the victim is 'fattened' with trust and attention before the final blow. Educational reconstruction of the fake trading dashboard — no real platform or cryptocurrency involved.",
+  "local_port": 8038,
+  "entry_path": "index.html"
+}

@@ -1,0 +1,23 @@
+DEMO — este archivo es texto inerte, no es malware ni ejecuta nada.
+Ver annotations.md, secciones 2-4 y el aviso final.
+
+En el ataque real, un documento similar instalaba malware que incluía un
+registrador de pulsaciones de teclado. Con eso, los atacantes:
+
+  1. Capturaron las credenciales reales de un operador de SWIFT del banco.
+  2. Hicieron varias "pruebas" de acceso entre el 24 de enero y el 2 de
+     febrero de 2016, sin lanzar transferencias todavía.
+  3. Autorizaron 35 transferencias fraudulentas usando esas credenciales.
+  4. Solo 5 se completaron — el resto se bloquearon por un nombre de
+     beneficiario mal escrito ("Shalika Fandation") que activó una
+     alerta de cumplimiento en un banco intermediario.
+  5. Los 81 millones de dólares robados se blanquearon después a través
+     de casinos en Macao.
+
+Este museo trata sobre kits de PHISHING WEB, no sobre malware ejecutable.
+Por eso este archivo no reproduce ningún comportamiento real — solo
+documenta, en texto, qué habría hecho.
+
+Si quieres estudiar malware real (siempre cifrado y con fines de
+investigación), ese es el ámbito del proyecto hermano
+"Malware Research Hub".

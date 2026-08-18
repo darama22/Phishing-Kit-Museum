@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8"><title>DEMO — Alerta de seguridad falsa (genérica)</title><link rel="stylesheet" href="style.css"></head>
+<body>
+  <!--
+    DEMO EDUCATIVA. Reconstrucción GENÉRICA de una ventana de scareware,
+    sin el logo real de Windows/Microsoft ni ningún sonido real. Ver
+    annotations.md.
+  -->
+  <div class="lock-screen">
+    <div class="alert-icon">⚠️</div>
+    <h1>ALERTA DE SEGURIDAD (DEMO)</h1>
+    <p>Su equipo podría estar infectado. Se ha detectado actividad
+    sospechosa. NO cierre esta ventana ni reinicie su equipo.</p>
+    <div class="phone-number">📞 Llame ahora: 1-800-DEMO-000</div>
+    <button id="close-btn" onclick="tryClose()">Cerrar (DEMO)</button>
+    <p id="close-msg" class="close-msg hidden">DEMO: en el ataque real, este botón "falla" repetidamente para generar pánico. Aquí, en cambio, te lo explicamos:</p>
+    <a href="call.php" class="call-link">👉 Simular la llamada (demo, para ver qué pasaría)</a>
+  </div>
+  <script>
+    let attempts = 0;
+    function tryClose(){
+      attempts++;
+      const msg = document.getElementById('close-msg');
+      msg.classList.remove('hidden');
+      if (attempts < 3) {
+        msg.textContent = `DEMO: intento ${attempts} de "cerrar" — en el ataque real, la ventana se resistiría a cerrarse justo así, generando pánico.`;
+      } else {
+        msg.textContent = 'DEMO: en la vida real, la solución simple es cerrar TODO el navegador (o el proceso), nunca llamar al número.';
+      }
+    }
+  </script>
+</body>
+</html>

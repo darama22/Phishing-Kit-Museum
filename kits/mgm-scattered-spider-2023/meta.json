@@ -1,0 +1,29 @@
+{
+  "id": "mgm-scattered-spider-2023",
+  "display_name": "Cómo una llamada de 10 minutos al soporte técnico tumbó los casinos de MGM",
+  "display_name_en": "How a 10-minute call to IT support brought down MGM's casinos",
+  "target_brand": "El Helpdesk / mesa de ayuda de IT de MGM Resorts (no un empleado concreto)",
+  "target_brand_en": "MGM Resorts' IT Helpdesk (not a specific employee)",
+  "year": 2023,
+  "kit_type": "vishing dirigido a soporte técnico (suplantación de identidad de un empleado real ante el propio helpdesk)",
+  "kit_type_en": "helpdesk-targeted vishing (impersonating a real employee to the helpdesk itself)",
+  "delivery_vector": "llamada telefónica al servicio de soporte técnico interno, tras investigación previa en LinkedIn",
+  "delivery_vector_en": "phone call to the internal IT help desk, after prior LinkedIn reconnaissance",
+  "evasion_techniques": [
+    "No se llamó a la víctima — se llamó al HELPDESK, haciéndose pasar por un empleado real de alto perfil investigado previamente en LinkedIn",
+    "Los atacantes hablaban inglés con fluidez nativa, lo que reforzaba la credibilidad de la suplantación ante el personal de soporte",
+    "Al obtener el restablecimiento, crearon una segunda aplicación de identidad (IDP) bajo su control, para no depender de mantener el acceso original si los detectaban"
+  ],
+  "evasion_techniques_en": [
+    "They didn't call the victim — they called the HELPDESK, posing as a real high-profile employee researched beforehand on LinkedIn",
+    "Attackers spoke fluent native English, reinforcing the credibility of the impersonation to support staff",
+    "Once they got the reset, they created a second identity-provider (IDP) app under their control, so they wouldn't depend on keeping the original access if detected"
+  ],
+  "exfiltration_method_original": "Restablecimiento de contraseña/MFA de una cuenta con privilegios elevados, concedido verbalmente por el helpdesk tras la suplantación",
+  "source": "Análisis técnico de Netwrix, Specops y Virsec sobre el incidente; declaraciones públicas de MGM Resorts y cobertura de The Register sobre Scattered Spider — https://specopssoft.com/blog/mgm-resorts-service-desk-hack/",
+  "status": "defanged",
+  "notes": "El grupo 'Scattered Spider' obtuvo privilegios de super-administrador en el entorno Okta de MGM, permitiendo inicio de sesión único no autorizado hacia Microsoft Azure y más de 100 hipervisores ESXi. El ataque paralizó máquinas tragaperras, llaves digitales de habitaciones y sistemas de reservas durante días; el grupo de ransomware ALPHV/BlackCat cifró sistemas después. Reconstrucción educativa del guion de la llamada — sin ninguna herramienta real de restablecimiento.",
+  "notes_en": "The 'Scattered Spider' group gained super-admin privileges in MGM's Okta environment, enabling unauthorized single sign-on into Microsoft Azure and 100+ ESXi hypervisors. The attack paralyzed slot machines, digital room keys, and reservation systems for days; the ALPHV/BlackCat ransomware group encrypted systems afterward. Educational reconstruction of the call script — no real reset tooling involved.",
+  "local_port": 8027,
+  "entry_path": "index.html"
+}

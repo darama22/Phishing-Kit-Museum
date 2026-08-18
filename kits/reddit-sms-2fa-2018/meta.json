@@ -1,0 +1,29 @@
+{
+  "id": "reddit-sms-2fa-2018",
+  "display_name": "Reddit tenía 2FA activado — y aun así les hackearon",
+  "display_name_en": "Reddit had 2FA enabled — and got hacked anyway",
+  "target_brand": "Empleados de Reddit con cuentas en proveedores de hosting de código y nube",
+  "target_brand_en": "Reddit employees with accounts at code-hosting and cloud providers",
+  "year": 2018,
+  "kit_type": "interceptación de SMS (probable SIM swap) para eludir 2FA basado en SMS",
+  "kit_type_en": "SMS interception (likely SIM swap) to bypass SMS-based 2FA",
+  "delivery_vector": "manipulación del operador móvil de la víctima para desviar sus SMS (no un email ni una web falsa)",
+  "delivery_vector_en": "manipulation of the victim's mobile carrier to redirect their SMS (not an email or fake website)",
+  "evasion_techniques": [
+    "El propio Reddit admitió no saber (o no querer revelar) exactamente cómo se interceptaron los SMS — lo que demuestra lo difícil que es detectar este vector",
+    "No se hackeó el teléfono de la víctima directamente — la manipulación ocurrió del lado del operador de telefonía, fuera del control de la propia víctima",
+    "El 2FA por SMS, pensado como una capa extra de seguridad, resultó ser precisamente el eslabón que falló, mientras las contraseñas seguían protegidas"
+  ],
+  "evasion_techniques_en": [
+    "Reddit itself admitted not knowing (or not wanting to reveal) exactly how the SMS messages were intercepted — showing how hard this vector is to detect",
+    "The victim's phone wasn't hacked directly — the manipulation happened on the carrier's side, outside the victim's own control",
+    "SMS-based 2FA, meant as an extra security layer, turned out to be exactly the link that failed, even as passwords stayed protected"
+  ],
+  "exfiltration_method_original": "Código de verificación SMS interceptado y usado junto a la contraseña ya comprometida para acceder a cuentas de empleados",
+  "source": "Comunicado oficial de Reddit; análisis de Krebs on Security, 'Reddit Breach Highlights Limits of SMS-Based Authentication' — https://krebsonsecurity.com/2018/08/reddit-breach-highlights-limits-of-sms-based-authentication/",
+  "status": "defanged",
+  "notes": "El acceso no autorizado ocurrió entre el 14 y el 18 de junio de 2018. Los atacantes accedieron a código fuente, logs internos, archivos de configuración y una copia de seguridad antigua (2005-2007) con nombres de usuario, contraseñas cifradas, emails y mensajes. Reddit respondió exigiendo 2FA basado en tokens (no SMS) para todos los empleados. Reconstrucción educativa del concepto de interceptación — sin ninguna manipulación real de operadores telefónicos.",
+  "notes_en": "Unauthorized access happened between June 14-18, 2018. Attackers accessed source code, internal logs, config files, and an old 2005-2007 backup with usernames, hashed passwords, emails, and messages. Reddit responded by requiring token-based (not SMS) 2FA for all employees. Educational reconstruction of the interception concept — no real carrier manipulation involved.",
+  "local_port": 8034,
+  "entry_path": "index.html"
+}

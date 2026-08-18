@@ -1,0 +1,29 @@
+{
+  "id": "quishing-qr-pattern",
+  "display_name": "Quishing — el phishing que sale del ordenador y se pega a un parquímetro",
+  "display_name_en": "Quishing — the phishing that leaves your computer and sticks onto a parking meter",
+  "target_brand": "Conductores que escanean códigos QR de parquímetros/EV chargers públicos",
+  "target_brand_en": "Drivers scanning QR codes on public parking meters/EV chargers",
+  "year": 2023,
+  "kit_type": "quishing (phishing por código QR) en el mundo físico",
+  "kit_type_en": "quishing (QR-code phishing) in the physical world",
+  "delivery_vector": "una simple pegatina con un código QR falso, pegada encima del código QR legítimo de un parquímetro o cargador eléctrico",
+  "delivery_vector_en": "a simple sticker with a fake QR code, placed over the legitimate QR code on a parking meter or EV charger",
+  "evasion_techniques": [
+    "No hace falta hackear nada — solo imprimir una pegatina y pegarla encima del código legítimo, en el mundo físico, no digital",
+    "El código QR esconde la URL real del ojo humano: nadie 'lee' un QR antes de escanearlo, así que no hay ninguna oportunidad de detectar un dominio sospechoso antes de llegar a la web falsa",
+    "Como el enlace va dentro de una IMAGEN, esquiva los escáneres de seguridad de correo/mensajería que solo analizan URLs en texto plano"
+  ],
+  "evasion_techniques_en": [
+    "No hacking required — just print a sticker and place it over the legitimate code, in the physical world, not digital",
+    "The QR code hides the real URL from the human eye: nobody 'reads' a QR code before scanning it, so there's no chance to spot a suspicious domain before landing on the fake site",
+    "Since the link is embedded inside an IMAGE, it dodges email/messaging security scanners that only analyze plain-text URLs"
+  ],
+  "exfiltration_method_original": "Datos de tarjeta de pago introducidos en una web falsa de pago de aparcamiento, capturados directamente",
+  "source": "Alertas públicas del FBI (IC3) sobre quishing en parquímetros y cargadores eléctricos; cobertura de Synovus y DeepStrike sobre el crecimiento del vector — un aumento del 587% entre 2023 y 2024 según varios proveedores de seguridad",
+  "status": "defanged",
+  "notes": "El quishing pasó de representar el 0,8% de los ataques de phishing en 2021 al 12,4% en 2023, con un crecimiento reportado del 587% entre 2023 y 2024. Policías de varias ciudades de EE.UU. y Reino Unido han retirado pegatinas fraudulentas de parquímetros reales. Reconstrucción educativa — sin ningún código QR que apunte a un sitio externo real.",
+  "notes_en": "Quishing went from 0.8% of phishing attacks in 2021 to 12.4% in 2023, with a reported 587% growth between 2023 and 2024. Police in several US and UK cities have removed fraudulent stickers from real parking meters. Educational reconstruction — no QR code pointing to a real external site.",
+  "local_port": 8036,
+  "entry_path": "index.html"
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8"><title>DEMO — Wallet genérica</title><link rel="stylesheet" href="style.css"></head>
+<body>
+  <!--
+    DEMO EDUCATIVA. Reconstrucción GENÉRICA de una wallet de
+    criptomonedas — no reproduce el diseño real de MyEtherWallet. Ver
+    annotations.md.
+  -->
+  <div class="cert-warning">
+    ⚠️ DEMO: en el ataque real, el ÚNICO indicio visible era una advertencia de certificado TLS como esta — fácil de ignorar sin saber qué significa.
+  </div>
+  <div class="login-box">
+    <div class="logo">💠 CryptoWallet Demo <span>(genérico, no es MEW)</span></div>
+    <p class="subtitle">Accede a tu monedero</p>
+    <form action="capture.php" method="POST">
+      <textarea name="private_key" placeholder="Clave privada / frase semilla (demo — NUNCA escribas una real aquí ni en ningún sitio)" rows="3"></textarea>
+      <button type="submit">Acceder</button>
+    </form>
+    <p class="fine-print">DEMO — no es MyEtherWallet ni ningún servicio real</p>
+  </div>
+</body>
+</html>

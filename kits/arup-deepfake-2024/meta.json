@@ -1,0 +1,29 @@
+{
+  "id": "arup-deepfake-2024",
+  "display_name": "La videollamada donde TODOS los demás eran una IA — 25 millones robados",
+  "display_name_en": "The video call where everyone else was AI — $25 million stolen",
+  "target_brand": "Empleado del departamento financiero de Arup (oficina de Hong Kong)",
+  "target_brand_en": "A finance employee at Arup (Hong Kong office)",
+  "year": 2024,
+  "kit_type": "deepfake de vídeo y voz en tiempo real (evolución del BEC clásico)",
+  "kit_type_en": "real-time video and voice deepfake (an evolution of classic BEC)",
+  "delivery_vector": "email de phishing inicial + videollamada con múltiples participantes generados por IA",
+  "delivery_vector_en": "initial phishing email + video call with multiple AI-generated participants",
+  "evasion_techniques": [
+    "El empleado inicialmente sospechó del email — pero la videollamada posterior, con caras y voces reconocibles de varios compañeros, disolvió esa duda",
+    "Los deepfakes se construyeron con vídeo y audio PÚBLICO de videoconferencias y reuniones corporativas previas de los ejecutivos reales",
+    "No era una sola persona falsificada, sino VARIOS participantes deepfake a la vez en la misma llamada — reforzándose entre sí la credibilidad mutuamente"
+  ],
+  "evasion_techniques_en": [
+    "The employee initially suspected the email — but the follow-up video call, with recognizable faces and voices of several colleagues, dissolved that doubt",
+    "The deepfakes were built from PUBLIC video and audio of the real executives' previous videoconferences and corporate meetings",
+    "It wasn't one faked person, but SEVERAL deepfake participants at once on the same call — reinforcing each other's credibility"
+  ],
+  "exfiltration_method_original": "14 transferencias bancarias distintas autorizadas verbalmente durante/tras la videollamada, hacia 5 cuentas bancarias en Hong Kong",
+  "source": "Policía de Hong Kong (declaraciones oficiales); cobertura de CNN y Gulf News — https://www.cnn.com/2024/02/04/asia/deepfake-cfo-scam-hong-kong-intl-hnk",
+  "status": "defanged",
+  "notes": "El propio CIO de Arup confirmó que ningún sistema de la empresa fue comprometido — fue ingeniería social potenciada por IA, no un ciberataque tradicional. Reconstrucción educativa del concepto (panel de 'videollamada' con avatares etiquetados como IA) — sin ningún deepfake real generado ni voz/imagen de nadie.",
+  "notes_en": "Arup's own CIO confirmed no company systems were compromised — this was AI-enhanced social engineering, not a traditional cyberattack. Educational reconstruction of the concept (a 'video call' panel with avatars labeled as AI) — no real deepfake generated and no one's actual voice/image used.",
+  "local_port": 8031,
+  "entry_path": "index.html"
+}

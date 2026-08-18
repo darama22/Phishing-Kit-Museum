@@ -1,0 +1,16 @@
+body { margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center; background: #15202b; font-family: -apple-system, "Segoe UI", sans-serif; }
+.login-box { background: #fff; border-radius: 8px; padding: 40px 36px; width: 320px; box-shadow: 0 20px 50px rgba(0,0,0,0.35); text-align: center; }
+.logo { font-size: 18px; font-weight: 700; color: #15202b; margin-bottom: 4px; }
+.logo span { display: block; font-weight: 400; color: #999; font-size: 11px; margin-top: 3px; }
+.subtitle { color: #667; font-size: 13px; margin: 14px 0 22px; }
+form { display: flex; flex-direction: column; gap: 12px; }
+input { padding: 11px 12px; border: 1px solid #d5dae2; border-radius: 5px; font-size: 14px; }
+button { margin-top: 6px; padding: 11px; border: none; border-radius: 5px; background: #1d9bf0; color: #fff; font-weight: 600; cursor: pointer; }
+.fine-print { margin-top: 18px; font-size: 10px; color: #99a; }
+
+.panel { max-width: 480px; margin: 40px auto; background: #fff; border-radius: 8px; padding: 30px; box-shadow: 0 20px 50px rgba(0,0,0,0.2); }
+.panel h1 { font-size: 17px; margin: 0 0 6px; }
+.panel .warn { font-size: 12px; color: #b91c1c; background: #fef2f2; border: 1px solid #fecaca; padding: 8px 12px; border-radius: 6px; margin-bottom: 16px; }
+.acct-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #eee; font-size: 13px; }
+.acct-row button { padding: 6px 12px; border: none; border-radius: 5px; background: #1d9bf0; color: #fff; font-size: 11px; cursor: pointer; }
+.fine-print2 { font-size: 11px; color: #888; margin-top: 16px; }

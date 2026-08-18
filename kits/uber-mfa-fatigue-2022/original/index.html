@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8"><title>DEMO — Bombardeo de notificaciones MFA</title><link rel="stylesheet" href="style.css"></head>
+<body>
+  <!--
+    DEMO EDUCATIVA. Simulación INTERACTIVA del patrón de fatiga de MFA
+    documentado en el caso Uber/Lapsus$. No envía ninguna notificación
+    push real a ningún dispositivo. Ver annotations.md.
+  -->
+  <div class="phone">
+    <div class="phone-header">📱 Tu teléfono (demo)</div>
+    <div id="notif-list" class="notif-list"></div>
+    <button id="spam-btn" onclick="spamNotifications()">▶ Simular bombardeo (demo)</button>
+    <div id="whatsapp-msg" class="whatsapp-msg hidden">
+      💬 <strong>"IT Support" (WhatsApp, demo)</strong>: perdona el spam de notificaciones, solo aprueba una para que podamos arreglarlo 🙏
+    </div>
+    <form id="approve-form" action="approve.php" method="POST" class="hidden">
+      <button type="submit" class="approve-btn">✅ Aprobar (demo)</button>
+      <button type="button" class="deny-btn" onclick="alert('DEMO: denegar aquí detiene el ataque por completo — es la respuesta correcta.')">❌ Denegar</button>
+    </form>
+  </div>
+  <script>
+    let count = 0;
+    function spamNotifications(){
+      document.getElementById('spam-btn').disabled = true;
+      const list = document.getElementById('notif-list');
+      const interval = setInterval(() => {
+        count++;
+        const n = document.createElement('div');
+        n.className = 'notif';
+        n.textContent = `🔔 ¿Eres tú intentando iniciar sesión? (intento #${count})`;
+        list.prepend(n);
+        if (count >= 8) {
+          clearInterval(interval);
+          document.getElementById('whatsapp-msg').classList.remove('hidden');
+          document.getElementById('approve-form').classList.remove('hidden');
+        }
+      }, 250);
+    }
+  </script>
+</body>
+</html>

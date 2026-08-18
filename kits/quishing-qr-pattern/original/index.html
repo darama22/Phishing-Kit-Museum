@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8"><title>DEMO — Portal de pago de aparcamiento (genérico)</title><link rel="stylesheet" href="style.css"></head>
+<body>
+  <!--
+    DEMO EDUCATIVA. Simulación del recorrido: pegatina QR falsa sobre un
+    parquímetro → web de pago falsa. El "QR" de abajo es solo una
+    ilustración (patrón genérico), no un código QR funcional real. Ver
+    annotations.md.
+  -->
+  <div class="scene">
+    <div class="meter-mock">
+      <div class="meter-label">🅿️ Parquímetro (demo)</div>
+      <div class="qr-sticker">
+        <svg viewBox="0 0 100 100" width="90" height="90">
+          <rect width="100" height="100" fill="#fff"/>
+          <g fill="#000">
+            <rect x="5" y="5" width="25" height="25"/><rect x="10" y="10" width="15" height="15" fill="#fff"/><rect x="15" y="15" width="5" height="5"/>
+            <rect x="70" y="5" width="25" height="25"/><rect x="75" y="10" width="15" height="15" fill="#fff"/><rect x="80" y="15" width="5" height="5"/>
+            <rect x="5" y="70" width="25" height="25"/><rect x="10" y="75" width="15" height="15" fill="#fff"/><rect x="15" y="80" width="5" height="5"/>
+            <rect x="40" y="40" width="8" height="8"/><rect x="55" y="40" width="8" height="8"/><rect x="40" y="55" width="8" height="8"/><rect x="60" y="60" width="10" height="10"/><rect x="40" y="70" width="6" height="6"/><rect x="75" y="45" width="6" height="6"/>
+          </g>
+        </svg>
+        <div class="sticker-note">⚠️ pegatina falsa (demo), pegada sobre el código real</div>
+      </div>
+      <a href="pay.html" class="scan-btn">📷 "Escanear" el código (demo)</a>
+    </div>
+  </div>
+  <p class="caption">↑ Ilustración del patrón documentado por el FBI — el gráfico QR de arriba es decorativo, no funcional.</p>
+</body>
+</html>

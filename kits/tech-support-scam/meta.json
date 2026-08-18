@@ -1,0 +1,29 @@
+{
+  "id": "tech-support-scam",
+  "display_name": "El falso \"tu ordenador tiene un virus\" — 924 millones de dólares en un año",
+  "display_name_en": "The fake \"your computer has a virus\" — $924 million in one year",
+  "target_brand": "Cualquier usuario navegando por internet — desproporcionadamente, personas mayores",
+  "target_brand_en": "Any internet user — disproportionately, elderly people",
+  "year": 2023,
+  "kit_type": "scareware (pantalla de bloqueo falsa) + vishing inverso + abuso de software de acceso remoto",
+  "kit_type_en": "scareware (fake lock screen) + reverse vishing + remote-access software abuse",
+  "delivery_vector": "ventana emergente de navegador que bloquea la pantalla, simulando una alerta de seguridad de Windows/Microsoft",
+  "delivery_vector_en": "a browser pop-up that locks the screen, mimicking a Windows/Microsoft security alert",
+  "evasion_techniques": [
+    "Invierte el sentido habitual del ataque: en vez de que el atacante llame o escriba a la víctima, es la propia víctima quien llama al número que aparece en la falsa alerta",
+    "La ventana emergente está diseñada para ser difícil de cerrar (a menudo con sonidos de alarma y un bucle de diálogos), generando pánico real antes de que la víctima piense con calma",
+    "Una vez al teléfono, el 'técnico' pide instalar software de acceso remoto legítimo (herramientas reales, no malware) para 'diagnosticar' el problema — y desde ahí opera directamente sobre el equipo de la víctima"
+  ],
+  "evasion_techniques_en": [
+    "Reverses the usual attack direction: instead of the attacker calling or messaging the victim, the victim themselves calls the number shown in the fake alert",
+    "The pop-up is designed to be hard to close (often with alarm sounds and a dialog loop), generating real panic before the victim can think calmly",
+    "Once on the phone, the 'technician' asks the victim to install legitimate remote-access software (real tools, not malware) to 'diagnose' the problem — then operates directly on the victim's machine from there"
+  ],
+  "exfiltration_method_original": "Pago directo por un 'servicio de limpieza' falso, o robo de credenciales bancarias/instalación de malware real durante la sesión de acceso remoto",
+  "source": "FBI (alertas del IC3) y FTC (Consumer Advice) — https://www.fbi.gov/how-we-can-help-you/scams-and-safety/common-frauds-and-scams/tech-support-scams · https://consumer.ftc.gov/articles/how-spot-avoid-and-report-tech-support-scams",
+  "status": "defanged",
+  "notes": "La FTC estimó pérdidas de 924 millones de dólares en 2023 solo en EE.UU.; el FBI recibió 19.000 denuncias entre enero y junio de ese mismo año, con pérdidas estimadas de más de 542 millones. Casi el 50% de las víctimas reportadas al FBI tenían más de 60 años, representando el 66% de las pérdidas totales. Ni Microsoft ni Apple muestran nunca un número de teléfono en sus alertas reales. Reconstrucción educativa de la pantalla de bloqueo — sin ningún software de acceso remoto real instalado.",
+  "notes_en": "The FTC estimated $924 million in losses in 2023 in the US alone; the FBI received 19,000 complaints between January and June of that same year, with estimated losses over $542 million. Nearly 50% of victims reported to the FBI were over 60, accounting for 66% of total losses. Neither Microsoft nor Apple ever show a phone number in their real alerts. Educational reconstruction of the lock screen — no real remote-access software installed.",
+  "local_port": 8040,
+  "entry_path": "index.html"
+}

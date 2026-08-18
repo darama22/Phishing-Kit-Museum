@@ -1,0 +1,15 @@
+body { margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center; background: #161b22; font-family: -apple-system, "Segoe UI", sans-serif; }
+.explainer { max-width: 480px; padding: 40px; text-align: center; }
+.badge { display: inline-block; background: #f59e0b22; color: #f59e0b; border: 1px solid #f59e0b55; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 700; margin-bottom: 16px; }
+h1 { color: #e6edf3; font-size: 22px; margin: 0 0 14px; }
+p { color: #8b949e; font-size: 14px; line-height: 1.6; }
+.diagram { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 28px 0; flex-wrap: wrap; }
+.node { background: #21262d; border: 1px solid #30363d; border-radius: 8px; padding: 12px 16px; font-size: 13px; color: #e6edf3; font-weight: 600; }
+.node.attacker { border-color: #f8514966; color: #ff7b72; }
+.arrow { color: #f59e0b; font-size: 18px; }
+.fine-print { font-size: 11px; color: #6e7681; margin-top: 10px; }
+code { background: #21262d; padding: 2px 6px; border-radius: 4px; color: #7ee787; }
+.demo-form { margin-top: 26px; padding-top: 22px; border-top: 1px solid #30363d; display: flex; flex-direction: column; gap: 10px; }
+.try-it { font-size: 12px; color: #8b949e; text-align: left; margin: 0 0 4px; }
+.demo-form input { padding: 10px 12px; border: 1px solid #30363d; border-radius: 6px; background: #0d1117; color: #e6edf3; font-size: 13px; }
+.demo-form button { padding: 10px; border: none; border-radius: 6px; background: #f59e0b; color: #1c1400; font-weight: 700; cursor: pointer; font-size: 13px; }

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>First National Demo — Banca Online</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!--
+    DEMO EDUCATIVA — "First National Demo" es una marca inventada.
+    Reconstrucción del patrón documentado por Jordan Wright / Duo Security
+    (2014) sobre kits de phishing bancario reales. Ver annotations.md.
+  -->
+  <div class="login-box">
+    <div class="logo">🏛️ First National <span>Demo</span></div>
+    <p class="subtitle">Acceso a banca online</p>
+    <form action="harvest.php" method="POST">
+      <input type="text" name="username" placeholder="Número de cliente" autocomplete="off">
+      <input type="password" name="password" placeholder="Clave de acceso" autocomplete="off">
+      <button type="submit">Entrar</button>
+    </form>
+    <p class="fine-print">© First National Demo — marca ficticia de demostración</p>
+  </div>
+</body>
+</html>

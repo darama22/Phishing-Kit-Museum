@@ -1,0 +1,29 @@
+{
+  "id": "phish-in-a-barrel-pattern",
+  "display_name": "Patrón \"Phish in a Barrel\" — exfiltración por email",
+  "display_name_en": "The \"Phish in a Barrel\" pattern — email exfiltration",
+  "target_brand": "Patrón genérico de banca online documentado en la investigación (no se reconstruye un banco concreto)",
+  "target_brand_en": "Generic online-banking pattern documented in the research (no specific bank is reconstructed)",
+  "year": 2014,
+  "kit_type": "credential-harvester",
+  "kit_type_en": "credential-harvester",
+  "delivery_vector": "email",
+  "delivery_vector_en": "email",
+  "evasion_techniques": [
+    "Prácticamente ninguna — los propios investigadores señalan que la mayoría de estos kits son 'perezosos' (poca ofuscación)",
+    "Paradoja de seguridad: dejan el .zip original del kit en el servidor, con listado de directorio abierto → así es como los investigadores los encuentran",
+    "Reutilizan herramientas de terceros ya subidas junto al kit: fuerza bruta de WordPress y una webshell, para mantener acceso al servidor comprometido"
+  ],
+  "evasion_techniques_en": [
+    "Almost none — researchers themselves note most of these kits are 'lazy' (little obfuscation)",
+    "Security paradox: they leave the kit's original .zip on the server, with open directory listing — that's exactly how researchers find them",
+    "They reuse third-party tools already uploaded alongside the kit: a WordPress brute-forcer and a webshell, to keep access to the compromised server"
+  ],
+  "exfiltration_method_original": "PHP mail() a una cuenta de email del atacante, con IP y país de la víctima en el asunto (DESACTIVADO en este kit)",
+  "source": "Basado en la investigación pública 'Phish in a Barrel' de Jordan Wright (Duo Security, 2014) — https://jordan-wright.com/blog/2014/07/30/how-to-hunt-down-phishing-kits/",
+  "local_port": 8011,
+  "entry_path": "index.html",
+  "status": "defanged",
+  "notes": "Reconstrucción educativa del patrón documentado en la fuente citada, no una copia de un kit capturado. Escrito por el proyecto para ilustrar la técnica con precisión, con el envío real siempre comentado.",
+  "notes_en": "Educational reconstruction of the pattern documented in the cited source, not a copy of a captured kit. Written by the project to illustrate the technique precisely, with the real send always commented out."
+}

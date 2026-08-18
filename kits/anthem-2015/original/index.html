@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8"><title>DEMO — Email interno falso (reconstrucción genérica)</title><link rel="stylesheet" href="style.css"></head>
+<body>
+  <!--
+    DEMO EDUCATIVA. Reconstrucción GENÉRICA del tipo de email de
+    spear-phishing documentado en los cargos del DOJ. No reproduce ningún
+    email real ni contiene malware — el enlace no lleva a ningún sitio
+    externo. Ver annotations.md.
+  -->
+  <div class="email-mock">
+    <div class="email-header">
+      <span class="from">Remitente falsificado &lt;it-soporte@empresa-salud-demo.invalid&gt;</span>
+      <span class="subject">Actualización obligatoria del sistema de RRHH</span>
+    </div>
+    <div class="email-body">
+      <p>Hola,</p>
+      <p>Vamos a actualizar el sistema interno de recursos humanos este
+      fin de semana. Por favor, revisa tus datos de perfil antes del
+      cierre de la migración.</p>
+      <a class="cta" href="malicious_link_notice.txt">Revisar mi perfil</a>
+      <p class="fine-print">— Departamento de TI (demo)</p>
+    </div>
+  </div>
+  <p class="caption">↑ Reconstrucción genérica del tipo de cebo documentado — no un email real. El enlace lleva a una nota de texto inerte, no a ningún sitio externo.</p>
+</body>
+</html>

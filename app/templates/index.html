@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phishing Kit Museum</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  body{ background:#0b0e14; color:#dbe2ea; font-family:-apple-system,'Segoe UI',sans-serif; }
+  .mono{ font-family:'JetBrains Mono',ui-monospace,monospace; }
+  .glass{ background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:12px; }
+  .glass:hover{ border-color:rgba(56,189,248,0.4); }
+  .badge{ font-size:10px; text-transform:uppercase; font-weight:700; padding:2px 8px; border-radius:4px; letter-spacing:.04em; }
+  .badge-defanged{ background:rgba(34,197,94,0.15); color:#86efac; border:1px solid rgba(34,197,94,0.35); }
+  .badge-warn{ background:rgba(239,68,68,0.15); color:#fca5a5; border:1px solid rgba(239,68,68,0.35); }
+  pre{ background:#05070b; border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:14px; overflow-x:auto; font-size:12.5px; }
+  .prose-note :where(h1,h2,h3){ color:#e8edf2; font-weight:700; margin-top:1.2em; }
+  .prose-note p, .prose-note li{ color:#a9b4c0; line-height:1.65; }
+  .prose-note code{ background:#05070b; padding:1px 5px; border-radius:4px; color:#7dd3fc; }
+  .prose-note blockquote{ border-left:3px solid #f59e0b; padding-left:12px; color:#fbbf24; }
+  .lang-btn{ padding:3px 9px; border-radius:5px; font-size:11px; font-weight:700; color:#8b96a3; }
+  .lang-btn.active{ background:#0ea5e9; color:#fff; }
+</style>
+</head>
+<body>
+
+<div class="bg-red-950/40 border-b border-red-800/50 text-red-200 text-xs px-4 py-2 text-center" data-i18n="banner_warning">
+  ⚠️ Fines educativos y de concienciación. Todos los kits están desactivados (sin backend funcional, sin datos de víctimas). Ver RULES.md.
+</div>
+
+<nav class="border-b border-white/10 px-6 py-3 flex items-center gap-3">
+  <span class="text-xl">🎣</span>
+  <span class="font-bold text-lg">Phishing Kit Museum</span>
+  <span class="text-xs text-slate-500 ml-2" data-i18n="nav_subtitle">local · privado</span>
+  <div class="flex gap-1 bg-slate-900 border border-white/10 rounded-lg p-1 ml-auto" id="lang-switch">
+    <button class="lang-btn" data-lang="es">ES</button>
+    <button class="lang-btn" data-lang="en">EN</button>
+  </div>
+</nav>
+
+<main class="max-w-6xl mx-auto px-6 py-10">
+  <div id="view-catalog">
+    <h1 class="text-3xl font-extrabold mb-2" data-i18n="catalog_title">Salas del museo</h1>
+    <p class="text-slate-400 max-w-2xl text-sm mb-8" data-i18n="catalog_subtitle">Cada kit desmontado y anotado: la máscara visual, la trampa de captura, la fuga de datos y los trucos de evasión que usan de verdad.</p>
+    <div id="kit-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+  </div>
+
+  <div id="view-detail" class="hidden">
+    <button onclick="showCatalog()" class="text-sm text-sky-400 hover:text-sky-300 mb-6" data-i18n="back_to_catalog">&larr; volver al museo</button>
+    <div id="detail-content"></div>
+  </div>
+</main>
+
+<div id="toast-container" class="fixed bottom-4 right-4 z-[80] flex flex-col gap-2 items-end"></div>
+
+<script src="/static/i18n.js"></script>
+<script>
+async function fetchJSON(url){ const r = await fetch(url); return r.json(); }
+function withLang(url){ const sep = url.includes("?") ? "&" : "?"; return `${url}${sep}lang=${getLang()}`; }
+
+function showToast(message, tone){
+  const container = document.getElementById("toast-container");
+  const colors = { safe: "bg-green-950 border-green-700 text-green-200", danger: "bg-red-950 border-red-700 text-red-200" };
+  const el = document.createElement("div");
+  el.className = `max-w-sm text-xs px-3 py-2 rounded-lg border shadow-lg ${colors[tone] || colors.safe}`;
+  el.textContent = message;
+  container.appendChild(el);
+  setTimeout(() => el.remove(), 4000);
+}
+
+function statusBadge(status){
+  return status === "defanged"
+    ? `<span class="badge badge-defanged">${t("badge_defanged")}</span>`
+    : `<span class="badge badge-warn">${status}</span>`;
+}
+
+function kitCard(k){
+  const div = document.createElement("div");
+  div.className = "glass p-5 cursor-pointer transition-colors";
+  div.onclick = () => openKit(k.folder);
+  div.innerHTML = `
+    <div class="flex justify-between items-start mb-3">
+      <h3 class="font-bold">${k.display_name}</h3>
+      ${statusBadge(k.status)}
+    </div>
+    <div class="text-xs text-slate-500 mb-3 mono">${k.kit_type} · ${k.year || "?"}</div>
+    <p class="text-sm text-slate-400 mb-2">${t("target_label")} <span class="text-slate-300">${k.target_brand}</span></p>
+    <p class="text-xs text-slate-500">${t("vector_label")} ${k.delivery_vector}</p>
+  `;
+  return div;
+}
+
+async function loadCatalog(){
+  const data = await fetchJSON(withLang("/api/kits"));
+  const grid = document.getElementById("kit-grid");
+  grid.innerHTML = "";
+  if (data.total === 0){
+    grid.innerHTML = `<p class="text-slate-500 col-span-full">${t("no_kits")}</p>`;
+    return;
+  }
+  data.kits.forEach(k => grid.appendChild(kitCard(k)));
+}
+
+function showCatalog(){
+  document.getElementById("view-detail").classList.add("hidden");
+  document.getElementById("view-catalog").classList.remove("hidden");
+  history.pushState({}, "", "/");
+}
+
+let currentFolder = null;
+
+async function openKit(folder){
+  currentFolder = folder;
+  const k = await fetchJSON(withLang(`/api/kits/${folder}`));
+  document.getElementById("view-catalog").classList.add("hidden");
+  const detail = document.getElementById("view-detail");
+  detail.classList.remove("hidden");
+
+  const evasion = (k.evasion_techniques || []).map(item => `<li>${item}</li>`).join("");
+  const files = (k.files || []).map(f => {
+    const rel = f.replace(/^original\//, "");
+    return `<button class="mono text-xs text-left px-2 py-1 rounded hover:bg-white/5 w-full" onclick="viewSource('${folder}','${rel}')">${rel}</button>`;
+  }).join("");
+  const fallbackNotice = k.annotations_language_fallback
+    ? `<p class="text-xs text-amber-400/80 mb-3">${t("fallback_notice")}</p>` : "";
+
+  document.getElementById("detail-content").innerHTML = `
+    <div class="flex justify-between items-start mb-6">
+      <div>
+        <h1 class="text-3xl font-extrabold mb-1">${k.display_name}</h1>
+        <p class="text-slate-500 text-sm">${t("target_label")} ${k.target_brand} · ${k.kit_type} · ${k.year || "?"}</p>
+      </div>
+      ${statusBadge(k.status)}
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div class="lg:col-span-2 space-y-6">
+        ${k.local_port ? `
+        <div class="glass p-5" id="launch-box">
+          <div class="flex items-center gap-3 flex-wrap">
+            <button id="launch-btn" onclick="launchKit('${folder}')" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-sm px-4 py-2 rounded-lg transition-colors">${t("launch_btn")}</button>
+            <button id="stop-btn" onclick="stopKit('${folder}')" class="hidden border border-white/15 hover:bg-white/5 text-slate-300 text-sm px-4 py-2 rounded-lg">${t("stop_btn")}</button>
+            <span id="launch-status" class="text-xs text-slate-500"></span>
+          </div>
+          <p class="text-xs text-slate-500 mt-2">${t("launch_note")}</p>
+        </div>` : ""}
+        <div class="glass p-5">
+          <h2 class="font-bold mb-2 text-sm uppercase tracking-wide text-slate-400">${t("section_preview")}</h2>
+          <iframe src="/preview/${folder}/index.html" class="w-full h-80 rounded-lg border border-white/10 bg-white"></iframe>
+        </div>
+        <div class="glass p-5">
+          <h2 class="font-bold mb-2 text-sm uppercase tracking-wide text-slate-400">${t("section_annotations")}</h2>
+          ${fallbackNotice}
+          <div class="prose-note">${k.annotations_html}</div>
+        </div>
+      </div>
+      <div class="space-y-6">
+        <div class="glass p-5">
+          <h2 class="font-bold mb-3 text-sm uppercase tracking-wide text-slate-400">${t("section_files")}</h2>
+          <div class="space-y-1">${files || `<p class="text-xs text-slate-500">${t("no_files")}</p>`}</div>
+        </div>
+        <div class="glass p-5">
+          <h2 class="font-bold mb-3 text-sm uppercase tracking-wide text-slate-400">${t("section_evasion")}</h2>
+          <ul class="text-sm text-slate-400 list-disc pl-4 space-y-1">${evasion || `<li>${t("no_evasion")}</li>`}</ul>
+        </div>
+        <div class="glass p-5 text-xs text-slate-500">
+          <p class="mb-1"><strong class="text-slate-400">${t("section_source")}:</strong> ${k.source}</p>
+          <p>${k.notes || ""}</p>
+        </div>
+      </div>
+    </div>
+    <div id="source-viewer" class="hidden mt-6 glass p-5">
+      <div class="flex justify-between items-center mb-2">
+        <h2 class="font-bold text-sm uppercase tracking-wide text-slate-400" id="source-title"></h2>
+        <button onclick="document.getElementById('source-viewer').classList.add('hidden')" class="text-slate-500 hover:text-slate-300 text-sm">${t("close")}</button>
+      </div>
+      <pre id="source-code" class="mono"></pre>
+    </div>
+  `;
+  if (k.local_port) refreshLaunchStatus(folder, k.local_port);
+}
+
+async function refreshLaunchStatus(folder, port){
+  try {
+    const s = await fetchJSON(`/api/kits/${folder}/status`);
+    setLaunchUI(s.running, port);
+  } catch { /* silencioso: si falla, se deja el botón en estado inicial */ }
+}
+
+function setLaunchUI(running, port){
+  const launchBtn = document.getElementById("launch-btn");
+  const stopBtn = document.getElementById("stop-btn");
+  const status = document.getElementById("launch-status");
+  if (!launchBtn) return;
+  if (running) {
+    launchBtn.classList.add("hidden");
+    stopBtn.classList.remove("hidden");
+    status.innerHTML = `🟢 ${t("launch_running")} <a href="http://127.0.0.1:${port}/" target="_blank" class="text-sky-400 hover:underline">127.0.0.1:${port}</a>`;
+  } else {
+    launchBtn.classList.remove("hidden");
+    stopBtn.classList.add("hidden");
+    status.textContent = "";
+  }
+}
+
+async function launchKit(folder){
+  const btn = document.getElementById("launch-btn");
+  const status = document.getElementById("launch-status");
+  btn.disabled = true;
+  const originalText = btn.textContent;
+  btn.textContent = t("launch_busy");
+  try {
+    const r = await fetch(`/api/kits/${folder}/launch`, { method: "POST" });
+    const data = await r.json();
+    if (data.ok) {
+      setLaunchUI(true, data.port);
+      window.open(data.url, "_blank");
+      showToast(`${t("launch_running")} ${data.url}`, "safe");
+    } else {
+      status.textContent = t("launch_error_prefix") + data.error;
+      showToast(t("launch_error_prefix") + data.error, "danger");
+    }
+  } catch (err) {
+    status.textContent = t("launch_error_prefix") + err;
+    showToast(t("launch_error_prefix") + err, "danger");
+  } finally {
+    btn.disabled = false;
+    btn.textContent = originalText;
+  }
+}
+
+async function stopKit(folder){
+  await fetch(`/api/kits/${folder}/stop`, { method: "POST" });
+  setLaunchUI(false, null);
+}
+
+async function viewSource(folder, relPath){
+  const data = await fetchJSON(`/api/kits/${folder}/source/${relPath}`);
+  document.getElementById("source-title").textContent = relPath;
+  document.getElementById("source-code").textContent = data.content;
+  document.getElementById("source-viewer").classList.remove("hidden");
+  document.getElementById("source-viewer").scrollIntoView({behavior:"smooth"});
+}
+
+document.querySelectorAll(".lang-btn").forEach(btn => {
+  btn.addEventListener("click", async () => {
+    if (btn.dataset.lang === getLang()) return;
+    setLang(btn.dataset.lang);
+    applyStaticTranslations();
+    if (document.getElementById("view-detail").classList.contains("hidden")) {
+      await loadCatalog();
+    } else {
+      await openKit(currentFolder);
+    }
+  });
+});
+
+applyStaticTranslations();
+loadCatalog();
+</script>
+</body>
+</html>

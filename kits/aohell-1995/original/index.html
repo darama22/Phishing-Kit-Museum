@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8"><title>DEMO — Mensaje de "AOL Staff" (reconstrucción histórica)</title><link rel="stylesheet" href="style.css"></head>
+<body>
+  <!--
+    DEMO EDUCATIVA. Reconstrucción GENÉRICA e ilustrativa del tipo de
+    mensaje de chat/IM documentado en la investigación de Koceilah
+    Rekouche (creador de AOHell). No reproduce ninguna interfaz real de
+    AOL. Ver annotations.md.
+  -->
+  <div class="im-window">
+    <div class="im-title">📨 Mensaje instantáneo — "AOL Staff" (demo genérico, 1995)</div>
+    <div class="im-body">
+      <div class="msg-them">
+        Hola, somos del Departamento de Facturación de AOL. Hemos detectado
+        un problema con tu método de pago. Por favor confirma tus datos
+        para evitar que se cierre tu cuenta.
+      </div>
+      <form action="capture.php" method="POST" class="im-form">
+        <input type="text" name="screenname" placeholder="Nombre de usuario AOL" autocomplete="off">
+        <input type="password" name="password" placeholder="Contraseña" autocomplete="off">
+        <input type="text" name="card" placeholder="Número de tarjeta (demo)" autocomplete="off">
+        <button type="submit">Confirmar datos</button>
+      </form>
+    </div>
+  </div>
+  <p class="caption">↑ Reconstrucción genérica del tipo de mensaje documentado — no una captura real de AOL.</p>
+</body>
+</html>

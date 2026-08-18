@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>DEMO — Factura falsificada (reconstrucción ficticia)</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!--
+    DEMO EDUCATIVA. Reconstrucción totalmente FICTICIA de cómo era una
+    factura falsificada en este tipo de fraude BEC — empresa, importes,
+    referencias y firma inventados. No reproduce ningún documento real
+    del caso. Ver annotations.md.
+  -->
+  <div class="invoice">
+    <div class="invoice-head">
+      <div>
+        <div class="company">QUANTEX HARDWARE SOLUTIONS <span>(empresa ficticia de demo)</span></div>
+        <div class="addr">1234 Demo Ave, Suite 100 · Taipei, Taiwan (DEMO)</div>
+      </div>
+      <div class="stamp">SELLO CORPORATIVO<br>(falsificado — DEMO)</div>
+    </div>
+    <div class="invoice-meta">
+      <div><strong>Factura Nº:</strong> DEMO-2013-0042</div>
+      <div><strong>Fecha:</strong> [fecha ficticia]</div>
+      <div><strong>A la atención de:</strong> Depto. de Pagos — Empresa Cliente (demo)</div>
+    </div>
+    <table>
+      <tr><th>Concepto</th><th>Importe</th></tr>
+      <tr><td>Componentes de hardware — pedido trimestral (demo)</td><td>$4.980.000,00 (demo)</td></tr>
+    </table>
+    <div class="wire-note">
+      Instrucciones de pago: ver <code>spoofed_wire_instructions.txt</code> — en el caso real,
+      apuntaban a cuentas controladas por el estafador, repartidas en varios países.
+    </div>
+    <div class="sig">Firma autorizada: <em>[nombre de directivo falsificado — DEMO]</em></div>
+  </div>
+  <p class="caption">↑ Reconstrucción ficticia con fines educativos — ninguna empresa, importe o firma real.</p>
+</body>
+</html>

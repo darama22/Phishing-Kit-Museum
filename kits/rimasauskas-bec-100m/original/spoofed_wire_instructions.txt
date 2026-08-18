@@ -1,0 +1,25 @@
+DEMO — reconstrucción ilustrativa, NO instrucciones reales de ningún caso.
+Ver annotations.md, sección 5.
+
+En un fraude BEC real como este, la factura falsificada suele incluir (o ir
+seguida de) un correo con "instrucciones de pago actualizadas", del estilo:
+
+    Asunto: Actualización de datos bancarios — [Empresa proveedora, demo]
+
+    Estimado equipo de Pagos,
+
+    Les informamos que, por motivos de auditoría interna, hemos actualizado
+    nuestra cuenta bancaria de cobro. Rogamos dirijan el próximo pago a:
+
+        Banco: [Banco demo, país A]
+        IBAN:  [número ficticio]
+        Titular: [nombre de empresa ficticia]
+
+    Disculpen las molestias.
+    [Firma de directivo falsificada — demo]
+
+El objetivo de este mensaje es que el pago de la factura legítima (que la
+víctima ya esperaba pagar) se desvíe a una cuenta controlada por el
+estafador, en vez de a la cuenta real del proveedor genuino. En el caso
+real, el dinero se repartía después entre cuentas de varios países para
+dificultar su rastreo y recuperación.

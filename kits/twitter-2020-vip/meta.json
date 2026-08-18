@@ -1,0 +1,29 @@
+{
+  "id": "twitter-2020-vip",
+  "display_name": "El hackeo de Twitter que secuestró a Obama, Musk y Bezos en una tarde",
+  "display_name_en": "The Twitter hack that hijacked Obama, Musk and Bezos in one afternoon",
+  "target_brand": "Empleados de Twitter con acceso a herramientas administrativas internas",
+  "target_brand_en": "Twitter employees with access to internal admin tools",
+  "year": 2020,
+  "kit_type": "vishing (phishing por voz/teléfono) + abuso de herramienta administrativa interna",
+  "kit_type_en": "vishing (voice/phone phishing) + internal admin-tool abuse",
+  "delivery_vector": "llamadas telefónicas suplantando al departamento de IT de la empresa",
+  "delivery_vector_en": "phone calls impersonating the company's IT department",
+  "evasion_techniques": [
+    "No hubo ninguna web falsa ni email — el vector fue una llamada de teléfono convincente, haciéndose pasar por soporte técnico interno",
+    "Los atacantes explotaron la confianza en la 'autoridad de IT', un objetivo muy difícil de entrenar frente al phishing tradicional basado en emails/enlaces",
+    "Una vez dentro de una herramienta administrativa interna, no hizo falta 'hackear' cada cuenta por separado — bastaba con usar el panel legítimo de la propia empresa"
+  ],
+  "evasion_techniques_en": [
+    "There was no fake website or email — the vector was a convincing phone call, posing as internal tech support",
+    "Attackers exploited trust in 'IT authority,' a target very hard to train people against compared to traditional email/link phishing",
+    "Once inside an internal admin tool, there was no need to 'hack' each account separately — the company's own legitimate panel was enough"
+  ],
+  "exfiltration_method_original": "Acceso directo a cuentas de alto perfil a través de un panel de administración interno legítimo, una vez obtenidas credenciales de empleado por vishing",
+  "source": "Departamento de Servicios Financieros del Estado de Nueva York (informe oficial de investigación) — https://www.dfs.ny.gov/Twitter_Report · cobertura de Reuters/CBC sobre las detenciones",
+  "local_port": 8021,
+  "entry_path": "index.html",
+  "status": "defanged",
+  "notes": "130 cuentas de alto perfil (Obama, Biden, Musk, Bezos, Kim Kardashian, empresas de criptomonedas...) fueron comprometidas; 45 se usaron para publicar una estafa de Bitcoin, robando más de 118.000 dólares en pocas horas. Los responsables incluían a un adolescente de 17 años. Reconstrucción educativa del mecanismo — sin herramientas ni credenciales reales de Twitter.",
+  "notes_en": "130 high-profile accounts (Obama, Biden, Musk, Bezos, Kim Kardashian, crypto companies...) were compromised; 45 were used to post a Bitcoin scam, stealing over $118,000 in a few hours. Those responsible included a 17-year-old. Educational reconstruction of the mechanism — no real Twitter tools or credentials involved."
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8"><title>DEMO — Videollamada (reconstrucción conceptual)</title><link rel="stylesheet" href="style.css"></head>
+<body>
+  <!--
+    DEMO EDUCATIVA. Reconstrucción CONCEPTUAL de una videollamada con
+    participantes deepfake — cada "participante" es un avatar genérico
+    etiquetado como IA, no un deepfake real de nadie. Ver annotations.md.
+  -->
+  <div class="call-window">
+    <div class="call-title">📹 Videollamada — Revisión financiera urgente (demo genérico)</div>
+    <div class="participants">
+      <div class="participant"><div class="avatar">👤</div><span>CFO (demo)</span><span class="ai-tag">deepfake simulado</span></div>
+      <div class="participant"><div class="avatar">👤</div><span>Legal (demo)</span><span class="ai-tag">deepfake simulado</span></div>
+      <div class="participant"><div class="avatar">👤</div><span>Auditor (demo)</span><span class="ai-tag">deepfake simulado</span></div>
+      <div class="participant you"><div class="avatar">🙂</div><span>Tú</span></div>
+    </div>
+    <form action="authorize.php" method="POST" class="call-form">
+      <p class="call-note">Todos los demás participantes son avatares de demostración. En el caso real, cada uno era un deepfake generado a partir de vídeo/audio público de directivos reales.</p>
+      <input type="text" name="amount" placeholder="Importe a autorizar (demo)" autocomplete="off">
+      <button type="submit">Autorizar transferencia (demo)</button>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+DEMO — reconstrucción ilustrativa del TIPO de anuncio usado para reclutar
+"mulas de dinero", basada en el patrón documentado por el FBI. No es un
+anuncio real de ningún caso. Ver annotations.md, sección 3.
+
+    ¿Buscas trabajar desde casa? 💰
+
+    Empresa internacional de logística financiera busca
+    "agentes de procesamiento de pagos" en EE.UU.
+
+    - Sin experiencia necesaria
+    - Recibes transferencias en tu cuenta bancaria
+    - Reenvías el dinero (menos tu comisión del 10%) por
+      servicio de transferencia internacional
+    - Pago inmediato por cada operación
+
+    Responde a este anuncio con tus datos bancarios para empezar hoy mismo.
+
+---
+
+Por qué esto funciona como reclutamiento:
+- Suena a un trabajo remoto legítimo y sencillo — muchas víctimas de este
+  reclutamiento no saben (al menos al principio) que están blanqueando
+  dinero robado.
+- La comisión ofrecida es lo bastante atractiva para captar interés, sin
+  ser tan alta como para levantar sospechas inmediatas.
+- Pedir "datos bancarios para empezar" es, en la práctica, pedir la propia
+  cuenta que se usará como cuenta mula.
+
+Legalmente, actuar como mula de dinero — incluso sin saberlo con certeza —
+puede acarrear responsabilidad penal. Si te ofrecen algo parecido a esto,
+es una señal de alarma.

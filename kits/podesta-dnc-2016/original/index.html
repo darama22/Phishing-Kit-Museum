@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>DEMO — La página de login falsa</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!--
+    DEMO EDUCATIVA. Reconstrucción GENÉRICA de una página de login falsa
+    de webmail, tal y como se documenta en la investigación (sin copiar
+    el diseño real de ningún proveedor concreto). Ver annotations.md.
+  -->
+  <div class="login-box">
+    <div class="logo">✉️ MailGuard <span>(demo genérico)</span></div>
+    <p class="subtitle">Verifica tu identidad para continuar</p>
+    <form id="login-form">
+      <input type="email" id="fld-email" placeholder="Correo electrónico" autocomplete="off">
+      <input type="password" id="fld-pass" placeholder="Contraseña actual" autocomplete="off">
+      <button type="submit">Verificar y cambiar contraseña</button>
+    </form>
+    <p class="fine-print">DEMO — no es Google ni ningún proveedor real</p>
+  </div>
+  <script src="capture.js"></script>
+</body>
+</html>

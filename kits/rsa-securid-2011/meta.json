@@ -1,0 +1,29 @@
+{
+  "id": "rsa-securid-2011",
+  "display_name": "El Excel que comprometió la seguridad de medio mundo corporativo",
+  "display_name_en": "The Excel file that compromised half the corporate world's security",
+  "target_brand": "Empleados de RSA (división de seguridad de EMC Corp.)",
+  "target_brand_en": "RSA employees (EMC Corp.'s security division)",
+  "year": 2011,
+  "kit_type": "spear-phishing con exploit de día cero adjunto (ataque a infraestructura de seguridad)",
+  "kit_type_en": "spear-phishing with a zero-day exploit attachment (attack on security infrastructure)",
+  "delivery_vector": "email con hoja de cálculo Excel maliciosa (\"2011 Recruitment plan.xls\")",
+  "delivery_vector_en": "email with a malicious Excel spreadsheet (\"2011 Recruitment plan.xls\")",
+  "evasion_techniques": [
+    "Asunto genérico y creíble en un contexto de RRHH ('Plan de Contratación 2011') — nada alarmante, nada que levante sospechas",
+    "El correo cayó primero en la carpeta de spam; un empleado lo recuperó de ahí y lo abrió igualmente, confiando en el asunto",
+    "El exploit iba embebido en un objeto Flash dentro del propio Excel, aprovechando una vulnerabilidad de día cero (sin parche disponible en ese momento)"
+  ],
+  "evasion_techniques_en": [
+    "Generic, believable HR-context subject ('2011 Recruitment Plan') — nothing alarming, nothing to raise suspicion",
+    "The email first landed in spam; an employee retrieved it from there and opened it anyway, trusting the subject line",
+    "The exploit was embedded in a Flash object inside the Excel file itself, exploiting a zero-day vulnerability (no patch available at the time)"
+  ],
+  "exfiltration_method_original": "Backdoor remota instalada tras la explotación del día cero de Flash (CVE-2011-0609), con acceso completo al equipo comprometido",
+  "source": "Threatpost, 'RSA: SecurID Attack Was Phishing Via an Excel Spreadsheet' — https://threatpost.com/rsa-securid-attack-was-phishing-excel-spreadsheet-040111/75099/ · cobertura técnica de Dark Reading y The Register",
+  "local_port": 8022,
+  "entry_path": "index.html",
+  "status": "defanged",
+  "notes": "El ataque robó información relacionada con el sistema de autenticación SecurID de RSA, usado por miles de empresas y agencias gubernamentales. Meses después, esa información se usó en intentos de intrusión contra contratistas de defensa como Lockheed Martin. No incluimos ningún exploit ni código real del día cero en esta sala — para eso, el proyecto hermano 'Malware Research Hub' es el lugar adecuado. Aquí solo reconstruimos el email/cebo.",
+  "notes_en": "The attack stole information related to RSA's SecurID authentication system, used by thousands of companies and government agencies. Months later, that information was used in intrusion attempts against defense contractors like Lockheed Martin. We don't include any real zero-day exploit or code in this room — the sibling project 'Malware Research Hub' is the right place for that. Here we only reconstruct the bait email."
+}

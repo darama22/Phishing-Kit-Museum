@@ -1,0 +1,9 @@
+body { margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center; background: #0f2d1f; font-family: -apple-system, "Segoe UI", sans-serif; }
+.login-box { background: #fff; border-radius: 8px; padding: 40px 36px; width: 320px; box-shadow: 0 20px 50px rgba(0,0,0,0.35); text-align: center; }
+.logo { font-size: 19px; font-weight: 700; color: #0f2d1f; margin-bottom: 4px; }
+.logo span { display: block; font-weight: 400; color: #999; font-size: 11px; margin-top: 3px; }
+.subtitle { color: #667; font-size: 13px; margin: 14px 0 22px; }
+form { display: flex; flex-direction: column; gap: 12px; }
+input { padding: 11px 12px; border: 1px solid #d5dae2; border-radius: 5px; font-size: 14px; }
+button { margin-top: 6px; padding: 11px; border: none; border-radius: 5px; background: #0f2d1f; color: #fff; font-weight: 600; cursor: pointer; }
+.fine-print { margin-top: 18px; font-size: 10px; color: #99a; }

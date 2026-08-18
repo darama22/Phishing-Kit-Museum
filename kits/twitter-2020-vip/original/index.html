@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8"><title>DEMO — Portal interno (genérico)</title><link rel="stylesheet" href="style.css"></head>
+<body>
+  <!--
+    DEMO EDUCATIVA. Página GENÉRICA de "portal interno de empresa", tal
+    y como se documenta el patrón en el informe del NY DFS (no reproduce
+    ninguna herramienta real de Twitter ni de ninguna empresa). Ver
+    annotations.md.
+  -->
+  <div class="login-box">
+    <div class="logo">🛠️ Portal Interno IT <span>(demo genérico)</span></div>
+    <p class="subtitle">Revalidación de sesión requerida</p>
+    <form action="fake_admin_panel.php" method="POST">
+      <input type="text" name="username" placeholder="Usuario corporativo" autocomplete="off">
+      <input type="password" name="password" placeholder="Contraseña" autocomplete="off">
+      <button type="submit">Revalidar sesión</button>
+    </form>
+    <p class="fine-print">DEMO — no es Twitter ni ninguna herramienta real</p>
+  </div>
+</body>
+</html>

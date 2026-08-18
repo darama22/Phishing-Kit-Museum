@@ -1,0 +1,1168 @@
+{
+  "total": 30,
+  "kits": [
+    {
+      "id": "16shop-pattern",
+      "folder": "16shop-pattern",
+      "display_name": "16Shop — phishing-as-a-service (caso real, con detenciones)",
+      "display_name_en": "16Shop — phishing-as-a-service (real case, with arrests)",
+      "target_brand": "Multimarca por panel: el comprador elegía entre Apple, Amazon, PayPal, DHL, American Express... cada una con un precio distinto",
+      "target_brand_en": "Multi-brand via panel: the buyer chose between Apple, Amazon, PayPal, DHL, American Express... each at a different price",
+      "year": 2018,
+      "kit_type": "phishing-as-a-service",
+      "kit_type_en": "phishing-as-a-service",
+      "delivery_vector": "email",
+      "delivery_vector_en": "email",
+      "evasion_techniques": [
+        "Multi-idioma: plantillas de mensajes preconfiguradas (verify.ini) según el país objetivo",
+        "Licencia atada a la máquina del comprador — dificulta la piratería del propio kit entre criminales",
+        "Panel de control propio: el comprador elige marca, idioma y recibe el paquete listo para desplegar, sin programar nada"
+      ],
+      "evasion_techniques_en": [
+        "Multi-language: preconfigured message templates (verify.ini) based on the target country",
+        "License tied to the buyer's machine — makes it harder for other criminals to pirate the kit itself",
+        "Its own control panel: the buyer picks brand and language and gets a ready-to-deploy package, no coding required"
+      ],
+      "local_port": 8014,
+      "entry_path": "panel.php",
+      "upstream_port": null,
+      "upstream_entry": null,
+      "status": "defanged",
+      "source": "Trend Micro, 'Revisiting 16shop Phishing Kit, Trend-Interpol Partnership' (2023) — https://www.trendmicro.com/en_us/research/23/i/revisiting-16shop-phishing-kit-trend-interpol-partnership.html",
+      "notes": "Activo desde 2018 hasta que uno de sus administradores principales fue detenido en 2021 (operación conjunta de policía de Indonesia, Japón e Interpol, con el apoyo de Trend Micro). Reconstrucción educativa del panel documentado en la fuente, no el kit original.",
+      "notes_en": "Active from 2018 until one of its main administrators was arrested in 2021 (a joint operation by Indonesian and Japanese police and Interpol, supported by Trend Micro). Educational reconstruction of the panel documented in the source, not the original kit.",
+      "files": [
+        "original/index.html",
+        "original/panel.php",
+        "original/panel_config.php",
+        "original/style.css",
+        "original/verify.ini"
+      ],
+      "annotations_path": "kits/16shop-pattern/annotations.md",
+      "annotations_en_path": "kits/16shop-pattern/annotations_en.md"
+    },
+    {
+      "id": "anthem-2015",
+      "folder": "anthem-2015",
+      "display_name": "78,8 millones de historiales médicos — la mayor brecha sanitaria de la historia",
+      "display_name_en": "78.8 million medical records — the largest healthcare breach in history",
+      "target_brand": "Empleados de Anthem Inc. (la mayor aseguradora médica de EE.UU.)",
+      "target_brand_en": "Anthem Inc. employees (the largest health insurer in the US)",
+      "year": 2015,
+      "kit_type": "spear-phishing con enlace malicioso (instalación de puerta trasera, ataque de estado)",
+      "kit_type_en": "spear-phishing with a malicious link (backdoor installation, nation-state attack)",
+      "delivery_vector": "email dirigido con un enlace malicioso, disfrazado de comunicación interna legítima",
+      "delivery_vector_en": "targeted email with a malicious link, disguised as legitimate internal communication",
+      "evasion_techniques": [
+        "Tras la intrusión inicial, los atacantes pasaron MESES haciendo reconocimiento silencioso antes de tocar el sistema más valioso (el almacén de datos corporativo)",
+        "Exfiltraron los datos en archivos comprimidos y cifrados por ellos mismos, dificultando su detección por herramientas de prevención de fuga de datos",
+        "Borraron los archivos cifrados del sistema tras la exfiltración, para reducir el rastro de evidencia de la intrusión"
+      ],
+      "evasion_techniques_en": [
+        "After the initial intrusion, attackers spent MONTHS quietly doing reconnaissance before touching the most valuable system (the corporate data warehouse)",
+        "They exfiltrated data in files they compressed and encrypted themselves, making detection by data-loss-prevention tools harder",
+        "They deleted the encrypted files from the system after exfiltration, to reduce the evidence trail of the intrusion"
+      ],
+      "local_port": 8030,
+      "entry_path": "index.html",
+      "upstream_port": null,
+      "upstream_entry": null,
+      "status": "defanged",
+      "source": "Departamento de Justicia de EE.UU., cargos contra un miembro de un grupo de hacking vinculado a China — https://www.justice.gov/archives/opa/pr/member-sophisticated-china-based-hacking-group-indicted-series-computer-intrusions-including",
+      "notes": "Datos de aproximadamente 78,8 millones de personas comprometidos: nombres, números de identificación médica, fechas de nacimiento, números de la Seguridad Social, direcciones, teléfonos, emails, datos de empleo e ingresos. El acceso no autorizado comenzó en diciembre de 2014 y se detectó en enero de 2015. El Departamento de Justicia de EE.UU. atribuyó el ataque a un grupo de hacking vinculado a China, presentando cargos contra un miembro identificado. Reconstrucción educativa del email/cebo — sin ningún malware real (ver aviso en la sala).",
+      "notes_en": "Data on approximately 78.8 million people was compromised: names, health ID numbers, dates of birth, Social Security numbers, addresses, phone numbers, emails, employment and income data. Unauthorized access began in December 2014 and was detected in January 2015. The US Department of Justice attributed the attack to a China-linked hacking group, charging an identified member. Educational reconstruction of the bait email — no real malware (see the room's notice).",
+      "files": [
+        "original/index.html",
+        "original/malicious_link_notice.txt",
+        "original/style.css"
+      ],
+      "annotations_path": "kits/anthem-2015/annotations.md",
+      "annotations_en_path": "kits/anthem-2015/annotations_en.md"
+    },
+    {
+      "id": "aohell-1995",
+      "folder": "aohell-1995",
+      "display_name": "AOHell — de donde viene literalmente la palabra \"phishing\"",
+      "display_name_en": "AOHell — where the word \"phishing\" literally comes from",
+      "target_brand": "Usuarios de America Online (AOL), vía mensajería instantánea y chats",
+      "target_brand_en": "America Online (AOL) users, via instant messaging and chat rooms",
+      "year": 1995,
+      "kit_type": "el primer kit de phishing automatizado de la historia (suplantación de personal de AOL)",
+      "kit_type_en": "the first automated phishing kit in history (impersonating AOL staff)",
+      "delivery_vector": "mensajes de AOL Instant Messenger y salas de chat, haciéndose pasar por personal de AOL",
+      "delivery_vector_en": "AOL Instant Messenger and chat-room messages, posing as AOL staff",
+      "evasion_techniques": [
+        "Se aprovechaba de que, en 1995, casi nadie había oído hablar de este tipo de engaño — no había ninguna cultura de desconfianza que superar",
+        "El propio programa generaba números de tarjeta de crédito aleatorios válidos según el algoritmo, para abrir cuentas de AOL de usar y tirar desde las que lanzar el ataque",
+        "Usaba la autoridad percibida de 'ser AOL' — la misma empresa que prestaba el servicio pidiéndote que confirmaras tus datos de facturación"
+      ],
+      "evasion_techniques_en": [
+        "Took advantage of the fact that, in 1995, almost nobody had heard of this kind of scam — there was no culture of suspicion to overcome",
+        "The program itself generated algorithmically-valid random credit card numbers to open disposable AOL accounts to launch the attack from",
+        "Used the perceived authority of 'being AOL' — the very company providing the service, asking you to confirm your billing info"
+      ],
+      "local_port": 8024,
+      "entry_path": "index.html",
+      "upstream_port": null,
+      "upstream_entry": null,
+      "status": "defanged",
+      "source": "Investigación académica 'Early Phishing' de Koceilah Rekouche (creador de AOHell) — https://arxiv.org/abs/1106.4692 · cobertura histórica de Kaseya y Control Engineering",
+      "notes": "AOHell fue creado en 1994 por un estudiante de 17 años bajo el pseudónimo 'Da Chronic'. Es el origen documentado del propio término 'phishing' (con 'ph' heredado de 'phreaking', la manipulación de sistemas telefónicos). Todo lo que verás en las otras 20+ salas de este museo desciende, técnica y lingüísticamente, de esta sala. Reconstrucción educativa sin ningún generador de tarjetas real.",
+      "notes_en": "AOHell was created in 1994 by a 17-year-old under the pseudonym 'Da Chronic.' It's the documented origin of the term \"phishing\" itself (the 'ph' inherited from 'phreaking,' the manipulation of phone systems). Everything you see in this museum's other 20+ rooms descends, technically and linguistically, from this room. Educational reconstruction with no real card generator.",
+      "files": [
+        "original/capture.php",
+        "original/index.html",
+        "original/style.css"
+      ],
+      "annotations_path": "kits/aohell-1995/annotations.md",
+      "annotations_en_path": "kits/aohell-1995/annotations_en.md"
+    },
+    {
+      "id": "arup-deepfake-2024",
+      "folder": "arup-deepfake-2024",
+      "display_name": "La videollamada donde TODOS los demás eran una IA — 25 millones robados",
+      "display_name_en": "The video call where everyone else was AI — $25 million stolen",
+      "target_brand": "Empleado del departamento financiero de Arup (oficina de Hong Kong)",
+      "target_brand_en": "A finance employee at Arup (Hong Kong office)",
+      "year": 2024,
+      "kit_type": "deepfake de vídeo y voz en tiempo real (evolución del BEC clásico)",
+      "kit_type_en": "real-time video and voice deepfake (an evolution of classic BEC)",
+      "delivery_vector": "email de phishing inicial + videollamada con múltiples participantes generados por IA",
+      "delivery_vector_en": "initial phishing email + video call with multiple AI-generated participants",
+      "evasion_techniques": [
+        "El empleado inicialmente sospechó del email — pero la videollamada posterior, con caras y voces reconocibles de varios compañeros, disolvió esa duda",
+        "Los deepfakes se construyeron con vídeo y audio PÚBLICO de videoconferencias y reuniones corporativas previas de los ejecutivos reales",
+        "No era una sola persona falsificada, sino VARIOS participantes deepfake a la vez en la misma llamada — reforzándose entre sí la credibilidad mutuamente"
+      ],
+      "evasion_techniques_en": [
+        "The employee initially suspected the email — but the follow-up video call, with recognizable faces and voices of several colleagues, dissolved that doubt",
+        "The deepfakes were built from PUBLIC video and audio of the real executives' previous videoconferences and corporate meetings",
+        "It wasn't one faked person, but SEVERAL deepfake participants at once on the same call — reinforcing each other's credibility"
+      ],
+      "local_port": 8031,
+      "entry_path": "index.html",
+      "upstream_port": null,
+      "upstream_entry": null,
+      "status": "defanged",
+      "source": "Policía de Hong Kong (declaraciones oficiales); cobertura de CNN y Gulf News — https://www.cnn.com/2024/02/04/asia/deepfake-cfo-scam-hong-kong-intl-hnk",
+      "notes": "El propio CIO de Arup confirmó que ningún sistema de la empresa fue comprometido — fue ingeniería social potenciada por IA, no un ciberataque tradicional. Reconstrucción educativa del concepto (panel de 'videollamada' con avatares etiquetados como IA) — sin ningún deepfake real generado ni voz/imagen de nadie.",
+      "notes_en": "Arup's own CIO confirmed no company systems were compromised — this was AI-enhanced social engineering, not a traditional cyberattack. Educational reconstruction of the concept (a 'video call' panel with avatars labeled as AI) — no real deepfake generated and no one's actual voice/image used.",
+      "files": [
+        "original/authorize.php",
+        "original/index.html",
+        "original/style.css"
+      ],
+      "annotations_path": "kits/arup-deepfake-2024/annotations.md",
+      "annotations_en_path": "kits/arup-deepfake-2024/annotations_en.md"
+    },
+    {
+      "id": "bangladesh-bank-swift-2016",
+      "folder": "bangladesh-bank-swift-2016",
+      "display_name": "81 millones robados de un banco central — parados por una falta de ortografía",
+      "display_name_en": "$81 million stolen from a central bank — stopped by a spelling mistake",
+      "target_brand": "Empleados del Banco Central de Bangladés, con acceso al sistema de transferencias SWIFT",
+      "target_brand_en": "Bangladesh Bank employees with access to the SWIFT transfer system",
+      "year": 2016,
+      "kit_type": "spear-phishing con malware adjunto + software malicioso a medida contra SWIFT (ataque de estado)",
+      "kit_type_en": "spear-phishing with a malware attachment + custom malware targeting SWIFT (nation-state attack)",
+      "delivery_vector": "email con malware adjunto, semanas de reconocimiento antes de actuar",
+      "delivery_vector_en": "email with a malware attachment, weeks of reconnaissance before acting",
+      "evasion_techniques": [
+        "Los atacantes no actuaron de inmediato: hicieron varias 'pruebas' de acceso al sistema durante días antes de lanzar las transferencias fraudulentas de verdad",
+        "Usaron malware a medida (incluyendo un registrador de pulsaciones de teclado) para robar las credenciales reales de un operador de SWIFT del banco",
+        "Los cuatro ordenadores y servidores conectados a SWIFT del banco no tenían firewall y estaban conectados directamente a internet abierta — sin ninguna capa adicional de defensa"
+      ],
+      "evasion_techniques_en": [
+        "Attackers didn't act immediately: they ran several access 'test runs' over days before launching the real fraudulent transfers",
+        "They used custom malware (including a keystroke logger) to steal a real SWIFT operator's credentials at the bank",
+        "The bank's four SWIFT-connected computers and servers had no firewall and were directly connected to the open internet — no additional layer of defense"
+      ],
+      "local_port": 8035,
+      "entry_path": "index.html",
+      "upstream_port": null,
+      "upstream_entry": null,
+      "status": "defanged",
+      "source": "Atribución de agencias de inteligencia occidentales y SWIFT al grupo norcoreano Lazarus; análisis detallado de CSO Online e ISACA Journal — https://www.csoonline.com/article/4131864/10-years-later-bangladesh-bank-cyberheist-still-offers-cyber-resiliency-lessons.html",
+      "notes": "De 35 transferencias fraudulentas intentadas, solo 5 se completaron — el resto se bloquearon por nombres de beneficiario mal escritos que activaron alertas de cumplimiento normativo (una transferencia a la 'Shalika Fandation', mal escrito, fue detectada por un banco intermediario). Aun así, se robaron 81 millones de dólares, blanqueados después a través de casinos en Macao. Atribuido a Lazarus Group — el mismo tipo de actor vinculado también a Sony Pictures y Ronin/Axie Infinity, ambos en este museo. Reconstrucción educativa del email/cebo — sin malware real (ver aviso en la sala).",
+      "notes_en": "Of 35 attempted fraudulent transfers, only 5 completed — the rest were blocked by misspelled beneficiary names that triggered compliance alerts (a transfer to the misspelled 'Shalika Fandation' was flagged by an intermediary bank). Even so, $81 million was stolen, later laundered through casinos in Macau. Attributed to Lazarus Group — the same type of actor also linked to Sony Pictures and Ronin/Axie Infinity, both in this museum. Educational reconstruction of the bait email — no real malware (see the room's notice).",
+      "files": [
+        "original/index.html",
+        "original/style.css",
+        "original/swift_procedure_update.txt"
+      ],
+      "annotations_path": "kits/bangladesh-bank-swift-2016/annotations.md",
+      "annotations_en_path": "kits/bangladesh-bank-swift-2016/annotations_en.md"
+    },
+    {
+      "id": "demo-fake-bank",
+      "folder": "demo-fake-bank",
+      "display_name": "SecureBank Demo (kit de ejemplo, ficticio)",
+      "display_name_en": "SecureBank Demo (fictional example kit)",
+      "target_brand": "Ninguna — marca inventada para fines didácticos",
+      "target_brand_en": "None — brand invented purely for teaching purposes",
+      "year": 2026,
+      "kit_type": "credential-harvester",
+      "kit_type_en": "credential-harvester",
+      "delivery_vector": "email + enlace",
+      "delivery_vector_en": "email + link",
+      "evasion_techniques": [
+        "Detección de bots por User-Agent (bloquea crawlers de seguridad)",
+        "Ofuscación de nombres de campos del formulario",
+        "Redirección a la web real tras 'capturar' para no levantar sospechas"
+      ],
+      "evasion_techniques_en": [
+        "Bot detection via User-Agent (blocks security crawlers)",
+        "Obfuscated form field names",
+        "Redirects to the real site after 'capturing', to avoid raising suspicion"
+      ],
+      "local_port": 8010,
+      "entry_path": "index.html",
+      "upstream_port": null,
+      "upstream_entry": null,
+      "status": "defanged",
+      "source": "Escrito por el proyecto como ejemplo pedagógico — no proviene de un kit capturado en el mundo real",
+      "notes": "Este es el kit plantilla del museo: muestra el formato de sala (meta.json + annotations.md + original/) que deben seguir los kits reales que se añadan después, todos limpios de datos de víctimas y desactivados según RULES.md.",
+      "notes_en": "This is the museum's template kit: it shows the room format (meta.json + annotations.md + original/) that real kits added later should follow, always scrubbed of victim data and defanged per RULES.md.",
+      "files": [
+        "original/capture.js",
+        "original/index.html",
+        "original/style.css"
+      ],
+      "annotations_path": "kits/demo-fake-bank/annotations.md",
+      "annotations_en_path": "kits/demo-fake-bank/annotations_en.md"
+    },
+    {
+      "id": "google-docs-oauth-2017",
+      "folder": "google-docs-oauth-2017",
+      "display_name": "El gusano que infectó 1 millón de cuentas de Google sin robar ni una contraseña",
+      "display_name_en": "The worm that hit 1 million Google accounts without stealing a single password",
+      "target_brand": "Usuarios de Google (a través de un enlace real de google.com — no una web falsa)",
+      "target_brand_en": "Google users (through a real google.com link — not a fake website)",
+      "year": 2017,
+      "kit_type": "abuso de OAuth (phishing de consentimiento) — sin credential-harvesting",
+      "kit_type_en": "OAuth abuse (consent phishing) — no credential harvesting at all",
+      "delivery_vector": "email con invitación de \"Google Docs\" compartido, propagado automáticamente a los contactos de cada víctima",
+      "delivery_vector_en": "email with a shared \"Google Docs\" invitation, auto-spreading to each victim's contacts",
+      "evasion_techniques": [
+        "El enlace llevaba a la página REAL de inicio de sesión de Google (accounts.google.com) — no había ninguna web falsa que detectar",
+        "Google no validaba el nombre, icono ni URL de las apps de terceros, así que cualquiera podía llamar a su app 'Google Docs' y usar el logo real",
+        "Al conceder permiso, la propia app maliciosa leía la lista de contactos de la víctima y se reenviaba a sí misma automáticamente — sin que el atacante tuviera que hacer nada más"
+      ],
+      "evasion_techniques_en": [
+        "The link led to the REAL Google sign-in page (accounts.google.com) — there was no fake website to detect",
+        "Google didn't validate third-party apps' name, icon, or URL, so anyone could name their app 'Google Docs' and use the real logo",
+        "Once permission was granted, the malicious app itself read the victim's contact list and forwarded itself automatically — with no further action needed from the attacker"
+      ],
+      "local_port": 8025,
+      "entry_path": "index.html",
+      "upstream_port": null,
+      "upstream_entry": null,
+      "status": "defanged",
+      "source": "Cobertura técnica de BankInfoSecurity, Netskope (análisis del 'CloudPhishing worm') y SANS ISC — https://www.bankinfosecurity.com/attackers-unleash-oauth-worm-via-google-docs-app-a-9888 · https://www.netskope.com/blog/google-doc-cloudphishing-worm-attack-technical-analysis",
+      "notes": "El primer email malicioso se envió a las 14:27 (hora del Este de EE.UU.); en poco más de una hora Google había revocado el token de la app y detenido la propagación — pero se estima que hasta 1 millón de cuentas llegaron a autorizar la app maliciosa en esa ventana. Reconstrucción educativa de la pantalla de consentimiento OAuth — no es una app real ni se conecta a ninguna cuenta de Google de verdad.",
+      "notes_en": "The first malicious email went out at 2:27pm EST; within just over an hour Google had revoked the app's token and stopped the spread — but an estimated up to 1 million accounts authorized the malicious app in that window. Educational reconstruction of the OAuth consent screen — not a real app and never connects to any real Google account.",
+      "files": [
+        "original/grant.php",
+        "original/index.html",
+        "original/style.css"
+      ],
+      "annotations_path": "kits/google-docs-oauth-2017/annotations.md",
+      "annotations_en_path": "kits/google-docs-oauth-2017/annotations_en.md"
+    },
+    {
+      "id": "logokit-pattern",
+      "folder": "logokit-pattern",
+      "display_name": "LogoKit — el kit universal (una plantilla, miles de marcas)",
+      "display_name_en": "LogoKit — the universal kit (one template, thousands of brands)",
+      "target_brand": "Cualquiera — esa es la novedad: SharePoint, Adobe Document Cloud, OneDrive, Office 365 y en teoría cualquier empresa con logo público",
+      "target_brand_en": "Any brand — that's the twist: SharePoint, Adobe Document Cloud, OneDrive, Office 365, and in theory any company with a public logo",
+      "year": 2021,
+      "kit_type": "phishing dinámico (JavaScript en tiempo real)",
+      "kit_type_en": "dynamic phishing (real-time JavaScript)",
+      "delivery_vector": "email, con la dirección de la víctima incluida en la propia URL",
+      "delivery_vector_en": "email, with the victim's address embedded in the URL itself",
+      "evasion_techniques": [
+        "No aloja ningún logo propio: los pide EN VIVO a APIs públicas legítimas (Clearbit, Google Favicon, Microlink) — imposible de detectar por 'imágenes conocidas de phishing'",
+        "Autocompleta el email de la víctima leyendo un parámetro de la URL, reforzando la sensación de 'esta web ya me conoce'",
+        "Variantes posteriores generan capturas de pantalla reales del sitio de fondo vía un servicio externo (Thum.io), para verse aún más auténtico"
+      ],
+      "evasion_techniques_en": [
+        "Hosts no logo of its own: fetches it LIVE from legitimate public APIs (Clearbit, Google Favicon, Microlink) — impossible to flag via 'known phishing images'",
+        "Autofills the victim's email by reading a URL parameter, reinforcing the feeling that 'this page already knows me'",
+        "Later variants generate real screenshots of the background site via an external service (Thum.io), to look even more authentic"
+      ],
+      "local_port": 8015,
+      "entry_path": "index.html?e=demo@empresa-ejemplo-demo.com",
+      "upstream_port": null,
+      "upstream_entry": null,
+      "status": "defanged",
+      "source": "RiskIQ / Microsoft (2021), vía Threatpost y SecurityAffairs; actualización posterior documentada por Resecurity — https://threatpost.com/logokit-simplifies-office-365-sharepoint-login-phishing-pages/163430/",
+      "notes": "Reconstrucción educativa del mecanismo documentado. La clave de este kit no es el HTML (mínimo, genérico) sino el JavaScript que lo personaliza en tiempo real — por eso el 'kit' es prácticamente el mismo para todas las víctimas, sea cual sea la marca que ven.",
+      "notes_en": "Educational reconstruction of the documented mechanism. The key to this kit isn't the HTML (minimal, generic) but the JavaScript that personalizes it in real time — which is why the 'kit' is practically the same for every victim, whatever brand they see.",
+      "files": [
+        "original/capture.php",
+        "original/dynamic.js",
+        "original/index.html",
+        "original/logo_service.php",
+        "original/style.css"
+      ],
+      "annotations_path": "kits/logokit-pattern/annotations.md",
+      "annotations_en_path": "kits/logokit-pattern/annotations_en.md"
+    },
+    {
+      "id": "mgm-scattered-spider-2023",
+      "folder": "mgm-scattered-spider-2023",
+      "display_name": "Cómo una llamada de 10 minutos al soporte técnico tumbó los casinos de MGM",
+      "display_name_en": "How a 10-minute call to IT support brought down MGM's casinos",
+      "target_brand": "El Helpdesk / mesa de ayuda de IT de MGM Resorts (no un empleado concreto)",
+      "target_brand_en": "MGM Resorts' IT Helpdesk (not a specific employee)",
+      "year": 2023,
+      "kit_type": "vishing dirigido a soporte técnico (suplantación de identidad de un empleado real ante el propio helpdesk)",
+      "kit_type_en": "helpdesk-targeted vishing (impersonating a real employee to the helpdesk itself)",
+      "delivery_vector": "llamada telefónica al servicio de soporte técnico interno, tras investigación previa en LinkedIn",
+      "delivery_vector_en": "phone call to the internal IT help desk, after prior LinkedIn reconnaissance",
+      "evasion_techniques": [
+        "No se llamó a la víctima — se llamó al HELPDESK, haciéndose pasar por un empleado real de alto perfil investigado previamente en LinkedIn",
+        "Los atacantes hablaban inglés con fluidez nativa, lo que reforzaba la credibilidad de la suplantación ante el personal de soporte",
+        "Al obtener el restablecimiento, crearon una segunda aplicación de identidad (IDP) bajo su control, para no depender de mantener el acceso original si los detectaban"
+      ],
+      "evasion_techniques_en": [
+        "They didn't call the victim — they called the HELPDESK, posing as a real high-profile employee researched beforehand on LinkedIn",
+        "Attackers spoke fluent native English, reinforcing the credibility of the impersonation to support staff",
+        "Once they got the reset, they created a second identity-provider (IDP) app under their control, so they wouldn't depend on keeping the original access if detected"
+      ],
+      "local_port": 8027,
+      "entry_path": "index.html",
+      "upstream_port": null,
+      "upstream_entry": null,
+      "status": "defanged",
+      "source": "Análisis técnico de Netwrix, Specops y Virsec sobre el incidente; declaraciones públicas de MGM Resorts y cobertura de The Register sobre Scattered Spider — https://specopssoft.com/blog/mgm-resorts-service-desk-hack/",
+      "notes": "El grupo 'Scattered Spider' obtuvo privilegios de super-administrador en el entorno Okta de MGM, permitiendo inicio de sesión único no autorizado hacia Microsoft Azure y más de 100 hipervisores ESXi. El ataque paralizó máquinas tragaperras, llaves digitales de habitaciones y sistemas de reservas durante días; el grupo de ransomware ALPHV/BlackCat cifró sistemas después. Reconstrucción educativa del guion de la llamada — sin ninguna herramienta real de restablecimiento.",
+      "notes_en": "The 'Scattered Spider' group gained super-admin privileges in MGM's Okta environment, enabling unauthorized single sign-on into Microsoft Azure and 100+ ESXi hypervisors. The attack paralyzed slot machines, digital room keys, and reservation systems for days; the ALPHV/BlackCat ransomware group encrypted systems afterward. Educational reconstruction of the call script — no real reset tooling involved.",
+      "files": [
+        "original/index.html",
+        "original/linkedin_recon_notes.txt",
+        "original/reset.php",
+        "original/style.css"
+      ],
+      "annotations_path": "kits/mgm-scattered-spider-2023/annotations.md",
+      "annotations_en_path": "kits/mgm-scattered-spider-2023/annotations_en.md"
+    },
+    {
+      "id": "myetherwallet-bgp-2018",
+      "folder": "myetherwallet-bgp-2018",
+      "display_name": "El phishing donde escribir la URL correcta no te salvaba",
+      "display_name_en": "The phishing where typing the right URL didn't save you",
+      "target_brand": "Usuarios de MyEtherWallet (MEW), una wallet de Ethereum muy popular",
+      "target_brand_en": "MyEtherWallet (MEW) users, a very popular Ethereum wallet",
+      "year": 2018,
+      "kit_type": "secuestro de BGP + DNS — phishing a nivel de infraestructura de internet, no de la aplicación",
+      "kit_type_en": "BGP + DNS hijacking — infrastructure-level phishing, not application-level",
+      "delivery_vector": "ningún email ni enlace — la propia navegación normal de la víctima al dominio real fue redirigida",
+      "delivery_vector_en": "no email or link at all — the victim's own normal navigation to the real domain was redirected",
+      "evasion_techniques": [
+        "No hacía falta engañar a nadie para que hiciera clic en nada — la víctima escribía la URL real, correcta, de siempre, y aun así llegaba al sitio falso",
+        "El ataque manipuló las rutas centrales de internet (BGP) para que el tráfico hacia los servidores DNS de Amazon (usados por MEW) se desviara a un servidor bajo control del atacante",
+        "La única señal visible para la víctima era una advertencia de certificado TLS — fácil de ignorar sin entender su importancia"
+      ],
+      "evasion_techniques_en": [
+        "No one needed to be tricked into clicking anything — the victim typed the real, correct URL as always, and still landed on the fake site",
+        "The attack manipulated the internet's core routing (BGP) so traffic to Amazon's DNS servers (used by MEW) was redirected to a server under the attacker's control",
+        "The only visible sign to the victim was a TLS certificate warning — easy to dismiss without understanding its significance"
+      ],
+      "local_port": 8033,
+      "entry_path": "index.html",
+      "upstream_port": null,
+      "upstream_entry": null,
+      "status": "defanged",
+      "source": "Cobertura técnica de BleepingComputer, Virus Bulletin y la propia comunicación oficial de MyEtherWallet — https://www.bleepingcomputer.com/news/security/hacker-hijacks-dns-server-of-myetherwallet-to-steal-160-000/",
+      "notes": "Entre las 11:00 y las 13:00 UTC del 24 de abril de 2018, alguien envió mensajes BGP falsos a routers centrales de internet, engañándolos para enviar el tráfico de Amazon Route 53 (el servicio DNS que usaba MEW) hacia un servidor en Rusia. Se robaron unos 160.000 dólares en Ethereum. Investigadores bautizaron esta categoría de ataque como 'MEWKit'. Reconstrucción educativa del formulario de wallet — sin ninguna manipulación de red real.",
+      "notes_en": "Between 11:00 and 13:00 UTC on April 24, 2018, someone sent fake BGP messages to core internet routers, tricking them into sending traffic for Amazon Route 53 (the DNS service MEW used) to a server in Russia. About $160,000 in Ethereum was stolen. Researchers dubbed this category of attack 'MEWKit.' Educational reconstruction of the wallet form — no real network manipulation involved.",
+      "files": [
+        "original/capture.php",
+        "original/index.html",
+        "original/style.css"
+      ],
+      "annotations_path": "kits/myetherwallet-bgp-2018/annotations.md",
+      "annotations_en_path": "kits/myetherwallet-bgp-2018/annotations_en.md"
+    },
+    {
+      "id": "nigerian-prince-419",
+      "folder": "nigerian-prince-419",
+      "display_name": "El fraude más viejo y más rentable de la historia — 3.400 millones de emails al día",
+      "display_name_en": "The oldest, most profitable fraud in history — 3.4 billion emails a day",
+      "target_brand": "Cualquier destinatario de email, contactado como si fuera elegido al azar",
+      "target_brand_en": "Any email recipient, contacted as if randomly chosen",
+      "year": 1989,
+      "kit_type": "fraude de anticipo (advance-fee fraud) — sin robo de credenciales, pago directo escalonado",
+      "kit_type_en": "advance-fee fraud — no credential theft, direct escalating payments",
+      "delivery_vector": "email masivo suplantando a un príncipe, funcionario o viuda con una fortuna bloqueada",
+      "delivery_vector_en": "mass email impersonating a prince, official, or widow with a blocked fortune",
+      "evasion_techniques": [
+        "No pide una contraseña ni datos bancarios de golpe — pide pequeños pagos 'de gestión' que se van escalando, cada uno desbloqueando el siguiente obstáculo hacia la fortuna prometida",
+        "Explota la codicia y la compasión a partes iguales — variantes van desde la fortuna heredada hasta la viuda enferma o el soldado con un tesoro oculto",
+        "Se reinventa constantemente según la actualidad: conflictos armados, desastres naturales, pandemias — cualquier titular sirve de excusa narrativa nueva"
+      ],
+      "evasion_techniques_en": [
+        "It doesn't ask for a password or banking details all at once — it asks for small 'processing' payments that escalate, each unlocking the next obstacle to the promised fortune",
+        "Exploits greed and compassion in equal measure — variants range from an inherited fortune to a sick widow or a soldier with hidden treasure",
+        "Constantly reinvents itself around current events: armed conflicts, natural disasters, pandemics — any headline provides new narrative material"
+      ],
+      "local_port": 8039,
+      "entry_path": "index.html",
+      "upstream_port": null,
+      "upstream_entry": null,
+      "status": "defanged",
+      "source": "Historia documentada por ExpressVPN, NordVPN y Avast; estadísticas de pérdidas en 2024 y operación policial de Lagos — origen del fraude vinculado al 'timo del prisionero español' del siglo XIX",
+      "notes": "El nombre '419' viene del artículo del código penal nigeriano que tipifica este fraude, adoptado en 1995 ante su magnitud. Solo en 2024, este fraude extrajo más de 100 millones de dólares de víctimas estadounidenses; se estiman 3.400 millones de emails de este tipo enviados al día en todo el mundo. En 2024, una redada policial en Lagos detuvo a 792 sospechosos en una sola operación, revelando redes organizadas con oficinas y programas de formación. Reconstrucción educativa del email — con nombres y cifras ficticias.",
+      "notes_en": "The name '419' comes from the section of the Nigerian criminal code that criminalizes this fraud, adopted in 1995 given its scale. In 2024 alone, this fraud extracted over $100 million from American victims; an estimated 3.4 billion such emails are sent daily worldwide. In 2024, a police raid in Lagos arrested 792 suspects in a single operation, revealing organized networks with offices and training programs. Educational reconstruction of the email — with fictional names and figures.",
+      "files": [
+        "original/index.html",
+        "original/step1.php",
+        "original/step2.php",
+        "original/step3.php",
+        "original/style.css"
+      ],
+      "annotations_path": "kits/nigerian-prince-419/annotations.md",
+      "annotations_en_path": "kits/nigerian-prince-419/annotations_en.md"
+    },
+    {
+      "id": "oktapus-smishing-2022",
+      "folder": "oktapus-smishing-2022",
+      "display_name": "0ktapus — el smishing que comprometió 136 empresas en meses",
+      "display_name_en": "0ktapus — the smishing campaign that hit 136 companies in months",
+      "target_brand": "Empleados de empresas clientes de Okta (Twilio, Cloudflare, MailChimp, Klaviyo, y ~130 más)",
+      "target_brand_en": "Employees at Okta customer companies (Twilio, Cloudflare, MailChimp, Klaviyo, and ~130 more)",
+      "year": 2022,
+      "kit_type": "smishing (phishing por SMS) + relevo de código de verificación en tiempo real",
+      "kit_type_en": "smishing (SMS phishing) + real-time verification-code relay",
+      "delivery_vector": "SMS con enlace a una página de login de Okta clonada, personalizada por empresa",
+      "delivery_vector_en": "SMS with a link to a cloned Okta login page, personalized per company",
+      "evasion_techniques": [
+        "Cada web falsa se generaba con el logo y nombre exactos de la empresa objetivo, apuntando a un dominio parecido al portal real de Okta de esa empresa",
+        "El SMS (en vez de email) esquivaba los filtros anti-phishing corporativos, centrados casi siempre en el correo",
+        "Tras robar la contraseña, el kit pedía también el código de un solo uso enviado por SMS (MFA) y lo reenviaba en tiempo real a los atacantes antes de que caducara"
+      ],
+      "evasion_techniques_en": [
+        "Each fake site was generated with the target company's exact logo and name, pointing to a domain resembling that company's real Okta portal",
+        "SMS (instead of email) dodged corporate anti-phishing filters, almost always focused on email",
+        "After stealing the password, the kit also asked for the SMS one-time code (MFA) and relayed it to the attackers in real time before it expired"
+      ],
+      "local_port": 8026,
+      "entry_path": "index.html",
+      "upstream_port": null,
+      "upstream_entry": null,
+      "status": "defanged",
+      "source": "Group-IB, 'Roasting 0ktapus' (2022) — https://www.group-ib.com/blog/0ktapus/ · confirmación oficial de Okta ('Scatter Swine') — https://sec.okta.com/articles/scatterswine/",
+      "notes": "Casi 10.000 credenciales de empleados robadas en 136 organizaciones, la mayoría empresas de tecnología/software/nube, entre ellas Twilio, Cloudflare, MailChimp y Klaviyo. El acceso a Twilio permitió a los atacantes interceptar códigos SMS de otras víctimas en campañas posteriores. Reconstrucción educativa — el relevo de MFA se queda siempre en un log local, nunca se envía a ningún sitio real.",
+      "notes_en": "Nearly 10,000 employee credentials stolen across 136 organizations, mostly tech/software/cloud companies, including Twilio, Cloudflare, MailChimp, and Klaviyo. Access to Twilio let attackers intercept SMS codes for other victims in later campaigns. Educational reconstruction — the MFA relay always stays in a local log, never sent anywhere real.",
+      "files": [
+        "original/index.html",
+        "original/relay.php",
+        "original/step1.php",
+        "original/style.css"
+      ],
+      "annotations_path": "kits/oktapus-smishing-2022/annotations.md",
+      "annotations_en_path": "kits/oktapus-smishing-2022/annotations_en.md"
+    },
+    {
+      "id": "phish-in-a-barrel-pattern",
+      "folder": "phish-in-a-barrel-pattern",
+      "display_name": "Patrón \"Phish in a Barrel\" — exfiltración por email",
+      "display_name_en": "The \"Phish in a Barrel\" pattern — email exfiltration",
+      "target_brand": "Patrón genérico de banca online documentado en la investigación (no se reconstruye un banco concreto)",
+      "target_brand_en": "Generic online-banking pattern documented in the research (no specific bank is reconstructed)",
+      "year": 2014,
+      "kit_type": "credential-harvester",
+      "kit_type_en": "credential-harvester",
+      "delivery_vector": "email",
+      "delivery_vector_en": "email",
+      "evasion_techniques": [
+        "Prácticamente ninguna — los propios investigadores señalan que la mayoría de estos kits son 'perezosos' (poca ofuscación)",
+        "Paradoja de seguridad: dejan el .zip original del kit en el servidor, con listado de directorio abierto → así es como los investigadores los encuentran",
+        "Reutilizan herramientas de terceros ya subidas junto al kit: fuerza bruta de WordPress y una webshell, para mantener acceso al servidor comprometido"
+      ],
+      "evasion_techniques_en": [
+        "Almost none — researchers themselves note most of these kits are 'lazy' (little obfuscation)",
+        "Security paradox: they leave the kit's original .zip on the server, with open directory listing — that's exactly how researchers find them",
+        "They reuse third-party tools already uploaded alongside the kit: a WordPress brute-forcer and a webshell, to keep access to the compromised server"
+      ],
+      "local_port": 8011,
+      "entry_path": "index.html",
+      "upstream_port": null,
+      "upstream_entry": null,
+      "status": "defanged",
+      "source": "Basado en la investigación pública 'Phish in a Barrel' de Jordan Wright (Duo Security, 2014) — https://jordan-wright.com/blog/2014/07/30/how-to-hunt-down-phishing-kits/",
+      "notes": "Reconstrucción educativa del patrón documentado en la fuente citada, no una copia de un kit capturado. Escrito por el proyecto para ilustrar la técnica con precisión, con el envío real siempre comentado.",
+      "notes_en": "Educational reconstruction of the pattern documented in the cited source, not a copy of a captured kit. Written by the project to illustrate the technique precisely, with the real send always commented out.",
+      "files": [
+        "original/harvest.php",
+        "original/index.html",
+        "original/style.css",
+        "original/thanks.html"
+      ],
+      "annotations_path": "kits/phish-in-a-barrel-pattern/annotations.md",
+      "annotations_en_path": "kits/phish-in-a-barrel-pattern/annotations_en.md"
+    },
+    {
+      "id": "phish-phry-2009",
+      "folder": "phish-phry-2009",
+      "display_name": "Operation Phish Phry — la mayor causa de cibercrimen de la historia (100 acusados)",
+      "display_name_en": "Operation Phish Phry — the largest cybercrime case in history (100 defendants)",
+      "target_brand": "Clientes de bancos estadounidenses (páginas de banca online falsificadas)",
+      "target_brand_en": "US bank customers (fake online-banking pages)",
+      "year": 2009,
+      "kit_type": "credential-harvester + red de blanqueo de capitales (mulas de dinero)",
+      "kit_type_en": "credential-harvester + money-laundering network (money mules)",
+      "delivery_vector": "email masivo (spam) con enlaces a páginas bancarias falsas",
+      "delivery_vector_en": "mass email (spam) with links to fake banking pages",
+      "evasion_techniques": [
+        "Operación transnacional dividida en dos roles: hackers en Egipto capturaban las credenciales, cómplices en EE.UU. gestionaban el dinero — así ninguno de los dos grupos veía la operación completa",
+        "Reclutamiento de 'runners' (mulas de dinero) que abrían cuentas bancarias reales a su nombre para recibir las transferencias, dificultando el rastreo directo hasta los hackers",
+        "El dinero robado se fragmentaba y se enviaba de vuelta a Egipto por servicios de transferencia internacional, en tramos que evitaban activar alertas de grandes movimientos"
+      ],
+      "evasion_techniques_en": [
+        "Transnational operation split into two roles: hackers in Egypt captured credentials, accomplices in the US handled the money — so neither group saw the whole operation",
+        "Recruitment of 'runners' (money mules) who opened real bank accounts in their own name to receive transfers, making it harder to trace money directly back to the hackers",
+        "Stolen money was split up and sent back to Egypt via international transfer services, in amounts designed to avoid triggering large-transaction alerts"
+      ],
+      "local_port": 8019,
+      "entry_path": "index.html",
+      "upstream_port": null,
+      "upstream_entry": null,
+      "status": "defanged",
+      "source": "FBI, comunicado oficial de la Operation 'Phish Phry' (2009) — https://www.fbi.gov/news/stories/2009/october/phishphry_100709 · Departamento de Justicia de EE.UU.",
+      "notes": "En su momento, la mayor causa de cibercrimen jamás presentada: 53 acusados en EE.UU. y 47 en Egipto, en una investigación conjunta del FBI y las autoridades egipcias. Pérdidas estimadas superiores a 1,5 millones de dólares; decenas de condenas, con penas de hasta 13 años de prisión para los cabecillas. Reconstrucción educativa del mecanismo, sin datos de víctimas ni cuentas reales.",
+      "notes_en": "At the time, the largest cybercrime case ever brought: 53 defendants in the US and 47 in Egypt, in a joint FBI and Egyptian-authorities investigation. Estimated losses over $1.5 million; dozens of convictions, with sentences up to 13 years in prison for ringleaders. Educational reconstruction of the mechanism, with no victim data or real accounts.",
+      "files": [
+        "original/harvest.php",
+        "original/index.html",
+        "original/mule_recruitment_flyer.txt",
+        "original/style.css",
+        "original/thanks.html"
+      ],
+      "annotations_path": "kits/phish-phry-2009/annotations.md",
+      "annotations_en_path": "kits/phish-phry-2009/annotations_en.md"
+    },
+    {
+      "id": "pig-butchering-pattern",
+      "folder": "pig-butchering-pattern",
+      "display_name": "\"Pig Butchering\" — la estafa de miles de millones que dura meses, no minutos",
+      "display_name_en": "\"Pig Butchering\" — the multi-billion-dollar scam that lasts months, not minutes",
+      "target_brand": "Cualquier persona contactada por 'error' vía SMS, redes sociales o apps de citas",
+      "target_brand_en": "Anyone contacted 'by mistake' via SMS, social media, or dating apps",
+      "year": 2023,
+      "kit_type": "estafa de inversión romántica a largo plazo, con panel de trading falso",
+      "kit_type_en": "long-con romance investment scam, with a fake trading dashboard",
+      "delivery_vector": "mensaje de \"número equivocado\" por SMS, redes sociales o apps de citas, seguido de meses de relación cultivada",
+      "delivery_vector_en": "a \"wrong number\" text message via SMS, social media, or dating apps, followed by months of cultivated relationship",
+      "evasion_techniques": [
+        "No hay urgencia en ningún momento — al contrario que casi todas las demás salas, aquí la paciencia de MESES es la propia arma del ataque",
+        "El panel de inversión muestra ganancias falsas reales y permite retirar pequeñas cantidades al principio, generando confianza genuina antes del gran engaño",
+        "Los operadores suelen estar en centros de estafa organizados en el sudeste asiático — a menudo, ellos mismos son víctimas de trata de personas, forzados a operar la estafa"
+      ],
+      "evasion_techniques_en": [
+        "There's no urgency at any point — unlike almost every other room, MONTHS of patience is itself the weapon here",
+        "The investment dashboard shows real-looking fake profits and allows small early withdrawals, building genuine trust before the big con",
+        "Operators are often based in organized scam centers in Southeast Asia — frequently, they are themselves trafficking victims, forced to run the scam"
+      ],
+      "local_port": 8038,
+      "entry_path": "index.html",
+      "upstream_port": null,
+      "upstream_entry": null,
+      "status": "defanged",
+      "source": "Servicio Secreto de EE.UU. (unidad de fraude de inversión) y Departamento de Justicia de EE.UU. (acciones de decomiso de criptomonedas) — https://www.secretservice.gov/investigations/investmentfraud-pigbutchering",
+      "notes": "Se estima que este fraude ha costado miles de millones de dólares a nivel mundial, con millones de víctimas. El nombre viene del mandarín 'Shā Zhū Pán' ('engordar al cerdo antes de matarlo') — la víctima se 'engorda' con confianza y atención antes del golpe final. Reconstrucción educativa del panel de trading falso — sin ninguna plataforma ni criptomoneda real.",
+      "notes_en": "This fraud is estimated to have cost billions of dollars worldwide, with millions of victims. The name comes from the Mandarin 'Shā Zhū Pán' ('fatten the pig before slaughter') — the victim is 'fattened' with trust and attention before the final blow. Educational reconstruction of the fake trading dashboard — no real platform or cryptocurrency involved.",
+      "files": [
+        "original/dashboard.php",
+        "original/index.html",
+        "original/style.css"
+      ],
+      "annotations_path": "kits/pig-butchering-pattern/annotations.md",
+      "annotations_en_path": "kits/pig-butchering-pattern/annotations_en.md"
+    },
+    {
+      "id": "podesta-dnc-2016",
+      "folder": "podesta-dnc-2016",
+      "display_name": "El email que llegó a influir en una elección presidencial",
+      "display_name_en": "The email that ended up shaping a presidential election",
+      "target_brand": "Cuenta de Gmail de John Podesta, presidente de campaña de Hillary Clinton (2016)",
+      "target_brand_en": "The Gmail account of John Podesta, Hillary Clinton's 2016 campaign chairman",
+      "year": 2016,
+      "kit_type": "spear-phishing (ataque dirigido a una persona concreta)",
+      "kit_type_en": "spear-phishing (attack targeted at one specific person)",
+      "delivery_vector": "email, con enlaces acortados vía Bitly",
+      "delivery_vector_en": "email, with shortened links via Bitly",
+      "evasion_techniques": [
+        "Falsa alerta de seguridad de Google ('alguien ha usado tu contraseña') — genera pánico y urgencia real, no codicia",
+        "Dominio de remitente parecido pero no idéntico al legítimo",
+        "Miles de enlaces Bitly generados en masa contra ~4.000 objetivos distintos, cada uno personalizado con el nombre/email de la víctima concreta",
+        "El propio equipo de TI de la campaña, al reenviar la alerta, escribió 'this is a legitimate email' por error (querían decir 'illegitimate') — el típico fallo humano que decide todo"
+      ],
+      "evasion_techniques_en": [
+        "Fake Google security alert ('someone has your password') — triggers real panic and urgency, not greed",
+        "Sender domain that looks similar but isn't identical to the legitimate one",
+        "Thousands of Bitly links generated in bulk against ~4,000 different targets, each personalized with that specific victim's name/email",
+        "The campaign's own IT staff, forwarding the alert, typed 'this is a legitimate email' by mistake (they meant 'illegitimate') — the classic human slip that decided everything"
+      ],
+      "local_port": 8016,
+      "entry_path": "index.html",
+      "upstream_port": null,
+      "upstream_entry": null,
+      "status": "defanged",
+      "source": "Atribución técnica de SecureWorks a 'Fancy Bear' (GRU, inteligencia militar rusa); cobertura de CNN, Sophos y Motherboard sobre el caso Podesta — https://www.cnn.com/2016/10/28/politics/phishing-email-hack-john-podesta-hillary-clinton-wikileaks · https://news.sophos.com/en-us/2016/12/16/dnc-chief-podesta-led-to-phishing-link-thanks-to-a-typo/",
+      "notes": "Entre marzo de 2015 y mayo de 2016, el mismo grupo generó cerca de 9.000 enlaces Bitly dirigidos a unos 4.000 objetivos. El correo de Podesta fue uno de ellos: los emails robados acabaron publicados por WikiLeaks semanas antes de las elecciones de EE.UU. de 2016. Reconstrucción educativa del mecanismo, con dominios y textos ficticios — no se reproduce el email original.",
+      "notes_en": "Between March 2015 and May 2016, the same group generated close to 9,000 Bitly links aimed at roughly 4,000 targets. Podesta's email was one of them: the stolen emails ended up published by WikiLeaks weeks before the 2016 US election. Educational reconstruction of the mechanism, with fictional domains and text — the original email is not reproduced.",
+      "files": [
+        "original/capture.js",
+        "original/fake_security_alert.html",
+        "original/index.html",
+        "original/style.css"
+      ],
+      "annotations_path": "kits/podesta-dnc-2016/annotations.md",
+      "annotations_en_path": "kits/podesta-dnc-2016/annotations_en.md"
+    },
+    {
+      "id": "quishing-qr-pattern",
+      "folder": "quishing-qr-pattern",
+      "display_name": "Quishing — el phishing que sale del ordenador y se pega a un parquímetro",
+      "display_name_en": "Quishing — the phishing that leaves your computer and sticks onto a parking meter",
+      "target_brand": "Conductores que escanean códigos QR de parquímetros/EV chargers públicos",
+      "target_brand_en": "Drivers scanning QR codes on public parking meters/EV chargers",
+      "year": 2023,
+      "kit_type": "quishing (phishing por código QR) en el mundo físico",
+      "kit_type_en": "quishing (QR-code phishing) in the physical world",
+      "delivery_vector": "una simple pegatina con un código QR falso, pegada encima del código QR legítimo de un parquímetro o cargador eléctrico",
+      "delivery_vector_en": "a simple sticker with a fake QR code, placed over the legitimate QR code on a parking meter or EV charger",
+      "evasion_techniques": [
+        "No hace falta hackear nada — solo imprimir una pegatina y pegarla encima del código legítimo, en el mundo físico, no digital",
+        "El código QR esconde la URL real del ojo humano: nadie 'lee' un QR antes de escanearlo, así que no hay ninguna oportunidad de detectar un dominio sospechoso antes de llegar a la web falsa",
+        "Como el enlace va dentro de una IMAGEN, esquiva los escáneres de seguridad de correo/mensajería que solo analizan URLs en texto plano"
+      ],
+      "evasion_techniques_en": [
+        "No hacking required — just print a sticker and place it over the legitimate code, in the physical world, not digital",
+        "The QR code hides the real URL from the human eye: nobody 'reads' a QR code before scanning it, so there's no chance to spot a suspicious domain before landing on the fake site",
+        "Since the link is embedded inside an IMAGE, it dodges email/messaging security scanners that only analyze plain-text URLs"
+      ],
+      "local_port": 8036,
+      "entry_path": "index.html",
+      "upstream_port": null,
+      "upstream_entry": null,
+      "status": "defanged",
+      "source": "Alertas públicas del FBI (IC3) sobre quishing en parquímetros y cargadores eléctricos; cobertura de Synovus y DeepStrike sobre el crecimiento del vector — un aumento del 587% entre 2023 y 2024 según varios proveedores de seguridad",
+      "notes": "El quishing pasó de representar el 0,8% de los ataques de phishing en 2021 al 12,4% en 2023, con un crecimiento reportado del 587% entre 2023 y 2024. Policías de varias ciudades de EE.UU. y Reino Unido han retirado pegatinas fraudulentas de parquímetros reales. Reconstrucción educativa — sin ningún código QR que apunte a un sitio externo real.",
+      "notes_en": "Quishing went from 0.8% of phishing attacks in 2021 to 12.4% in 2023, with a reported 587% growth between 2023 and 2024. Police in several US and UK cities have removed fraudulent stickers from real parking meters. Educational reconstruction — no QR code pointing to a real external site.",
+      "files": [
+        "original/capture.php",
+        "original/index.html",
+        "original/pay.html",
+        "original/style.css"
+      ],
+      "annotations_path": "kits/quishing-qr-pattern/annotations.md",
+      "annotations_en_path": "kits/quishing-qr-pattern/annotations_en.md"
+    },
+    {
+      "id": "reddit-sms-2fa-2018",
+      "folder": "reddit-sms-2fa-2018",
+      "display_name": "Reddit tenía 2FA activado — y aun así les hackearon",
+      "display_name_en": "Reddit had 2FA enabled — and got hacked anyway",
+      "target_brand": "Empleados de Reddit con cuentas en proveedores de hosting de código y nube",
+      "target_brand_en": "Reddit employees with accounts at code-hosting and cloud providers",
+      "year": 2018,
+      "kit_type": "interceptación de SMS (probable SIM swap) para eludir 2FA basado en SMS",
+      "kit_type_en": "SMS interception (likely SIM swap) to bypass SMS-based 2FA",
+      "delivery_vector": "manipulación del operador móvil de la víctima para desviar sus SMS (no un email ni una web falsa)",
+      "delivery_vector_en": "manipulation of the victim's mobile carrier to redirect their SMS (not an email or fake website)",
+      "evasion_techniques": [
+        "El propio Reddit admitió no saber (o no querer revelar) exactamente cómo se interceptaron los SMS — lo que demuestra lo difícil que es detectar este vector",
+        "No se hackeó el teléfono de la víctima directamente — la manipulación ocurrió del lado del operador de telefonía, fuera del control de la propia víctima",
+        "El 2FA por SMS, pensado como una capa extra de seguridad, resultó ser precisamente el eslabón que falló, mientras las contraseñas seguían protegidas"
+      ],
+      "evasion_techniques_en": [
+        "Reddit itself admitted not knowing (or not wanting to reveal) exactly how the SMS messages were intercepted — showing how hard this vector is to detect",
+        "The victim's phone wasn't hacked directly — the manipulation happened on the carrier's side, outside the victim's own control",
+        "SMS-based 2FA, meant as an extra security layer, turned out to be exactly the link that failed, even as passwords stayed protected"
+      ],
+      "local_port": 8034,
+      "entry_path": "index.html",
+      "upstream_port": null,
+      "upstream_entry": null,
+      "status": "defanged",
+      "source": "Comunicado oficial de Reddit; análisis de Krebs on Security, 'Reddit Breach Highlights Limits of SMS-Based Authentication' — https://krebsonsecurity.com/2018/08/reddit-breach-highlights-limits-of-sms-based-authentication/",
+      "notes": "El acceso no autorizado ocurrió entre el 14 y el 18 de junio de 2018. Los atacantes accedieron a código fuente, logs internos, archivos de configuración y una copia de seguridad antigua (2005-2007) con nombres de usuario, contraseñas cifradas, emails y mensajes. Reddit respondió exigiendo 2FA basado en tokens (no SMS) para todos los empleados. Reconstrucción educativa del concepto de interceptación — sin ninguna manipulación real de operadores telefónicos.",
+      "notes_en": "Unauthorized access happened between June 14-18, 2018. Attackers accessed source code, internal logs, config files, and an old 2005-2007 backup with usernames, hashed passwords, emails, and messages. Reddit responded by requiring token-based (not SMS) 2FA for all employees. Educational reconstruction of the interception concept — no real carrier manipulation involved.",
+      "files": [
+        "original/index.html",
+        "original/style.css",
+        "original/swap.php"
+      ],
+      "annotations_path": "kits/reddit-sms-2fa-2018/annotations.md",
+      "annotations_en_path": "kits/reddit-sms-2fa-2018/annotations_en.md"
+    },
+    {
+      "id": "rimasauskas-bec-100m",
+      "folder": "rimasauskas-bec-100m",
+      "display_name": "El hombre que estafó $100 millones a Google y Facebook",
+      "display_name_en": "The man who scammed Google and Facebook out of $100 million",
+      "target_brand": "Empleados del departamento de pagos de Google y Facebook (2013-2015)",
+      "target_brand_en": "Payments-department employees at Google and Facebook (2013-2015)",
+      "year": 2013,
+      "kit_type": "estafa BEC (Business Email Compromise) — sin kit técnico, ingeniería social + documentos falsificados",
+      "kit_type_en": "BEC scam (Business Email Compromise) — no technical kit, social engineering + forged documents",
+      "delivery_vector": "email corporativo suplantando a un proveedor real, con facturas y contratos falsificados adjuntos",
+      "delivery_vector_en": "corporate email impersonating a real vendor, with forged invoices and contracts attached",
+      "evasion_techniques": [
+        "Registró una empresa REAL con el mismo nombre que un proveedor de hardware auténtico de ambas compañías — no un dominio parecido, una empresa legalmente constituida",
+        "Falsificó facturas, contratos y cartas con firmas de directivos reales de las empresas suplantadas",
+        "Fabricó sellos corporativos falsos grabados con los nombres de las compañías, para que la documentación superara controles bancarios",
+        "Repartió el dinero en cuentas bancarias de varios países para dificultar el rastreo (blanqueo de capitales)"
+      ],
+      "evasion_techniques_en": [
+        "Registered a REAL company with the same name as a genuine hardware vendor of both companies — not a similar-looking domain, a legally incorporated business",
+        "Forged invoices, contracts and letters bearing the signatures of real executives from the impersonated companies",
+        "Fabricated fake corporate seals engraved with the companies' names, so the paperwork would pass bank checks",
+        "Spread the money across bank accounts in several countries to make tracing harder (money laundering)"
+      ],
+      "local_port": 8017,
+      "entry_path": "index.html",
+      "upstream_port": null,
+      "upstream_entry": null,
+      "status": "defanged",
+      "source": "Departamento de Justicia de EE.UU. (cargos y sentencia); cobertura de BleepingComputer, CNBC, NPR y CyberScoop — https://www.bleepingcomputer.com/news/security/lithuanian-pleads-guilty-to-stealing-100-million-from-google-facebook/ · https://www.npr.org/2019/03/25/706715377/",
+      "notes": "Evaldas Rimasauskas (Lituania) defraudó a Google (~23M$) y Facebook (~99M$) entre 2013 y 2015. Se declaró culpable de fraude electrónico, robo de identidad agravado y blanqueo de capitales; sentenciado a 5 años de prisión, con orden de decomiso de ~50M$ y restitución de más de 26M$. Google recuperó todo su dinero; Facebook, la mayor parte. Reconstrucción educativa con empresas y documentos ficticios — no se reproduce ningún documento real.",
+      "notes_en": "Evaldas Rimasauskas (Lithuania) defrauded Google (~$23M) and Facebook (~$99M) between 2013 and 2015. He pleaded guilty to wire fraud, aggravated identity theft and money laundering; sentenced to 5 years in prison, with an order to forfeit ~$50M and pay over $26M in restitution. Google recovered all its money; Facebook recovered most of it. Educational reconstruction with fictional companies and documents — no real document is reproduced.",
+      "files": [
+        "original/index.html",
+        "original/spoofed_wire_instructions.txt",
+        "original/style.css"
+      ],
+      "annotations_path": "kits/rimasauskas-bec-100m/annotations.md",
+      "annotations_en_path": "kits/rimasauskas-bec-100m/annotations_en.md"
+    },
+    {
+      "id": "ronin-axie-2022",
+      "folder": "ronin-axie-2022",
+      "display_name": "La oferta de trabajo falsa que costó 625 millones de dólares",
+      "display_name_en": "The fake job offer that cost $625 million",
+      "target_brand": "Ingenieros senior de Sky Mavis (empresa creadora de Axie Infinity / red Ronin)",
+      "target_brand_en": "Senior engineers at Sky Mavis (the company behind Axie Infinity / the Ronin network)",
+      "year": 2022,
+      "kit_type": "spear-phishing de reclutamiento con documento malicioso adjunto (ataque a infraestructura cripto)",
+      "kit_type_en": "recruitment spear-phishing with a malicious document attachment (attack on crypto infrastructure)",
+      "delivery_vector": "contacto vía LinkedIn con una oferta de empleo, seguido de varias rondas de entrevista falsas y un PDF malicioso",
+      "delivery_vector_en": "LinkedIn outreach with a job offer, followed by several fake interview rounds and a malicious PDF",
+      "evasion_techniques": [
+        "El proceso de reclutamiento falso incluía VARIAS rondas de entrevistas realistas antes de enviar el archivo malicioso — generando confianza acumulada, no un solo mensaje sospechoso",
+        "El documento final se presentaba como una 'oferta de contrato' extremadamente creíble tras semanas de proceso — el momento de menos alerta de la víctima",
+        "El objetivo no era una wallet cualquiera, sino ingenieros con acceso a los nodos validadores de la red — un objetivo elegido con precisión quirúrgica"
+      ],
+      "evasion_techniques_en": [
+        "The fake recruitment process included SEVERAL realistic interview rounds before sending the malicious file — building accumulated trust, not a single suspicious message",
+        "The final document was presented as an extremely credible 'contract offer' after weeks of process — the victim's lowest point of alertness",
+        "The target wasn't just any wallet, but engineers with access to the network's validator nodes — a surgically precise target choice"
+      ],
+      "local_port": 8028,
+      "entry_path": "index.html",
+      "upstream_port": null,
+      "upstream_entry": null,
+      "status": "defanged",
+      "source": "Atribución oficial del FBI y el Departamento del Tesoro de EE.UU. a Lazarus Group; cobertura técnica de Chainalysis, Halborn y The Block — https://www.chainalysis.com/blog/axie-infinity-ronin-bridge-dprk-hack-seizure/ · https://www.halborn.com/blog/post/explained-the-ronin-hack-march-2022",
+      "notes": "El mayor robo de criptomonedas de la historia hasta la fecha: 173.600 ETH + 25,5 millones de USDC, valorados en unos 625 millones de dólares en el momento del ataque. La red Ronin requería 5 de 9 firmas de validadores para autorizar una retirada; los atacantes comprometieron 4 nodos directamente y un quinto a través de un nodo RPC mal configurado que Sky Mavis usaba para reducir comisiones a sus usuarios. Atribuido por EE.UU. al grupo norcoreano Lazarus. Reconstrucción educativa del mensaje de LinkedIn y el PDF — sin ningún malware real (ver aviso en la sala).",
+      "notes_en": "The largest cryptocurrency theft in history to date: 173,600 ETH + 25.5 million USDC, worth about $625 million at the time of the attack. The Ronin network required 5 of 9 validator signatures to authorize a withdrawal; attackers compromised 4 nodes directly and a fifth through a misconfigured RPC node Sky Mavis used to reduce fees for its users. Attributed by the US to the North Korean Lazarus group. Educational reconstruction of the LinkedIn message and PDF — no real malware (see the room's notice).",
+      "files": [
+        "original/fake_offer_letter.txt",
+        "original/index.html",
+        "original/style.css"
+      ],
+      "annotations_path": "kits/ronin-axie-2022/annotations.md",
+      "annotations_en_path": "kits/ronin-axie-2022/annotations_en.md"
+    },
+    {
+      "id": "rsa-securid-2011",
+      "folder": "rsa-securid-2011",
+      "display_name": "El Excel que comprometió la seguridad de medio mundo corporativo",
+      "display_name_en": "The Excel file that compromised half the corporate world's security",
+      "target_brand": "Empleados de RSA (división de seguridad de EMC Corp.)",
+      "target_brand_en": "RSA employees (EMC Corp.'s security division)",
+      "year": 2011,
+      "kit_type": "spear-phishing con exploit de día cero adjunto (ataque a infraestructura de seguridad)",
+      "kit_type_en": "spear-phishing with a zero-day exploit attachment (attack on security infrastructure)",
+      "delivery_vector": "email con hoja de cálculo Excel maliciosa (\"2011 Recruitment plan.xls\")",
+      "delivery_vector_en": "email with a malicious Excel spreadsheet (\"2011 Recruitment plan.xls\")",
+      "evasion_techniques": [
+        "Asunto genérico y creíble en un contexto de RRHH ('Plan de Contratación 2011') — nada alarmante, nada que levante sospechas",
+        "El correo cayó primero en la carpeta de spam; un empleado lo recuperó de ahí y lo abrió igualmente, confiando en el asunto",
+        "El exploit iba embebido en un objeto Flash dentro del propio Excel, aprovechando una vulnerabilidad de día cero (sin parche disponible en ese momento)"
+      ],
+      "evasion_techniques_en": [
+        "Generic, believable HR-context subject ('2011 Recruitment Plan') — nothing alarming, nothing to raise suspicion",
+        "The email first landed in spam; an employee retrieved it from there and opened it anyway, trusting the subject line",
+        "The exploit was embedded in a Flash object inside the Excel file itself, exploiting a zero-day vulnerability (no patch available at the time)"
+      ],
+      "local_port": 8022,
+      "entry_path": "index.html",
+      "upstream_port": null,
+      "upstream_entry": null,
+      "status": "defanged",
+      "source": "Threatpost, 'RSA: SecurID Attack Was Phishing Via an Excel Spreadsheet' — https://threatpost.com/rsa-securid-attack-was-phishing-excel-spreadsheet-040111/75099/ · cobertura técnica de Dark Reading y The Register",
+      "notes": "El ataque robó información relacionada con el sistema de autenticación SecurID de RSA, usado por miles de empresas y agencias gubernamentales. Meses después, esa información se usó en intentos de intrusión contra contratistas de defensa como Lockheed Martin. No incluimos ningún exploit ni código real del día cero en esta sala — para eso, el proyecto hermano 'Malware Research Hub' es el lugar adecuado. Aquí solo reconstruimos el email/cebo.",
+      "notes_en": "The attack stole information related to RSA's SecurID authentication system, used by thousands of companies and government agencies. Months later, that information was used in intrusion attempts against defense contractors like Lockheed Martin. We don't include any real zero-day exploit or code in this room — the sibling project 'Malware Research Hub' is the right place for that. Here we only reconstruct the bait email.",
+      "files": [
+        "original/exploit_notice.txt",
+        "original/index.html",
+        "original/style.css"
+      ],
+      "annotations_path": "kits/rsa-securid-2011/annotations.md",
+      "annotations_en_path": "kits/rsa-securid-2011/annotations_en.md"
+    },
+    {
+      "id": "sony-pictures-2014",
+      "folder": "sony-pictures-2014",
+      "display_name": "El falso Apple ID que acabó filtrando películas de Sony",
+      "display_name_en": "The fake Apple ID page that ended up leaking Sony's movies",
+      "target_brand": "Administradores de sistemas y ejecutivos de Sony Pictures (email de verificación de Apple ID falso)",
+      "target_brand_en": "Sony Pictures sysadmins and executives (fake Apple ID verification email)",
+      "year": 2014,
+      "kit_type": "credential-harvester + reutilización de contraseñas (pivote de cuenta personal a corporativa)",
+      "kit_type_en": "credential-harvester + password reuse (personal-to-corporate account pivot)",
+      "delivery_vector": "email de verificación de Apple ID falso, dirigido primero a administradores de sistemas",
+      "delivery_vector_en": "fake Apple ID verification email, aimed first at system administrators",
+      "evasion_techniques": [
+        "Mostraba un error falso ('contraseña no válida, inténtalo de nuevo') tras el primer intento — mientras capturaba la contraseña real en segundo plano, sin que la víctima sospechara nada raro",
+        "No atacaba directamente las cuentas corporativas: iba primero a por el Apple ID PERSONAL, un objetivo mucho menos protegido",
+        "Usaba los perfiles públicos de LinkedIn de los empleados para deducir su formato de usuario corporativo, y probaba si reutilizaban la misma contraseña"
+      ],
+      "evasion_techniques_en": [
+        "Showed a fake error ('invalid password, try again') after the first attempt — while capturing the real password in the background, with no obvious sign to the victim",
+        "Didn't attack corporate accounts directly: went after the PERSONAL Apple ID first, a much less protected target",
+        "Used employees' public LinkedIn profiles to infer their corporate username format, then tried whether they reused the same password"
+      ],
+      "local_port": 8023,
+      "entry_path": "index.html",
+      "upstream_port": null,
+      "upstream_entry": null,
+      "status": "defanged",
+      "source": "Investigación citada en RSA Conference y recogida por Computerworld, eWeek y SiliconANGLE — https://www.computerworld.com/article/2913805/ · atribución del FBI y cargos del DOJ contra un operativo norcoreano",
+      "notes": "El FBI atribuyó el ataque a Corea del Norte; el Departamento de Justicia de EE.UU. presentó cargos contra Park Jin Hyok. Tras el robo de credenciales, los atacantes desplegaron un malware 'wiper' que destruyó sistemas de Sony Pictures y filtraron películas inéditas, guiones y correos internos — en el contexto de la controversia por la película 'The Interview'. Reconstrucción educativa del mecanismo de captura, sin reproducir la marca real de Apple ni ningún dato de empleados reales.",
+      "notes_en": "The FBI attributed the attack to North Korea; the US Department of Justice filed charges against Park Jin Hyok. After the credential theft, attackers deployed 'wiper' malware that destroyed Sony Pictures systems, and leaked unreleased films, scripts, and internal emails — in the context of the controversy over the film 'The Interview.' Educational reconstruction of the capture mechanism, without reproducing Apple's real brand or any real employee data.",
+      "files": [
+        "original/capture.php",
+        "original/index.html",
+        "original/style.css"
+      ],
+      "annotations_path": "kits/sony-pictures-2014/annotations.md",
+      "annotations_en_path": "kits/sony-pictures-2014/annotations_en.md"
+    },
+    {
+      "id": "target-fazio-2013",
+      "folder": "target-fazio-2013",
+      "display_name": "Cómo un email a un proveedor de aire acondicionado tumbó a Target",
+      "display_name_en": "How one email to an air-conditioning vendor took down Target",
+      "target_brand": "Fazio Mechanical (proveedor de HVAC de Target) → red interna de Target Corp.",
+      "target_brand_en": "Fazio Mechanical (Target's HVAC vendor) → Target Corp.'s internal network",
+      "year": 2013,
+      "kit_type": "spear-phishing con troyano adjunto (ataque a la cadena de suministro)",
+      "kit_type_en": "spear-phishing with a trojan attachment (supply-chain attack)",
+      "delivery_vector": "email con malware adjunto (troyano Citadel, basado en Zeus)",
+      "delivery_vector_en": "email with malware attached (Citadel trojan, based on Zeus)",
+      "evasion_techniques": [
+        "No atacó a Target directamente — atacó a un proveedor externo con acceso legítimo a la red de Target, un eslabón mucho más débil",
+        "El troyano Citadel no robó contraseñas de una web falsa: capturó las credenciales guardadas en el propio ordenador infectado de Fazio",
+        "Con esas credenciales legítimas y robadas, los atacantes se movieron dentro de la red de Target durante semanas sin levantar sospechas, hasta llegar a los terminales de punto de venta"
+      ],
+      "evasion_techniques_en": [
+        "Didn't attack Target directly — attacked an external vendor with legitimate access to Target's network, a much weaker link",
+        "The Citadel trojan didn't steal passwords from a fake website: it captured credentials already saved on Fazio's infected computer",
+        "With those legitimate, stolen credentials, the attackers moved inside Target's network for weeks without raising suspicion, until reaching the point-of-sale terminals"
+      ],
+      "local_port": 8018,
+      "entry_path": "index.html",
+      "upstream_port": null,
+      "upstream_entry": null,
+      "status": "defanged",
+      "source": "Investigación de Brian Krebs (KrebsOnSecurity), primera fuente en documentar el origen del ataque — https://krebsonsecurity.com/2014/02/target-hackers-broke-in-via-hvac-company/ · https://krebsonsecurity.com/2014/02/email-attack-on-vendor-set-up-breach-at-target/",
+      "notes": "Una de las mayores brechas de datos de la historia del retail: ~40 millones de tarjetas de pago y datos personales de ~70 millones de clientes comprometidos. No incluimos ningún ejecutable ni código del troyano Citadel en esta sala — para investigación de malware real (troyanos bancarios, familia Zeus) usa el proyecto hermano 'Malware Research Hub', con muestras cifradas y catalogadas para ese fin. Aquí solo reconstruimos el email/cebo que inició la cadena.",
+      "notes_en": "One of the largest data breaches in retail history: ~40 million payment cards and personal data from ~70 million customers compromised. We do not include any executable or Citadel trojan code in this room — for real malware research (banking trojans, the Zeus family) use the sibling project 'Malware Research Hub', with encrypted, cataloged samples for that purpose. Here we only reconstruct the email/bait that started the chain.",
+      "files": [
+        "original/attachment_demo.txt",
+        "original/index.html",
+        "original/style.css"
+      ],
+      "annotations_path": "kits/target-fazio-2013/annotations.md",
+      "annotations_en_path": "kits/target-fazio-2013/annotations_en.md"
+    },
+    {
+      "id": "tech-support-scam",
+      "folder": "tech-support-scam",
+      "display_name": "El falso \"tu ordenador tiene un virus\" — 924 millones de dólares en un año",
+      "display_name_en": "The fake \"your computer has a virus\" — $924 million in one year",
+      "target_brand": "Cualquier usuario navegando por internet — desproporcionadamente, personas mayores",
+      "target_brand_en": "Any internet user — disproportionately, elderly people",
+      "year": 2023,
+      "kit_type": "scareware (pantalla de bloqueo falsa) + vishing inverso + abuso de software de acceso remoto",
+      "kit_type_en": "scareware (fake lock screen) + reverse vishing + remote-access software abuse",
+      "delivery_vector": "ventana emergente de navegador que bloquea la pantalla, simulando una alerta de seguridad de Windows/Microsoft",
+      "delivery_vector_en": "a browser pop-up that locks the screen, mimicking a Windows/Microsoft security alert",
+      "evasion_techniques": [
+        "Invierte el sentido habitual del ataque: en vez de que el atacante llame o escriba a la víctima, es la propia víctima quien llama al número que aparece en la falsa alerta",
+        "La ventana emergente está diseñada para ser difícil de cerrar (a menudo con sonidos de alarma y un bucle de diálogos), generando pánico real antes de que la víctima piense con calma",
+        "Una vez al teléfono, el 'técnico' pide instalar software de acceso remoto legítimo (herramientas reales, no malware) para 'diagnosticar' el problema — y desde ahí opera directamente sobre el equipo de la víctima"
+      ],
+      "evasion_techniques_en": [
+        "Reverses the usual attack direction: instead of the attacker calling or messaging the victim, the victim themselves calls the number shown in the fake alert",
+        "The pop-up is designed to be hard to close (often with alarm sounds and a dialog loop), generating real panic before the victim can think calmly",
+        "Once on the phone, the 'technician' asks the victim to install legitimate remote-access software (real tools, not malware) to 'diagnose' the problem — then operates directly on the victim's machine from there"
+      ],
+      "local_port": 8040,
+      "entry_path": "index.html",
+      "upstream_port": null,
+      "upstream_entry": null,
+      "status": "defanged",
+      "source": "FBI (alertas del IC3) y FTC (Consumer Advice) — https://www.fbi.gov/how-we-can-help-you/scams-and-safety/common-frauds-and-scams/tech-support-scams · https://consumer.ftc.gov/articles/how-spot-avoid-and-report-tech-support-scams",
+      "notes": "La FTC estimó pérdidas de 924 millones de dólares en 2023 solo en EE.UU.; el FBI recibió 19.000 denuncias entre enero y junio de ese mismo año, con pérdidas estimadas de más de 542 millones. Casi el 50% de las víctimas reportadas al FBI tenían más de 60 años, representando el 66% de las pérdidas totales. Ni Microsoft ni Apple muestran nunca un número de teléfono en sus alertas reales. Reconstrucción educativa de la pantalla de bloqueo — sin ningún software de acceso remoto real instalado.",
+      "notes_en": "The FTC estimated $924 million in losses in 2023 in the US alone; the FBI received 19,000 complaints between January and June of that same year, with estimated losses over $542 million. Nearly 50% of victims reported to the FBI were over 60, accounting for 66% of total losses. Neither Microsoft nor Apple ever show a phone number in their real alerts. Educational reconstruction of the lock screen — no real remote-access software installed.",
+      "files": [
+        "original/call.php",
+        "original/grant.php",
+        "original/index.html",
+        "original/style.css"
+      ],
+      "annotations_path": "kits/tech-support-scam/annotations.md",
+      "annotations_en_path": "kits/tech-support-scam/annotations_en.md"
+    },
+    {
+      "id": "telegram-antibot-pattern",
+      "folder": "telegram-antibot-pattern",
+      "display_name": "Patrón moderno con Antibot + Telegram",
+      "display_name_en": "The modern Antibot + Telegram pattern",
+      "target_brand": "Patrón genérico de cooperativa de crédito, documentado en la investigación (no se reconstruye la entidad real)",
+      "target_brand_en": "Generic credit-union pattern documented in the research (the real institution is not reconstructed)",
+      "year": 2022,
+      "kit_type": "credential-harvester",
+      "kit_type_en": "credential-harvester",
+      "delivery_vector": "email + SMS",
+      "delivery_vector_en": "email + SMS",
+      "evasion_techniques": [
+        "Antibot.php: bloquea por hostname, IP y User-Agent antes de mostrar el phishing a quien no parezca una víctima real",
+        "Configuración externa (API keys + host remoto) para hablar con un servidor de mando y control (C&C) propio del kit",
+        "Doble canal de robo: guarda una copia local Y la envía en tiempo real por Telegram, así el atacante no pierde nada aunque limpien el servidor"
+      ],
+      "evasion_techniques_en": [
+        "Antibot.php: blocks by hostname, IP and User-Agent before showing the phishing page to anyone who doesn't look like a real victim",
+        "External config (API keys + remote host) to talk to the kit's own command-and-control (C&C) server",
+        "Double theft channel: keeps a local copy AND sends it in real time via Telegram, so the attacker loses nothing even if the server gets cleaned"
+      ],
+      "local_port": 8012,
+      "entry_path": "gateway.php",
+      "upstream_port": null,
+      "upstream_entry": null,
+      "status": "defanged",
+      "source": "Basado en la investigación pública de SiteLock, 'The Anatomy Of A Phishing Kit' (kit real analizado: 'Mountain America') — https://www.sitelock.com/blog/anatomy-of-a-phishing-kit/",
+      "notes": "Reconstrucción educativa del patrón documentado en la fuente citada, no una copia de un kit capturado. Escrito por el proyecto para ilustrar la técnica con precisión, con el envío real siempre comentado.",
+      "notes_en": "Educational reconstruction of the pattern documented in the cited source, not a copy of a captured kit. Written by the project to illustrate the technique precisely, with the real send always commented out.",
+      "files": [
+        "original/Antibot.php",
+        "original/gateway.php",
+        "original/index.html",
+        "original/mainnet.php",
+        "original/style.css",
+        "original/thanks.html",
+        "original/zsec_config.php"
+      ],
+      "annotations_path": "kits/telegram-antibot-pattern/annotations.md",
+      "annotations_en_path": "kits/telegram-antibot-pattern/annotations_en.md"
+    },
+    {
+      "id": "twitter-2020-vip",
+      "folder": "twitter-2020-vip",
+      "display_name": "El hackeo de Twitter que secuestró a Obama, Musk y Bezos en una tarde",
+      "display_name_en": "The Twitter hack that hijacked Obama, Musk and Bezos in one afternoon",
+      "target_brand": "Empleados de Twitter con acceso a herramientas administrativas internas",
+      "target_brand_en": "Twitter employees with access to internal admin tools",
+      "year": 2020,
+      "kit_type": "vishing (phishing por voz/teléfono) + abuso de herramienta administrativa interna",
+      "kit_type_en": "vishing (voice/phone phishing) + internal admin-tool abuse",
+      "delivery_vector": "llamadas telefónicas suplantando al departamento de IT de la empresa",
+      "delivery_vector_en": "phone calls impersonating the company's IT department",
+      "evasion_techniques": [
+        "No hubo ninguna web falsa ni email — el vector fue una llamada de teléfono convincente, haciéndose pasar por soporte técnico interno",
+        "Los atacantes explotaron la confianza en la 'autoridad de IT', un objetivo muy difícil de entrenar frente al phishing tradicional basado en emails/enlaces",
+        "Una vez dentro de una herramienta administrativa interna, no hizo falta 'hackear' cada cuenta por separado — bastaba con usar el panel legítimo de la propia empresa"
+      ],
+      "evasion_techniques_en": [
+        "There was no fake website or email — the vector was a convincing phone call, posing as internal tech support",
+        "Attackers exploited trust in 'IT authority,' a target very hard to train people against compared to traditional email/link phishing",
+        "Once inside an internal admin tool, there was no need to 'hack' each account separately — the company's own legitimate panel was enough"
+      ],
+      "local_port": 8021,
+      "entry_path": "index.html",
+      "upstream_port": null,
+      "upstream_entry": null,
+      "status": "defanged",
+      "source": "Departamento de Servicios Financieros del Estado de Nueva York (informe oficial de investigación) — https://www.dfs.ny.gov/Twitter_Report · cobertura de Reuters/CBC sobre las detenciones",
+      "notes": "130 cuentas de alto perfil (Obama, Biden, Musk, Bezos, Kim Kardashian, empresas de criptomonedas...) fueron comprometidas; 45 se usaron para publicar una estafa de Bitcoin, robando más de 118.000 dólares en pocas horas. Los responsables incluían a un adolescente de 17 años. Reconstrucción educativa del mecanismo — sin herramientas ni credenciales reales de Twitter.",
+      "notes_en": "130 high-profile accounts (Obama, Biden, Musk, Bezos, Kim Kardashian, crypto companies...) were compromised; 45 were used to post a Bitcoin scam, stealing over $118,000 in a few hours. Those responsible included a 17-year-old. Educational reconstruction of the mechanism — no real Twitter tools or credentials involved.",
+      "files": [
+        "original/fake_admin_panel.php",
+        "original/index.html",
+        "original/style.css",
+        "original/vishing_script.txt"
+      ],
+      "annotations_path": "kits/twitter-2020-vip/annotations.md",
+      "annotations_en_path": "kits/twitter-2020-vip/annotations_en.md"
+    },
+    {
+      "id": "uber-mfa-fatigue-2022",
+      "folder": "uber-mfa-fatigue-2022",
+      "display_name": "Uber 2022 — cómo agotar a alguien a notificaciones hasta que pulse \"Sí\"",
+      "display_name_en": "Uber 2022 — exhausting someone with notifications until they hit \"Yes\"",
+      "target_brand": "Un contratista externo de Uber con acceso a la red interna",
+      "target_brand_en": "An external Uber contractor with internal network access",
+      "year": 2022,
+      "kit_type": "fatiga de MFA / \"push bombing\" + ingeniería social multicanal",
+      "kit_type_en": "MFA fatigue / \"push bombing\" + multi-channel social engineering",
+      "delivery_vector": "inicios de sesión repetidos generando una tormenta de notificaciones push, combinados con un mensaje de WhatsApp",
+      "delivery_vector_en": "repeated login attempts generating a storm of push notifications, combined with a WhatsApp message",
+      "evasion_techniques": [
+        "La contraseña no se robó por phishing directo — se compró en un mercado de la dark web, tras haber sido capturada antes por un infostealer en el equipo del contratista",
+        "En vez de un solo intento sospechoso, el atacante inició sesión repetidamente durante aproximadamente una hora, generando una notificación push tras otra hasta agotar la paciencia de la víctima",
+        "Cuando la avalancha de notificaciones no bastó, el atacante contactó directamente por WhatsApp haciéndose pasar por soporte de IT de Uber, pidiendo que aprobara la notificación para 'resolver el problema'"
+      ],
+      "evasion_techniques_en": [
+        "The password wasn't stolen via direct phishing — it was purchased on a dark web marketplace, after being captured earlier by an infostealer on the contractor's machine",
+        "Instead of one suspicious attempt, the attacker logged in repeatedly for about an hour, generating one push notification after another until the victim's patience ran out",
+        "When the notification storm alone wasn't enough, the attacker reached out directly via WhatsApp posing as Uber IT support, asking them to approve the notification to 'fix the issue'"
+      ],
+      "local_port": 8032,
+      "entry_path": "index.html",
+      "upstream_port": null,
+      "upstream_entry": null,
+      "status": "defanged",
+      "source": "Cobertura técnica de Dark Reading, Group-IB (patrón multicanal) y análisis de OnlineHashCrack sobre el caso Uber/Lapsus$ — https://www.darkreading.com/cyberattacks-data-breaches/uber-breach-external-contractor-mfa-bombing-attack",
+      "notes": "En pocos minutos tras conseguir la aprobación, el atacante accedió a los canales de Slack internos, la VPN y los repositorios de código fuente de Uber. Uber se enteró de la brecha cuando el atacante publicó un mensaje en el canal general de Slack de toda la empresa. Este caso conecta con tu Malware Research Hub: el infostealer que capturó la contraseña original es exactamente el tipo de malware catalogado allí. Reconstrucción educativa — sin ningún bombardeo de notificaciones real.",
+      "notes_en": "Within minutes of getting approval, the attacker accessed Uber's internal Slack channels, VPN, and source-code repositories. Uber found out about the breach when the attacker posted a message on the company-wide Slack channel. This case connects to your Malware Research Hub: the infostealer that captured the original password is exactly the kind of malware cataloged there. Educational reconstruction — no real notification bombing.",
+      "files": [
+        "original/approve.php",
+        "original/index.html",
+        "original/style.css"
+      ],
+      "annotations_path": "kits/uber-mfa-fatigue-2022/annotations.md",
+      "annotations_en_path": "kits/uber-mfa-fatigue-2022/annotations_en.md"
+    },
+    {
+      "id": "ubiquiti-bec-2015",
+      "folder": "ubiquiti-bec-2015",
+      "display_name": "14 transferencias, 46,7 millones de dólares — sin hackear nada",
+      "display_name_en": "14 wire transfers, $46.7 million — without hacking anything",
+      "target_brand": "Departamento financiero de Ubiquiti Networks (oficina de Hong Kong)",
+      "target_brand_en": "Ubiquiti Networks' finance department (Hong Kong office)",
+      "year": 2015,
+      "kit_type": "estafa BEC (Business Email Compromise) — suplantación directa de directivos y de un bufete de abogados",
+      "kit_type_en": "BEC scam (Business Email Compromise) — direct impersonation of executives and a law firm",
+      "delivery_vector": "emails suplantando al CEO de la empresa y a un socio de un bufete de abogados externo real",
+      "delivery_vector_en": "emails impersonating the company's CEO and a partner at a real external law firm",
+      "evasion_techniques": [
+        "No suplantaron una empresa inventada — usaron el nombre de un bufete de abogados REAL y reconocible (Latham & Watkins) para dar peso legal a la instrucción",
+        "Repartieron el fraude en 14 transferencias distintas a lo largo del tiempo, en vez de una sola operación sospechosamente grande",
+        "Enviaron el dinero a cuentas en múltiples países (Rusia, Hong Kong, China, Hungría, Polonia) para dificultar el rastreo y la recuperación legal"
+      ],
+      "evasion_techniques_en": [
+        "They didn't impersonate a made-up company — they used the name of a REAL, recognizable law firm (Latham & Watkins) to lend legal weight to the instruction",
+        "They spread the fraud across 14 separate transfers over time, instead of one suspiciously large operation",
+        "They sent the money to accounts in multiple countries (Russia, Hong Kong, China, Hungary, Poland) to make tracing and legal recovery harder"
+      ],
+      "local_port": 8029,
+      "entry_path": "index.html",
+      "upstream_port": null,
+      "upstream_entry": null,
+      "status": "defanged",
+      "source": "Investigación de Brian Krebs (KrebsOnSecurity) y documentación pública en el 8-K presentado ante la SEC — https://krebsonsecurity.com/2015/08/tech-firm-ubiquiti-suffers-46m-cyberheist/",
+      "notes": "El entonces director financiero de Ubiquiti autorizó 14 transferencias desde la cuenta de Ubiquiti Hong Kong en HSBC, por un total de 46.703.232 dólares, siguiendo instrucciones de estafadores que se hacían pasar por el CEO real (Robert Pera) y un socio real de Latham & Watkins. Solo se recuperaron unos 8,1 millones de dólares. Reconstrucción educativa de los emails — con nombres y empresas ficticios.",
+      "notes_en": "Ubiquiti's then-CFO authorized 14 transfers from Ubiquiti Hong Kong's account at HSBC, totaling $46,703,232, following instructions from scammers posing as the real CEO (Robert Pera) and a real Latham & Watkins partner. Only about $8.1 million was recovered. Educational reconstruction of the emails — with fictional names and companies.",
+      "files": [
+        "original/index.html",
+        "original/style.css"
+      ],
+      "annotations_path": "kits/ubiquiti-bec-2015/annotations.md",
+      "annotations_en_path": "kits/ubiquiti-bec-2015/annotations_en.md"
+    },
+    {
+      "id": "w2-tax-phishing-2016",
+      "folder": "w2-tax-phishing-2016",
+      "display_name": "La epidemia de phishing que atacó a RRHH en vez de a Finanzas",
+      "display_name_en": "The phishing epidemic that targeted HR instead of Finance",
+      "target_brand": "Empleados de nóminas / recursos humanos, suplantando al CEO/CFO real de la empresa",
+      "target_brand_en": "Payroll/HR employees, impersonating the company's real CEO/CFO",
+      "year": 2016,
+      "kit_type": "estafa BEC especializada — no pide dinero, pide datos fiscales masivos de empleados",
+      "kit_type_en": "specialized BEC scam — doesn't ask for money, asks for mass employee tax data",
+      "delivery_vector": "email suplantando al CEO/CFO, dirigido específicamente al departamento de nóminas en plena temporada de impuestos",
+      "delivery_vector_en": "email impersonating the CEO/CFO, specifically targeted at the payroll department during tax season",
+      "evasion_techniques": [
+        "Ataca un departamento distinto al de las estafas BEC clásicas — RRHH/nóminas, no Finanzas — un objetivo menos entrenado contra este tipo de fraude en 2016",
+        "Cronometrado exactamente para la temporada de declaración de impuestos, cuando pedir formularios W-2 no levanta ninguna sospecha por sí solo",
+        "El botín no es dinero directamente, sino datos que permiten cometer fraude fiscal y robo de identidad a gran escala contra CADA empleado de la empresa a la vez"
+      ],
+      "evasion_techniques_en": [
+        "Targets a different department than classic BEC scams — HR/payroll, not Finance — a target less trained against this kind of fraud in 2016",
+        "Timed exactly for tax filing season, when requesting W-2 forms doesn't raise suspicion on its own",
+        "The loot isn't money directly, but data enabling large-scale tax fraud and identity theft against EVERY employee at the company at once"
+      ],
+      "local_port": 8037,
+      "entry_path": "index.html",
+      "upstream_port": null,
+      "upstream_entry": null,
+      "status": "defanged",
+      "source": "Alerta oficial del IRS (Security Summit) e investigación de Brian Krebs, 'IRS Scam Blends CEO Fraud, W-2 Phishing' — https://krebsonsecurity.com/2017/02/irs-scam-blends-ceo-fraud-w-2-phishing/",
+      "notes": "El IRS recibió más de 1.000 reportes de este tipo de phishing solo en enero de 2016, con un aumento del 400% interanual en la primera mitad de esa temporada fiscal. Empresas afectadas conocidas incluyen Seagate Technology, Moneytree y Sprouts Farmers Market. El fraude se extendió después a distritos escolares, casinos tribales y cadenas de restaurantes. Algunos casos incluían una segunda petición de transferencia bancaria tras obtener los W-2. Reconstrucción educativa del email — con nombres y empresa ficticios.",
+      "notes_en": "The IRS received over 1,000 reports of this type of phishing in January 2016 alone, with a 400% year-over-year increase in the first half of that tax season. Known affected companies include Seagate Technology, Moneytree, and Sprouts Farmers Market. The fraud later spread to school districts, tribal casinos, and restaurant chains. Some cases included a follow-up wire-transfer request after obtaining the W-2s. Educational reconstruction of the email — with fictional names and company.",
+      "files": [
+        "original/index.html",
+        "original/send_w2.php",
+        "original/style.css"
+      ],
+      "annotations_path": "kits/w2-tax-phishing-2016/annotations.md",
+      "annotations_en_path": "kits/w2-tax-phishing-2016/annotations_en.md"
+    },
+    {
+      "id": "w3ll-aitm-pattern",
+      "folder": "w3ll-aitm-pattern",
+      "display_name": "W3LL / OV6 — bypass de MFA con proxy (caso real, con desmantelamiento del FBI)",
+      "display_name_en": "W3LL / OV6 — MFA bypass via proxy (real case, FBI takedown)",
+      "target_brand": "Microsoft 365 (cuentas corporativas, ataques BEC)",
+      "target_brand_en": "Microsoft 365 (corporate accounts, BEC attacks)",
+      "year": 2023,
+      "kit_type": "adversary-in-the-middle (AiTM) / bypass de 2FA",
+      "kit_type_en": "adversary-in-the-middle (AiTM) / 2FA bypass",
+      "delivery_vector": "email (Business Email Compromise)",
+      "delivery_vector_en": "email (Business Email Compromise)",
+      "evasion_techniques": [
+        "Actúa como proxy inverso: la víctima interactúa con el Microsoft real de verdad, el atacante solo está 'en medio' escuchando",
+        "No roba la contraseña suelta — roba la COOKIE DE SESIÓN ya autenticada tras pasar el 2FA, así el segundo factor deja de proteger nada",
+        "Ecosistema de 16 herramientas complementarias vendidas junto al panel (envío SMTP, escáner de vulnerabilidades, redirecciones, reconocimiento de objetivos)"
+      ],
+      "evasion_techniques_en": [
+        "Acts as a reverse proxy: the victim interacts with the real Microsoft, the attacker is just 'in the middle' listening",
+        "Doesn't steal the password alone — it steals the SESSION COOKIE already authenticated past 2FA, so the second factor stops protecting anything",
+        "An ecosystem of 16 companion tools sold alongside the panel (SMTP senders, a vulnerability scanner, link redirectors, target reconnaissance)"
+      ],
+      "local_port": 8013,
+      "entry_path": "index.html",
+      "upstream_port": 8099,
+      "upstream_entry": "fake_upstream.php",
+      "status": "defanged",
+      "source": "Group-IB, 'W3LL Done: Uncovering Phishing Ecosystem Behind BEC Attacks' (2023) — https://www.group-ib.com/resources/research-hub/w3ll-phishing/ · desmantelamiento posterior por el FBI y policía de Indonesia",
+      "notes": "Caso real de gran escala: ~56.000 cuentas de Microsoft 365 atacadas, ~8.000 comprometidas, fraude estimado en 20 millones de dólares antes del desmantelamiento. Reconstrucción educativa del mecanismo AiTM documentado, no el kit original.",
+      "notes_en": "Large-scale real case: ~56,000 Microsoft 365 accounts targeted, ~8,000 compromised, fraud estimated at $20 million before the takedown. Educational reconstruction of the documented AiTM mechanism, not the original kit.",
+      "files": [
+        "original/fake_upstream.php",
+        "original/index.html",
+        "original/proxy_relay.php",
+        "original/style.css"
+      ],
+      "annotations_path": "kits/w3ll-aitm-pattern/annotations.md",
+      "annotations_en_path": "kits/w3ll-aitm-pattern/annotations_en.md"
+    }
+  ]
+}

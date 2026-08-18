@@ -1,0 +1,29 @@
+{
+  "id": "telegram-antibot-pattern",
+  "display_name": "Patrón moderno con Antibot + Telegram",
+  "display_name_en": "The modern Antibot + Telegram pattern",
+  "target_brand": "Patrón genérico de cooperativa de crédito, documentado en la investigación (no se reconstruye la entidad real)",
+  "target_brand_en": "Generic credit-union pattern documented in the research (the real institution is not reconstructed)",
+  "year": 2022,
+  "kit_type": "credential-harvester",
+  "kit_type_en": "credential-harvester",
+  "delivery_vector": "email + SMS",
+  "delivery_vector_en": "email + SMS",
+  "evasion_techniques": [
+    "Antibot.php: bloquea por hostname, IP y User-Agent antes de mostrar el phishing a quien no parezca una víctima real",
+    "Configuración externa (API keys + host remoto) para hablar con un servidor de mando y control (C&C) propio del kit",
+    "Doble canal de robo: guarda una copia local Y la envía en tiempo real por Telegram, así el atacante no pierde nada aunque limpien el servidor"
+  ],
+  "evasion_techniques_en": [
+    "Antibot.php: blocks by hostname, IP and User-Agent before showing the phishing page to anyone who doesn't look like a real victim",
+    "External config (API keys + remote host) to talk to the kit's own command-and-control (C&C) server",
+    "Double theft channel: keeps a local copy AND sends it in real time via Telegram, so the attacker loses nothing even if the server gets cleaned"
+  ],
+  "exfiltration_method_original": "Bot de Telegram en tiempo real + log local en el servidor (DESACTIVADO en este kit)",
+  "source": "Basado en la investigación pública de SiteLock, 'The Anatomy Of A Phishing Kit' (kit real analizado: 'Mountain America') — https://www.sitelock.com/blog/anatomy-of-a-phishing-kit/",
+  "local_port": 8012,
+  "entry_path": "gateway.php",
+  "status": "defanged",
+  "notes": "Reconstrucción educativa del patrón documentado en la fuente citada, no una copia de un kit capturado. Escrito por el proyecto para ilustrar la técnica con precisión, con el envío real siempre comentado.",
+  "notes_en": "Educational reconstruction of the pattern documented in the cited source, not a copy of a captured kit. Written by the project to illustrate the technique precisely, with the real send always commented out."
+}

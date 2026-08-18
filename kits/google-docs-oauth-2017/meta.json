@@ -1,0 +1,29 @@
+{
+  "id": "google-docs-oauth-2017",
+  "display_name": "El gusano que infectó 1 millón de cuentas de Google sin robar ni una contraseña",
+  "display_name_en": "The worm that hit 1 million Google accounts without stealing a single password",
+  "target_brand": "Usuarios de Google (a través de un enlace real de google.com — no una web falsa)",
+  "target_brand_en": "Google users (through a real google.com link — not a fake website)",
+  "year": 2017,
+  "kit_type": "abuso de OAuth (phishing de consentimiento) — sin credential-harvesting",
+  "kit_type_en": "OAuth abuse (consent phishing) — no credential harvesting at all",
+  "delivery_vector": "email con invitación de \"Google Docs\" compartido, propagado automáticamente a los contactos de cada víctima",
+  "delivery_vector_en": "email with a shared \"Google Docs\" invitation, auto-spreading to each victim's contacts",
+  "evasion_techniques": [
+    "El enlace llevaba a la página REAL de inicio de sesión de Google (accounts.google.com) — no había ninguna web falsa que detectar",
+    "Google no validaba el nombre, icono ni URL de las apps de terceros, así que cualquiera podía llamar a su app 'Google Docs' y usar el logo real",
+    "Al conceder permiso, la propia app maliciosa leía la lista de contactos de la víctima y se reenviaba a sí misma automáticamente — sin que el atacante tuviera que hacer nada más"
+  ],
+  "evasion_techniques_en": [
+    "The link led to the REAL Google sign-in page (accounts.google.com) — there was no fake website to detect",
+    "Google didn't validate third-party apps' name, icon, or URL, so anyone could name their app 'Google Docs' and use the real logo",
+    "Once permission was granted, the malicious app itself read the victim's contact list and forwarded itself automatically — with no further action needed from the attacker"
+  ],
+  "exfiltration_method_original": "Permisos OAuth concedidos a una app maliciosa, con acceso para leer, enviar, borrar y gestionar el correo de la víctima",
+  "source": "Cobertura técnica de BankInfoSecurity, Netskope (análisis del 'CloudPhishing worm') y SANS ISC — https://www.bankinfosecurity.com/attackers-unleash-oauth-worm-via-google-docs-app-a-9888 · https://www.netskope.com/blog/google-doc-cloudphishing-worm-attack-technical-analysis",
+  "status": "defanged",
+  "notes": "El primer email malicioso se envió a las 14:27 (hora del Este de EE.UU.); en poco más de una hora Google había revocado el token de la app y detenido la propagación — pero se estima que hasta 1 millón de cuentas llegaron a autorizar la app maliciosa en esa ventana. Reconstrucción educativa de la pantalla de consentimiento OAuth — no es una app real ni se conecta a ninguna cuenta de Google de verdad.",
+  "notes_en": "The first malicious email went out at 2:27pm EST; within just over an hour Google had revoked the app's token and stopped the spread — but an estimated up to 1 million accounts authorized the malicious app in that window. Educational reconstruction of the OAuth consent screen — not a real app and never connects to any real Google account.",
+  "local_port": 8025,
+  "entry_path": "index.html"
+}

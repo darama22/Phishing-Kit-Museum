@@ -1,0 +1,29 @@
+{
+  "id": "anthem-2015",
+  "display_name": "78,8 millones de historiales médicos — la mayor brecha sanitaria de la historia",
+  "display_name_en": "78.8 million medical records — the largest healthcare breach in history",
+  "target_brand": "Empleados de Anthem Inc. (la mayor aseguradora médica de EE.UU.)",
+  "target_brand_en": "Anthem Inc. employees (the largest health insurer in the US)",
+  "year": 2015,
+  "kit_type": "spear-phishing con enlace malicioso (instalación de puerta trasera, ataque de estado)",
+  "kit_type_en": "spear-phishing with a malicious link (backdoor installation, nation-state attack)",
+  "delivery_vector": "email dirigido con un enlace malicioso, disfrazado de comunicación interna legítima",
+  "delivery_vector_en": "targeted email with a malicious link, disguised as legitimate internal communication",
+  "evasion_techniques": [
+    "Tras la intrusión inicial, los atacantes pasaron MESES haciendo reconocimiento silencioso antes de tocar el sistema más valioso (el almacén de datos corporativo)",
+    "Exfiltraron los datos en archivos comprimidos y cifrados por ellos mismos, dificultando su detección por herramientas de prevención de fuga de datos",
+    "Borraron los archivos cifrados del sistema tras la exfiltración, para reducir el rastro de evidencia de la intrusión"
+  ],
+  "evasion_techniques_en": [
+    "After the initial intrusion, attackers spent MONTHS quietly doing reconnaissance before touching the most valuable system (the corporate data warehouse)",
+    "They exfiltrated data in files they compressed and encrypted themselves, making detection by data-loss-prevention tools harder",
+    "They deleted the encrypted files from the system after exfiltration, to reduce the evidence trail of the intrusion"
+  ],
+  "exfiltration_method_original": "Puerta trasera instalada tras el clic en el enlace malicioso, usada para explorar la red durante meses antes de exfiltrar datos cifrados hacia servidores externos",
+  "source": "Departamento de Justicia de EE.UU., cargos contra un miembro de un grupo de hacking vinculado a China — https://www.justice.gov/archives/opa/pr/member-sophisticated-china-based-hacking-group-indicted-series-computer-intrusions-including",
+  "status": "defanged",
+  "notes": "Datos de aproximadamente 78,8 millones de personas comprometidos: nombres, números de identificación médica, fechas de nacimiento, números de la Seguridad Social, direcciones, teléfonos, emails, datos de empleo e ingresos. El acceso no autorizado comenzó en diciembre de 2014 y se detectó en enero de 2015. El Departamento de Justicia de EE.UU. atribuyó el ataque a un grupo de hacking vinculado a China, presentando cargos contra un miembro identificado. Reconstrucción educativa del email/cebo — sin ningún malware real (ver aviso en la sala).",
+  "notes_en": "Data on approximately 78.8 million people was compromised: names, health ID numbers, dates of birth, Social Security numbers, addresses, phone numbers, emails, employment and income data. Unauthorized access began in December 2014 and was detected in January 2015. The US Department of Justice attributed the attack to a China-linked hacking group, charging an identified member. Educational reconstruction of the bait email — no real malware (see the room's notice).",
+  "local_port": 8030,
+  "entry_path": "index.html"
+}

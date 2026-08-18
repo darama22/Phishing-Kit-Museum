@@ -1,0 +1,7 @@
+# Logs generados al probar los kits en local — nunca se suben, ni por accidente
+__DEMO_LOG__.txt
+**/__DEMO_LOG__.txt
+
+__pycache__/
+*.pyc
+.venv/

@@ -1,0 +1,29 @@
+{
+  "id": "sony-pictures-2014",
+  "display_name": "El falso Apple ID que acabó filtrando películas de Sony",
+  "display_name_en": "The fake Apple ID page that ended up leaking Sony's movies",
+  "target_brand": "Administradores de sistemas y ejecutivos de Sony Pictures (email de verificación de Apple ID falso)",
+  "target_brand_en": "Sony Pictures sysadmins and executives (fake Apple ID verification email)",
+  "year": 2014,
+  "kit_type": "credential-harvester + reutilización de contraseñas (pivote de cuenta personal a corporativa)",
+  "kit_type_en": "credential-harvester + password reuse (personal-to-corporate account pivot)",
+  "delivery_vector": "email de verificación de Apple ID falso, dirigido primero a administradores de sistemas",
+  "delivery_vector_en": "fake Apple ID verification email, aimed first at system administrators",
+  "evasion_techniques": [
+    "Mostraba un error falso ('contraseña no válida, inténtalo de nuevo') tras el primer intento — mientras capturaba la contraseña real en segundo plano, sin que la víctima sospechara nada raro",
+    "No atacaba directamente las cuentas corporativas: iba primero a por el Apple ID PERSONAL, un objetivo mucho menos protegido",
+    "Usaba los perfiles públicos de LinkedIn de los empleados para deducir su formato de usuario corporativo, y probaba si reutilizaban la misma contraseña"
+  ],
+  "evasion_techniques_en": [
+    "Showed a fake error ('invalid password, try again') after the first attempt — while capturing the real password in the background, with no obvious sign to the victim",
+    "Didn't attack corporate accounts directly: went after the PERSONAL Apple ID first, a much less protected target",
+    "Used employees' public LinkedIn profiles to infer their corporate username format, then tried whether they reused the same password"
+  ],
+  "exfiltration_method_original": "Contraseña de Apple ID capturada, después probada contra el login corporativo de Sony deducido vía LinkedIn (DESACTIVADO en este kit)",
+  "source": "Investigación citada en RSA Conference y recogida por Computerworld, eWeek y SiliconANGLE — https://www.computerworld.com/article/2913805/ · atribución del FBI y cargos del DOJ contra un operativo norcoreano",
+  "status": "defanged",
+  "notes": "El FBI atribuyó el ataque a Corea del Norte; el Departamento de Justicia de EE.UU. presentó cargos contra Park Jin Hyok. Tras el robo de credenciales, los atacantes desplegaron un malware 'wiper' que destruyó sistemas de Sony Pictures y filtraron películas inéditas, guiones y correos internos — en el contexto de la controversia por la película 'The Interview'. Reconstrucción educativa del mecanismo de captura, sin reproducir la marca real de Apple ni ningún dato de empleados reales.",
+  "notes_en": "The FBI attributed the attack to North Korea; the US Department of Justice filed charges against Park Jin Hyok. After the credential theft, attackers deployed 'wiper' malware that destroyed Sony Pictures systems, and leaked unreleased films, scripts, and internal emails — in the context of the controversy over the film 'The Interview.' Educational reconstruction of the capture mechanism, without reproducing Apple's real brand or any real employee data.",
+  "local_port": 8023,
+  "entry_path": "index.html"
+}

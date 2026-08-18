@@ -1,0 +1,30 @@
+DEMO — reconstrucción ilustrativa del TIPO de notas de reconocimiento que
+un atacante prepararía antes de una llamada de vishing al helpdesk, según
+el patrón documentado. No son notas reales de ningún caso. Ver
+annotations.md, sección 1.
+
+    Objetivo: [Nombre ficticio], VP de Operaciones (demo)
+    Fuente: perfil público de LinkedIn
+
+    Datos útiles recopilados:
+    - Antigüedad en la empresa: ~6 años (aparece en LinkedIn)
+    - Departamento actual y anterior (para sonar creíble sobre "su equipo")
+    - Ciudad donde trabaja (para justificar acento/zona horaria si preguntan)
+    - Nombre de un compañero que aparece etiquetado en publicaciones
+      recientes (para citarlo como referencia si el helpdesk duda)
+
+    Guion aproximado para la llamada:
+    "Hola, soy [Nombre ficticio], VP de Operaciones. Estoy con un evento
+    fuera de la oficina y mi teléfono se ha estropeado — necesito que me
+    reseteéis el número asociado a mi cuenta para poder recibir el código
+    de acceso en este número nuevo."
+
+---
+
+Por qué esto funciona:
+- Toda la información citada es PÚBLICA y verificable — no hace falta
+  ningún hackeo previo, solo unos minutos de búsqueda en LinkedIn.
+- El guion da una razón plausible y urgente (estar fuera de la oficina)
+  para pedir algo inusual (cambiar el número de un segundo factor).
+- No pide directamente "dame la contraseña" — pide un cambio
+  administrativo que el propio helpdesk tiene el poder de conceder.

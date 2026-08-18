@@ -1,0 +1,29 @@
+{
+  "id": "aohell-1995",
+  "display_name": "AOHell — de donde viene literalmente la palabra \"phishing\"",
+  "display_name_en": "AOHell — where the word \"phishing\" literally comes from",
+  "target_brand": "Usuarios de America Online (AOL), vía mensajería instantánea y chats",
+  "target_brand_en": "America Online (AOL) users, via instant messaging and chat rooms",
+  "year": 1995,
+  "kit_type": "el primer kit de phishing automatizado de la historia (suplantación de personal de AOL)",
+  "kit_type_en": "the first automated phishing kit in history (impersonating AOL staff)",
+  "delivery_vector": "mensajes de AOL Instant Messenger y salas de chat, haciéndose pasar por personal de AOL",
+  "delivery_vector_en": "AOL Instant Messenger and chat-room messages, posing as AOL staff",
+  "evasion_techniques": [
+    "Se aprovechaba de que, en 1995, casi nadie había oído hablar de este tipo de engaño — no había ninguna cultura de desconfianza que superar",
+    "El propio programa generaba números de tarjeta de crédito aleatorios válidos según el algoritmo, para abrir cuentas de AOL de usar y tirar desde las que lanzar el ataque",
+    "Usaba la autoridad percibida de 'ser AOL' — la misma empresa que prestaba el servicio pidiéndote que confirmaras tus datos de facturación"
+  ],
+  "evasion_techniques_en": [
+    "Took advantage of the fact that, in 1995, almost nobody had heard of this kind of scam — there was no culture of suspicion to overcome",
+    "The program itself generated algorithmically-valid random credit card numbers to open disposable AOL accounts to launch the attack from",
+    "Used the perceived authority of 'being AOL' — the very company providing the service, asking you to confirm your billing info"
+  ],
+  "exfiltration_method_original": "La víctima escribía su contraseña o datos de tarjeta directamente en el chat/mensaje, creyendo hablar con soporte de AOL",
+  "source": "Investigación académica 'Early Phishing' de Koceilah Rekouche (creador de AOHell) — https://arxiv.org/abs/1106.4692 · cobertura histórica de Kaseya y Control Engineering",
+  "status": "defanged",
+  "notes": "AOHell fue creado en 1994 por un estudiante de 17 años bajo el pseudónimo 'Da Chronic'. Es el origen documentado del propio término 'phishing' (con 'ph' heredado de 'phreaking', la manipulación de sistemas telefónicos). Todo lo que verás en las otras 20+ salas de este museo desciende, técnica y lingüísticamente, de esta sala. Reconstrucción educativa sin ningún generador de tarjetas real.",
+  "notes_en": "AOHell was created in 1994 by a 17-year-old under the pseudonym 'Da Chronic.' It's the documented origin of the term \"phishing\" itself (the 'ph' inherited from 'phreaking,' the manipulation of phone systems). Everything you see in this museum's other 20+ rooms descends, technically and linguistically, from this room. Educational reconstruction with no real card generator.",
+  "local_port": 8024,
+  "entry_path": "index.html"
+}
