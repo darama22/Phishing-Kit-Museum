@@ -15,6 +15,12 @@
 ![Stack](https://img.shields.io/badge/STACK-Python_·_PHP-0ea5e9?style=flat-square&labelColor=0d1117)
 ![Riesgo](https://img.shields.io/badge/RIESGO-CERO-16a34a?style=flat-square&labelColor=0d1117)
 
+<br>
+
+<img src="screenshot.png" alt="Catálogo de salas del Phishing Kit Museum" width="900">
+
+<sub>El catálogo de salas — cada una con su vector, objetivo y estado "defang-eado"</sub>
+
 </div>
 
 ---

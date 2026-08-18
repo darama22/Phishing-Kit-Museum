@@ -15,6 +15,12 @@
 ![Stack](https://img.shields.io/badge/STACK-Python_·_PHP-0ea5e9?style=flat-square&labelColor=0d1117)
 ![Risk](https://img.shields.io/badge/RISK-ZERO-16a34a?style=flat-square&labelColor=0d1117)
 
+<br>
+
+<img src="screenshot.png" alt="Phishing Kit Museum room catalog" width="900">
+
+<sub>The room catalog — each with its vector, target, and "defanged" status</sub>
+
 </div>
 
 ---
